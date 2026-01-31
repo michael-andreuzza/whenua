@@ -116,7 +116,7 @@ Thumbs.db
 
     ${pc.dim("1.")} cd ${pc.cyan(projectName)}
     ${pc.dim("2.")} npm install
-    ${pc.dim("3.")} npx @bearnie/cli add button card
+    ${pc.dim("3.")} npx bearnie add button card
     ${pc.dim("4.")} npm run dev
 
   ${pc.dim("Browse components at")} ${link("bearnie.dev/docs/components", "https://bearnie.dev/docs/components")}

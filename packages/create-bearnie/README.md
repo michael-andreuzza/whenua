@@ -1,4 +1,4 @@
-# create-bearnie
+****# create-bearnie
 
 Create a new Astro project with Bearnie UI components pre-configured.
 
@@ -25,7 +25,7 @@ npm create bearnie my-app
 ```bash
 cd my-app
 npm install
-npx @bearnie/cli add button card dialog
+npx bearnie add button card dialog
 npm run dev
 ```
 
