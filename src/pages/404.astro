@@ -1,11 +1,14 @@
 ---
-// Fundations
-import BaseLayout from "@/layouts/BaseLayout.astro";
-import Text from "@/components/fundations/elements/Text.astro";
-import Button from "@/components/fundations/elements/Button.astro";
-import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 import { AstroSeo } from "@astrolib/seo";
+// Assets
+import Logo from "@/components/assets/Logo.astro";
+// Foundations
+import BaseLayout from "@/layouts/BaseLayout.astro";
+import Button from "@/components/ui/button/Button.astro";
+import Text from "@/components/fundations/elements/Text.astro";
+import Wrapper from "@/components/fundations/containers/Wrapper.astro";
 import { siteConfig } from "@/config/site";
+
 const canonical = `${siteConfig.url}${Astro.url.pathname || "/"}`;
 ---
 
@@ -40,11 +43,30 @@ const canonical = `${siteConfig.url}${Astro.url.pathname || "/"}`;
 />
 <BaseLayout showNavigation={false} showFooter={false}>
   <section>
-    <Wrapper variant="standard">
-      <Text tag="h1" variant="textLG"> 404 </Text>
-      <Button isLink={true} href="/" size="xs" variant="muted">
-        Go back gome
-      </Button>
+    <Wrapper
+      class="standard"
+      class="py-12 h-screen flex flex-col justify-center"
+    >
+      <div class="max-w-sm text-center mx-auto text-balance">
+        <Logo class="size-12 lg:size-20 mx-auto" />
+        <Text
+          tag="h1"
+          variant="textLG"
+          class="font-medium tracking-tight mt-12"
+        >
+          Page not found
+          <Text tag="p" variant="textSM" class="text-muted-foreground mt-4">
+            The page you're looking for doesn't exist or has been moved.
+          </Text>
+
+          <div class="flex items-center gap-2.5 mt-12 justify-center">
+            <Button href="/" size="default">Go Home</Button>
+            <Button href="/docs" variant="outline" size="default">
+              Browse Docs
+            </Button>
+          </div>
+        </Text>
+      </div>
     </Wrapper>
   </section>
 </BaseLayout>

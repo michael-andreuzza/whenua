@@ -2,68 +2,68 @@
 import { cn } from '@/utils/cn';
 import type { HTMLAttributes } from 'astro/types';
 
-export interface Props extends HTMLAttributes<'div'> {
-  keepOpen?: boolean;
-}
+export interface Props extends HTMLAttributes<'div'> {}
 
-const { class: className, keepOpen = false, ...props } = Astro.props;
+const { class: className, ...props } = Astro.props;
 ---
 
-<div 
-  class={cn('relative inline-block text-left', className)} 
-  data-dropdown 
-  data-keep-open={keepOpen ? 'true' : undefined}
-  {...props}
->
+<div class={cn('relative inline-block text-left', className)} data-dropdown {...props}>
   <slot />
 </div>
 
 <script>
-  import { generateId } from '@/utils/focus-trap';
+  import { generateId } from "@/utils/focus-trap";
 
   function initDropdowns() {
-    document.querySelectorAll('[data-dropdown]').forEach((dropdown) => {
-      if (dropdown.hasAttribute('data-initialized')) return;
-      dropdown.setAttribute('data-initialized', 'true');
+    document.querySelectorAll("[data-dropdown]").forEach((dropdown) => {
+      if (dropdown.hasAttribute("data-initialized")) return;
+      dropdown.setAttribute("data-initialized", "true");
 
-      const trigger = dropdown.querySelector('[data-dropdown-trigger]') as HTMLElement;
-      const content = dropdown.querySelector('[data-dropdown-content]') as HTMLElement;
+      const trigger = dropdown.querySelector(
+        "[data-dropdown-trigger]",
+      ) as HTMLElement;
+      const content = dropdown.querySelector(
+        "[data-dropdown-content]",
+      ) as HTMLElement;
 
       if (!trigger || !content) return;
 
       // Generate ID for content
       if (!content.id) {
-        content.id = generateId('dropdown-menu');
+        content.id = generateId("dropdown-menu");
       }
 
       // Set ARIA attributes
-      trigger.setAttribute('aria-haspopup', 'true');
-      trigger.setAttribute('aria-controls', content.id);
+      trigger.setAttribute("aria-haspopup", "true");
+      trigger.setAttribute("aria-controls", content.id);
 
-      const items = () => Array.from(content.querySelectorAll('[data-dropdown-item]:not([disabled])')) as HTMLElement[];
+      const items = () =>
+        Array.from(
+          content.querySelectorAll("[data-dropdown-item]:not([disabled])"),
+        ) as HTMLElement[];
       let focusedIndex = -1;
 
       const openDropdown = () => {
         content.hidden = false;
-        trigger.setAttribute('aria-expanded', 'true');
-        trigger.setAttribute('data-state', 'open');
-        
+        trigger.setAttribute("aria-expanded", "true");
+        trigger.setAttribute("data-state", "open");
+
         // Handle fixed positioning for side dropdowns (to escape overflow containers)
         const side = content.dataset.side;
-        if (side === 'left' || side === 'right') {
+        if (side === "left" || side === "right") {
           const triggerRect = trigger.getBoundingClientRect();
-          content.style.position = 'fixed';
+          content.style.position = "fixed";
           content.style.top = `${triggerRect.top}px`;
-          
-          if (side === 'left') {
+
+          if (side === "left") {
             content.style.right = `${window.innerWidth - triggerRect.left + 8}px`;
-            content.style.left = 'auto';
+            content.style.left = "auto";
           } else {
             content.style.left = `${triggerRect.right + 8}px`;
-            content.style.right = 'auto';
+            content.style.right = "auto";
           }
         }
-        
+
         // Focus first item
         const menuItems = items();
         if (menuItems.length > 0) {
@@ -74,19 +74,19 @@ const { class: className, keepOpen = false, ...props } = Astro.props;
 
       const closeDropdown = () => {
         content.hidden = true;
-        trigger.setAttribute('aria-expanded', 'false');
-        trigger.setAttribute('data-state', 'closed');
+        trigger.setAttribute("aria-expanded", "false");
+        trigger.setAttribute("data-state", "closed");
         focusedIndex = -1;
-        
+
         // Reset fixed positioning
         const side = content.dataset.side;
-        if (side === 'left' || side === 'right') {
-          content.style.position = '';
-          content.style.top = '';
-          content.style.left = '';
-          content.style.right = '';
+        if (side === "left" || side === "right") {
+          content.style.position = "";
+          content.style.top = "";
+          content.style.left = "";
+          content.style.right = "";
         }
-        
+
         trigger.focus();
       };
 
@@ -98,75 +98,73 @@ const { class: className, keepOpen = false, ...props } = Astro.props;
         }
       };
 
-      trigger.addEventListener('click', toggleDropdown);
+      trigger.addEventListener("click", toggleDropdown);
 
       // Keyboard support for trigger
-      trigger.addEventListener('keydown', (e) => {
+      trigger.addEventListener("keydown", (e) => {
         const event = e as KeyboardEvent;
-        if (event.key === 'Enter' || event.key === ' ') {
+        if (event.key === "Enter" || event.key === " ") {
           event.preventDefault();
           toggleDropdown();
-        } else if (event.key === 'ArrowDown' && content.hidden) {
+        } else if (event.key === "ArrowDown" && content.hidden) {
           event.preventDefault();
           openDropdown();
         }
       });
 
       // Arrow key navigation in menu
-      content.addEventListener('keydown', (e) => {
+      content.addEventListener("keydown", (e) => {
         const menuItems = items();
         if (menuItems.length === 0) return;
 
         switch (e.key) {
-          case 'ArrowDown':
+          case "ArrowDown":
             e.preventDefault();
             focusedIndex = (focusedIndex + 1) % menuItems.length;
             menuItems[focusedIndex].focus();
             break;
-          case 'ArrowUp':
+          case "ArrowUp":
             e.preventDefault();
-            focusedIndex = (focusedIndex - 1 + menuItems.length) % menuItems.length;
+            focusedIndex =
+              (focusedIndex - 1 + menuItems.length) % menuItems.length;
             menuItems[focusedIndex].focus();
             break;
-          case 'Home':
+          case "Home":
             e.preventDefault();
             focusedIndex = 0;
             menuItems[0].focus();
             break;
-          case 'End':
+          case "End":
             e.preventDefault();
             focusedIndex = menuItems.length - 1;
             menuItems[focusedIndex].focus();
             break;
-          case 'Escape':
+          case "Escape":
             e.preventDefault();
             closeDropdown();
             break;
-          case 'Tab':
+          case "Tab":
             closeDropdown();
             break;
         }
       });
 
       // Close on click outside
-      document.addEventListener('click', (e) => {
+      document.addEventListener("click", (e) => {
         if (!dropdown.contains(e.target as Node) && !content.hidden) {
           closeDropdown();
         }
       });
 
-      // Handle item clicks (unless keepOpen is set)
-      const keepOpen = dropdown.hasAttribute('data-keep-open');
-      if (!keepOpen) {
-        content.querySelectorAll('[data-dropdown-item]').forEach((item) => {
-          item.addEventListener('click', () => {
-            closeDropdown();
-          });
+      // Handle item clicks
+      content.querySelectorAll('[data-dropdown-item]').forEach((item) => {
+        item.addEventListener('click', () => {
+          closeDropdown();
         });
-      }
+      });
     });
   }
 
   initDropdowns();
-  document.addEventListener('astro:page-load', initDropdowns);
+  document.addEventListener("astro:page-load", initDropdowns);
 </script>
