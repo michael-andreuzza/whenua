@@ -28,11 +28,15 @@ const classes = cn('w-full', className);
       accordion.setAttribute('data-initialized', 'true');
 
       const type = accordion.getAttribute('data-type');
-      const items = accordion.querySelectorAll('[data-accordion-item]');
+      
+      // Only select direct accordion items (not nested ones)
+      const items = Array.from(accordion.querySelectorAll('[data-accordion-item]')).filter(
+        (item) => item.closest('[data-accordion]') === accordion
+      );
 
       items.forEach((item) => {
-        const trigger = item.querySelector('[data-accordion-trigger]') as HTMLElement;
-        const content = item.querySelector('[data-accordion-content]') as HTMLElement;
+        const trigger = item.querySelector(':scope > [data-accordion-trigger]') as HTMLElement;
+        const content = item.querySelector(':scope > [data-accordion-content]') as HTMLElement;
 
         if (!trigger || !content) return;
 
@@ -48,22 +52,28 @@ const classes = cn('w-full', className);
         content.setAttribute('aria-labelledby', trigger.id);
       });
 
-      const triggers = Array.from(accordion.querySelectorAll('[data-accordion-trigger]')) as HTMLElement[];
+      // Only select triggers that belong directly to this accordion
+      const triggers = Array.from(accordion.querySelectorAll('[data-accordion-trigger]')).filter(
+        (trigger) => trigger.closest('[data-accordion]') === accordion
+      ) as HTMLElement[];
 
       triggers.forEach((trigger) => {
-        trigger.addEventListener('click', () => {
+        trigger.addEventListener('click', (e) => {
+          // Prevent event from bubbling to parent accordions
+          e.stopPropagation();
+          
           const item = trigger.closest('[data-accordion-item]');
-          const content = item?.querySelector('[data-accordion-content]') as HTMLElement;
+          const content = item?.querySelector(':scope > [data-accordion-content]') as HTMLElement;
           const isOpen = trigger.getAttribute('data-state') === 'open';
 
           if (type === 'single') {
-            // Close all other items
+            // Close all other items in THIS accordion only
             triggers.forEach((t) => {
               if (t !== trigger) {
                 t.setAttribute('data-state', 'closed');
                 t.setAttribute('aria-expanded', 'false');
                 const otherItem = t.closest('[data-accordion-item]');
-                const otherContent = otherItem?.querySelector('[data-accordion-content]') as HTMLElement;
+                const otherContent = otherItem?.querySelector(':scope > [data-accordion-content]') as HTMLElement;
                 if (otherContent) {
                   otherContent.setAttribute('data-state', 'closed');
                   otherContent.hidden = true;

@@ -14,6 +14,19 @@ import Accordion from "@/components/ui/accordion/Accordion.astro";
 import AccordionItem from "@/components/ui/accordion/AccordionItem.astro";
 import AccordionTrigger from "@/components/ui/accordion/AccordionTrigger.astro";
 import AccordionContent from "@/components/ui/accordion/AccordionContent.astro";
+import Badge from "@/components/ui/badge/Badge.astro";
+import Button from "@/components/ui/button/Button.astro";
+import User from "@lucide/astro/icons/user";
+import CreditCard from "@lucide/astro/icons/credit-card";
+import Bell from "@lucide/astro/icons/bell";
+import Settings from "@lucide/astro/icons/settings";
+import Shield from "@lucide/astro/icons/shield";
+import Plus from "@lucide/astro/icons/plus";
+import Minus from "@lucide/astro/icons/minus";
+import Mail from "@lucide/astro/icons/mail";
+import Phone from "@lucide/astro/icons/phone";
+import MapPin from "@lucide/astro/icons/map-pin";
+import Clock from "@lucide/astro/icons/clock";
 
 <ComponentPreview>
   <Fragment slot="code">
@@ -91,49 +104,6 @@ import {
 
 <div class="space-y-4">
 <Prose>
-#### Single
-
-Only one item can be open at a time. Opening a new item automatically closes the previous one.
-</Prose>
-
-<ComponentPreview>
-  <Fragment slot="code">
-```html
-<Accordion type="single">
-  <AccordionItem value="item-1">
-    <AccordionTrigger>What is your refund policy?</AccordionTrigger>
-    <AccordionContent>We offer a 30-day money-back guarantee on all purchases.</AccordionContent>
-  </AccordionItem>
-  <AccordionItem value="item-2">
-    <AccordionTrigger>How do I contact support?</AccordionTrigger>
-    <AccordionContent>You can reach us via email at support@example.com.</AccordionContent>
-  </AccordionItem>
-  <AccordionItem value="item-3">
-    <AccordionTrigger>Do you offer discounts?</AccordionTrigger>
-    <AccordionContent>Yes, we offer seasonal promotions and bulk discounts.</AccordionContent>
-  </AccordionItem>
-</Accordion>
-```
-  </Fragment>
-  <Accordion type="single" class="w-full">
-    <AccordionItem value="item-1">
-      <AccordionTrigger>What is your refund policy?</AccordionTrigger>
-      <AccordionContent>We offer a 30-day money-back guarantee on all purchases.</AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="item-2">
-      <AccordionTrigger>How do I contact support?</AccordionTrigger>
-      <AccordionContent>You can reach us via email at support@example.com.</AccordionContent>
-    </AccordionItem>
-    <AccordionItem value="item-3">
-      <AccordionTrigger>Do you offer discounts?</AccordionTrigger>
-      <AccordionContent>Yes, we offer seasonal promotions and bulk discounts.</AccordionContent>
-    </AccordionItem>
-  </Accordion>
-</ComponentPreview>
-</div>
-
-<div class="space-y-4">
-<Prose>
 #### Multiple
 
 Multiple items can be open simultaneously. Useful when users may need to compare content across sections.
@@ -170,6 +140,698 @@ Multiple items can be open simultaneously. Useful when users may need to compare
     <AccordionItem value="item-3">
       <AccordionTrigger>Payment Method</AccordionTrigger>
       <AccordionContent>Credit card or PayPal account information.</AccordionContent>
+    </AccordionItem>
+  </Accordion>
+</ComponentPreview>
+</div>
+
+<div class="space-y-4">
+<Prose>
+#### With Icon
+
+Add icons to accordion triggers to provide visual context for each section.
+</Prose>
+
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Accordion type="single">
+  <AccordionItem value="profile">
+    <AccordionTrigger>
+      <span class="flex items-center gap-2">
+        <User class="size-4" />
+        Profile Settings
+      </span>
+    </AccordionTrigger>
+    <AccordionContent>
+      Manage your profile information, avatar, and display name.
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="billing">
+    <AccordionTrigger>
+      <span class="flex items-center gap-2">
+        <CreditCard class="size-4" />
+        Billing
+      </span>
+    </AccordionTrigger>
+    <AccordionContent>
+      View and manage your billing information and payment methods.
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="notifications">
+    <AccordionTrigger>
+      <span class="flex items-center gap-2">
+        <Bell class="size-4" />
+        Notifications
+      </span>
+    </AccordionTrigger>
+    <AccordionContent>
+      Configure how and when you receive notifications.
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+```
+  </Fragment>
+  <Accordion type="single" class="w-full">
+    <AccordionItem value="profile">
+      <AccordionTrigger>
+        <span class="flex items-center gap-2">
+          <User class="size-4" />
+          Profile Settings
+        </span>
+      </AccordionTrigger>
+      <AccordionContent>
+        Manage your profile information, avatar, and display name.
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="billing">
+      <AccordionTrigger>
+        <span class="flex items-center gap-2">
+          <CreditCard class="size-4" />
+          Billing
+        </span>
+      </AccordionTrigger>
+      <AccordionContent>
+        View and manage your billing information and payment methods.
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="notifications">
+      <AccordionTrigger>
+        <span class="flex items-center gap-2">
+          <Bell class="size-4" />
+          Notifications
+        </span>
+      </AccordionTrigger>
+      <AccordionContent>
+        Configure how and when you receive notifications.
+      </AccordionContent>
+    </AccordionItem>
+  </Accordion>
+</ComponentPreview>
+</div>
+
+<div class="space-y-4">
+<Prose>
+#### With Description
+
+Add a subtitle or description below the main trigger text for additional context.
+</Prose>
+
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Accordion type="single">
+  <AccordionItem value="account">
+    <AccordionTrigger>
+      <div class="flex flex-col items-start gap-1">
+        <span>Account</span>
+        <span class="text-sm text-muted-foreground font-normal">
+          Manage your account settings
+        </span>
+      </div>
+    </AccordionTrigger>
+    <AccordionContent>
+      Update your username, email, and password.
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="privacy">
+    <AccordionTrigger>
+      <div class="flex flex-col items-start gap-1">
+        <span>Privacy</span>
+        <span class="text-sm text-muted-foreground font-normal">
+          Control your privacy preferences
+        </span>
+      </div>
+    </AccordionTrigger>
+    <AccordionContent>
+      Manage who can see your profile and activity.
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="security">
+    <AccordionTrigger>
+      <div class="flex flex-col items-start gap-1">
+        <span>Security</span>
+        <span class="text-sm text-muted-foreground font-normal">
+          Protect your account
+        </span>
+      </div>
+    </AccordionTrigger>
+    <AccordionContent>
+      Enable two-factor authentication and manage sessions.
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+```
+  </Fragment>
+  <Accordion type="single" class="w-full">
+    <AccordionItem value="account">
+      <AccordionTrigger>
+        <div class="flex flex-col items-start gap-1">
+          <span>Account</span>
+          <span class="text-sm text-muted-foreground font-normal">
+            Manage your account settings
+          </span>
+        </div>
+      </AccordionTrigger>
+      <AccordionContent>
+        Update your username, email, and password.
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="privacy">
+      <AccordionTrigger>
+        <div class="flex flex-col items-start gap-1">
+          <span>Privacy</span>
+          <span class="text-sm text-muted-foreground font-normal">
+            Control your privacy preferences
+          </span>
+        </div>
+      </AccordionTrigger>
+      <AccordionContent>
+        Manage who can see your profile and activity.
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="security">
+      <AccordionTrigger>
+        <div class="flex flex-col items-start gap-1">
+          <span>Security</span>
+          <span class="text-sm text-muted-foreground font-normal">
+            Protect your account
+          </span>
+        </div>
+      </AccordionTrigger>
+      <AccordionContent>
+        Enable two-factor authentication and manage sessions.
+      </AccordionContent>
+    </AccordionItem>
+  </Accordion>
+</ComponentPreview>
+</div>
+
+<div class="space-y-4">
+<Prose>
+#### With Icon and Description
+
+Combine icons with descriptions for a rich, informative accordion header.
+</Prose>
+
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Accordion type="single">
+  <AccordionItem value="profile">
+    <AccordionTrigger>
+      <div class="flex items-start gap-3">
+        <User class="size-5 mt-0.5 text-muted-foreground" />
+        <div class="flex flex-col items-start gap-1">
+          <span>Profile</span>
+          <span class="text-sm text-muted-foreground font-normal">
+            Your personal information
+          </span>
+        </div>
+      </div>
+    </AccordionTrigger>
+    <AccordionContent>
+      Update your name, bio, and profile picture.
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="security">
+    <AccordionTrigger>
+      <div class="flex items-start gap-3">
+        <Shield class="size-5 mt-0.5 text-muted-foreground" />
+        <div class="flex flex-col items-start gap-1">
+          <span>Security</span>
+          <span class="text-sm text-muted-foreground font-normal">
+            Password and authentication
+          </span>
+        </div>
+      </div>
+    </AccordionTrigger>
+    <AccordionContent>
+      Change your password and enable 2FA.
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="notifications">
+    <AccordionTrigger>
+      <div class="flex items-start gap-3">
+        <Bell class="size-5 mt-0.5 text-muted-foreground" />
+        <div class="flex flex-col items-start gap-1">
+          <span>Notifications</span>
+          <span class="text-sm text-muted-foreground font-normal">
+            Email and push alerts
+          </span>
+        </div>
+      </div>
+    </AccordionTrigger>
+    <AccordionContent>
+      Choose what notifications you want to receive.
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+```
+  </Fragment>
+  <Accordion type="single" class="w-full">
+    <AccordionItem value="profile">
+      <AccordionTrigger>
+        <div class="flex items-start gap-3">
+          <User class="size-5 mt-0.5 text-muted-foreground" />
+          <div class="flex flex-col items-start gap-1">
+            <span>Profile</span>
+            <span class="text-sm text-muted-foreground font-normal">
+              Your personal information
+            </span>
+          </div>
+        </div>
+      </AccordionTrigger>
+      <AccordionContent>
+        Update your name, bio, and profile picture.
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="security">
+      <AccordionTrigger>
+        <div class="flex items-start gap-3">
+          <Shield class="size-5 mt-0.5 text-muted-foreground" />
+          <div class="flex flex-col items-start gap-1">
+            <span>Security</span>
+            <span class="text-sm text-muted-foreground font-normal">
+              Password and authentication
+            </span>
+          </div>
+        </div>
+      </AccordionTrigger>
+      <AccordionContent>
+        Change your password and enable 2FA.
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="notifications">
+      <AccordionTrigger>
+        <div class="flex items-start gap-3">
+          <Bell class="size-5 mt-0.5 text-muted-foreground" />
+          <div class="flex flex-col items-start gap-1">
+            <span>Notifications</span>
+            <span class="text-sm text-muted-foreground font-normal">
+              Email and push alerts
+            </span>
+          </div>
+        </div>
+      </AccordionTrigger>
+      <AccordionContent>
+        Choose what notifications you want to receive.
+      </AccordionContent>
+    </AccordionItem>
+  </Accordion>
+</ComponentPreview>
+</div>
+
+<div class="space-y-4">
+<Prose>
+#### Nested Accordions
+
+Accordions can be nested inside each other for hierarchical content organization.
+</Prose>
+
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Accordion type="single">
+  <AccordionItem value="general">
+    <AccordionTrigger>
+      <span class="flex items-center gap-2">
+        <Settings class="size-4" />
+        General Settings
+      </span>
+    </AccordionTrigger>
+    <AccordionContent>
+      <Accordion type="single" class="border-l pl-4">
+        <AccordionItem value="language">
+          <AccordionTrigger>Language</AccordionTrigger>
+          <AccordionContent>
+            Select your preferred language for the interface.
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="timezone">
+          <AccordionTrigger>Timezone</AccordionTrigger>
+          <AccordionContent>
+            Set your local timezone for accurate timestamps.
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="notifications">
+    <AccordionTrigger>
+      <span class="flex items-center gap-2">
+        <Bell class="size-4" />
+        Notification Preferences
+      </span>
+    </AccordionTrigger>
+    <AccordionContent>
+      <Accordion type="single" class="border-l pl-4">
+        <AccordionItem value="email">
+          <AccordionTrigger>Email Notifications</AccordionTrigger>
+          <AccordionContent>
+            Configure which emails you want to receive.
+          </AccordionContent>
+        </AccordionItem>
+        <AccordionItem value="push">
+          <AccordionTrigger>Push Notifications</AccordionTrigger>
+          <AccordionContent>
+            Manage browser and mobile push alerts.
+          </AccordionContent>
+        </AccordionItem>
+      </Accordion>
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+```
+  </Fragment>
+  <Accordion type="single" class="w-full">
+    <AccordionItem value="general">
+      <AccordionTrigger>
+        <span class="flex items-center gap-2">
+          <Settings class="size-4" />
+          General Settings
+        </span>
+      </AccordionTrigger>
+      <AccordionContent>
+        <Accordion type="single" class="border-l pl-4">
+          <AccordionItem value="language">
+            <AccordionTrigger>Language</AccordionTrigger>
+            <AccordionContent>
+              Select your preferred language for the interface.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="timezone">
+            <AccordionTrigger>Timezone</AccordionTrigger>
+            <AccordionContent>
+              Set your local timezone for accurate timestamps.
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="notifications">
+      <AccordionTrigger>
+        <span class="flex items-center gap-2">
+          <Bell class="size-4" />
+          Notification Preferences
+        </span>
+      </AccordionTrigger>
+      <AccordionContent>
+        <Accordion type="single" class="border-l pl-4">
+          <AccordionItem value="email">
+            <AccordionTrigger>Email Notifications</AccordionTrigger>
+            <AccordionContent>
+              Configure which emails you want to receive.
+            </AccordionContent>
+          </AccordionItem>
+          <AccordionItem value="push">
+            <AccordionTrigger>Push Notifications</AccordionTrigger>
+            <AccordionContent>
+              Manage browser and mobile push alerts.
+            </AccordionContent>
+          </AccordionItem>
+        </Accordion>
+      </AccordionContent>
+    </AccordionItem>
+  </Accordion>
+</ComponentPreview>
+</div>
+
+<div class="space-y-4">
+<Prose>
+#### Rich Content
+
+Accordion content can contain any elements including lists, badges, buttons, and more.
+</Prose>
+
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Accordion type="single">
+  <AccordionItem value="contact">
+    <AccordionTrigger>Contact Information</AccordionTrigger>
+    <AccordionContent>
+      <div class="space-y-3">
+        <div class="flex items-center gap-2 text-sm">
+          <Mail class="size-4 text-muted-foreground" />
+          <span>support@example.com</span>
+        </div>
+        <div class="flex items-center gap-2 text-sm">
+          <Phone class="size-4 text-muted-foreground" />
+          <span>+1 (555) 123-4567</span>
+        </div>
+        <div class="flex items-center gap-2 text-sm">
+          <MapPin class="size-4 text-muted-foreground" />
+          <span>123 Main St, City, Country</span>
+        </div>
+      </div>
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="hours">
+    <AccordionTrigger>Business Hours</AccordionTrigger>
+    <AccordionContent>
+      <div class="space-y-2">
+        <div class="flex items-center justify-between text-sm">
+          <span>Monday - Friday</span>
+          <Badge variant="outline">9:00 AM - 6:00 PM</Badge>
+        </div>
+        <div class="flex items-center justify-between text-sm">
+          <span>Saturday</span>
+          <Badge variant="outline">10:00 AM - 4:00 PM</Badge>
+        </div>
+        <div class="flex items-center justify-between text-sm">
+          <span>Sunday</span>
+          <Badge variant="secondary">Closed</Badge>
+        </div>
+      </div>
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="actions">
+    <AccordionTrigger>Quick Actions</AccordionTrigger>
+    <AccordionContent>
+      <div class="flex flex-wrap gap-2">
+        <Button size="sm">Schedule a Call</Button>
+        <Button size="sm" variant="outline">Send Message</Button>
+        <Button size="sm" variant="secondary">View FAQ</Button>
+      </div>
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+```
+  </Fragment>
+  <Accordion type="single" class="w-full">
+    <AccordionItem value="contact">
+      <AccordionTrigger>Contact Information</AccordionTrigger>
+      <AccordionContent>
+        <div class="space-y-3">
+          <div class="flex items-center gap-2 text-sm">
+            <Mail class="size-4 text-muted-foreground" />
+            <span>support@example.com</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm">
+            <Phone class="size-4 text-muted-foreground" />
+            <span>+1 (555) 123-4567</span>
+          </div>
+          <div class="flex items-center gap-2 text-sm">
+            <MapPin class="size-4 text-muted-foreground" />
+            <span>123 Main St, City, Country</span>
+          </div>
+        </div>
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="hours">
+      <AccordionTrigger>Business Hours</AccordionTrigger>
+      <AccordionContent>
+        <div class="space-y-2">
+          <div class="flex items-center justify-between text-sm">
+            <span>Monday - Friday</span>
+            <Badge variant="outline">9:00 AM - 6:00 PM</Badge>
+          </div>
+          <div class="flex items-center justify-between text-sm">
+            <span>Saturday</span>
+            <Badge variant="outline">10:00 AM - 4:00 PM</Badge>
+          </div>
+          <div class="flex items-center justify-between text-sm">
+            <span>Sunday</span>
+            <Badge variant="secondary">Closed</Badge>
+          </div>
+        </div>
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="actions">
+      <AccordionTrigger>Quick Actions</AccordionTrigger>
+      <AccordionContent>
+        <div class="flex flex-wrap gap-2">
+          <Button size="sm">Schedule a Call</Button>
+          <Button size="sm" variant="outline">Send Message</Button>
+          <Button size="sm" variant="secondary">View FAQ</Button>
+        </div>
+      </AccordionContent>
+    </AccordionItem>
+  </Accordion>
+</ComponentPreview>
+</div>
+
+<div class="space-y-4">
+<Prose>
+#### Borderless
+
+Remove borders for a cleaner, minimal look.
+</Prose>
+
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Accordion type="single">
+  <AccordionItem value="item-1" class="border-none">
+    <AccordionTrigger>What is your return policy?</AccordionTrigger>
+    <AccordionContent>
+      We accept returns within 30 days of purchase.
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-2" class="border-none">
+    <AccordionTrigger>How long does shipping take?</AccordionTrigger>
+    <AccordionContent>
+      Standard shipping takes 5-7 business days.
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-3" class="border-none">
+    <AccordionTrigger>Do you ship internationally?</AccordionTrigger>
+    <AccordionContent>
+      Yes, we ship to over 50 countries worldwide.
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+```
+  </Fragment>
+  <Accordion type="single" class="w-full">
+    <AccordionItem value="item-1" class="border-none">
+      <AccordionTrigger>What is your return policy?</AccordionTrigger>
+      <AccordionContent>
+        We accept returns within 30 days of purchase.
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2" class="border-none">
+      <AccordionTrigger>How long does shipping take?</AccordionTrigger>
+      <AccordionContent>
+        Standard shipping takes 5-7 business days.
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3" class="border-none">
+      <AccordionTrigger>Do you ship internationally?</AccordionTrigger>
+      <AccordionContent>
+        Yes, we ship to over 50 countries worldwide.
+      </AccordionContent>
+    </AccordionItem>
+  </Accordion>
+</ComponentPreview>
+</div>
+
+<div class="space-y-4">
+<Prose>
+#### Grouped
+
+Wrap accordion items in a bordered container for a unified, grouped appearance.
+</Prose>
+
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Accordion type="single" class="border rounded-lg">
+  <AccordionItem value="item-1" class="border-b last:border-b-0 px-4">
+    <AccordionTrigger>First Accordion</AccordionTrigger>
+    <AccordionContent>
+      Content for the first accordion item.
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-2" class="border-b last:border-b-0 px-4">
+    <AccordionTrigger>Second Accordion</AccordionTrigger>
+    <AccordionContent>
+      Content for the second accordion item.
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-3" class="border-b last:border-b-0 px-4">
+    <AccordionTrigger>Third Accordion</AccordionTrigger>
+    <AccordionContent>
+      Content for the third accordion item.
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+```
+  </Fragment>
+  <Accordion type="single" class="w-full border rounded-lg">
+    <AccordionItem value="item-1" class="border-b last:border-b-0 px-4">
+      <AccordionTrigger>First Accordion</AccordionTrigger>
+      <AccordionContent>
+        Content for the first accordion item.
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2" class="border-b last:border-b-0 px-4">
+      <AccordionTrigger>Second Accordion</AccordionTrigger>
+      <AccordionContent>
+        Content for the second accordion item.
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3" class="border-b last:border-b-0 px-4">
+      <AccordionTrigger>Third Accordion</AccordionTrigger>
+      <AccordionContent>
+        Content for the third accordion item.
+      </AccordionContent>
+    </AccordionItem>
+  </Accordion>
+</ComponentPreview>
+</div>
+
+<div class="space-y-4">
+<Prose>
+#### Card Style
+
+Style accordion items as separate cards with rounded corners and background.
+</Prose>
+
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Accordion type="single" class="space-y-2">
+  <AccordionItem value="item-1" class="border rounded-lg px-4">
+    <AccordionTrigger>Getting Started</AccordionTrigger>
+    <AccordionContent>
+      Follow our quick start guide to set up your first project.
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-2" class="border rounded-lg px-4">
+    <AccordionTrigger>Configuration</AccordionTrigger>
+    <AccordionContent>
+      Learn how to customize settings to fit your needs.
+    </AccordionContent>
+  </AccordionItem>
+  <AccordionItem value="item-3" class="border rounded-lg px-4">
+    <AccordionTrigger>Advanced Usage</AccordionTrigger>
+    <AccordionContent>
+      Explore advanced features and integrations.
+    </AccordionContent>
+  </AccordionItem>
+</Accordion>
+```
+  </Fragment>
+  <Accordion type="single" class="w-full space-y-2">
+    <AccordionItem value="item-1" class="border rounded-lg px-4">
+      <AccordionTrigger>Getting Started</AccordionTrigger>
+      <AccordionContent>
+        Follow our quick start guide to set up your first project.
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-2" class="border rounded-lg px-4">
+      <AccordionTrigger>Configuration</AccordionTrigger>
+      <AccordionContent>
+        Learn how to customize settings to fit your needs.
+      </AccordionContent>
+    </AccordionItem>
+    <AccordionItem value="item-3" class="border rounded-lg px-4">
+      <AccordionTrigger>Advanced Usage</AccordionTrigger>
+      <AccordionContent>
+        Explore advanced features and integrations.
+      </AccordionContent>
     </AccordionItem>
   </Accordion>
 </ComponentPreview>

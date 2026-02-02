@@ -46,7 +46,7 @@ const { contentId = "docs-content" } = Astro.props;
     const content = document.getElementById(contentId);
     if (!content) return;
 
-    const headings = content.querySelectorAll("h2, h3");
+    const headings = content.querySelectorAll("h2, h3, h4");
     if (headings.length === 0) {
       toc.innerHTML =
         '<p class="text-muted-foreground text-sm">No sections</p>';
