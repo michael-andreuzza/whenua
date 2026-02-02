@@ -13,10 +13,15 @@ import Prose from "@/components/docs/Prose.astro";
 import Checkbox from "@/components/ui/checkbox/Checkbox.astro";
 import Label from "@/components/ui/label/Label.astro";
 
-<ComponentPreview code={`<div class="flex items-center gap-2">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex items-center gap-2">
   <Checkbox id="terms" />
   <Label for="terms">Accept terms and conditions</Label>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex items-center gap-2">
     <Checkbox id="terms" />
     <Label for="terms">Accept terms and conditions</Label>
@@ -55,10 +60,15 @@ import { Checkbox } from "@/components/bearnie/checkbox"
 #### Checked
 </Prose>
 
-<ComponentPreview code={`<div class="flex items-center gap-2">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex items-center gap-2">
   <Checkbox id="checked" checked />
   <Label for="checked">Checked by default</Label>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex items-center gap-2">
     <Checkbox id="checked" checked />
     <Label for="checked">Checked by default</Label>
@@ -71,10 +81,15 @@ import { Checkbox } from "@/components/bearnie/checkbox"
 #### Disabled
 </Prose>
 
-<ComponentPreview code={`<div class="flex items-center gap-2">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex items-center gap-2">
   <Checkbox id="disabled" disabled />
   <Label for="disabled" class="opacity-50">Disabled checkbox</Label>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex items-center gap-2">
     <Checkbox id="disabled" disabled />
     <Label for="disabled" class="opacity-50">Disabled checkbox</Label>
@@ -87,13 +102,18 @@ import { Checkbox } from "@/components/bearnie/checkbox"
 #### With description
 </Prose>
 
-<ComponentPreview code={`<div class="flex items-start gap-2">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex items-start gap-2">
   <Checkbox id="emails" class="mt-1" />
   <div class="grid gap-1">
     <Label for="emails">Marketing emails</Label>
     <p class="text-sm text-muted-foreground">Receive emails about new products and features.</p>
   </div>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex items-start gap-2">
     <Checkbox id="emails" class="mt-1" />
     <div class="grid gap-1">

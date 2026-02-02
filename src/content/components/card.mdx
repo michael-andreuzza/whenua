@@ -23,7 +23,10 @@ import Label from "@/components/ui/label/Label.astro";
 import Badge from "@/components/ui/badge/Badge.astro";
 import Switch from "@/components/ui/switch/Switch.astro";
 
-<ComponentPreview code={`<Card class="w-[380px]">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Card class="w-[380px]">
   <CardHeader>
     <CardTitle>Notifications</CardTitle>
     <CardDescription>Manage your notification preferences.</CardDescription>
@@ -47,7 +50,9 @@ import Switch from "@/components/ui/switch/Switch.astro";
   <CardFooter>
     <Button class="w-full">Save preferences</Button>
   </CardFooter>
-</Card>`}>
+</Card>
+```
+  </Fragment>
   <Card class="w-[380px]">
     <CardHeader>
       <CardTitle>Notifications</CardTitle>
@@ -129,7 +134,10 @@ import {
 Use the `CardAction` component to add an action in the header.
 </Prose>
 
-<ComponentPreview code={`<Card class="w-[380px]">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Card class="w-[380px]">
   <CardHeader>
     <CardTitle>Team members</CardTitle>
     <CardDescription>Invite your team to collaborate.</CardDescription>
@@ -157,7 +165,9 @@ Use the `CardAction` component to add an action in the header.
       </div>
     </div>
   </CardContent>
-</Card>`}>
+</Card>
+```
+  </Fragment>
   <Card class="w-[380px]">
     <CardHeader>
       <CardTitle>Team members</CardTitle>
@@ -197,7 +207,10 @@ Use the `CardAction` component to add an action in the header.
 Use `size="sm"` for smaller padding.
 </Prose>
 
-<ComponentPreview code={`<Card size="sm" class="w-[320px]">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Card size="sm" class="w-[320px]">
   <CardHeader>
     <CardTitle>Quick note</CardTitle>
     <CardDescription>Add a quick note to your project.</CardDescription>
@@ -209,7 +222,9 @@ Use `size="sm"` for smaller padding.
     <Button size="sm" variant="outline">Cancel</Button>
     <Button size="sm">Save</Button>
   </CardFooter>
-</Card>`}>
+</Card>
+```
+  </Fragment>
   <Card size="sm" class="w-[320px]">
     <CardHeader>
       <CardTitle>Quick note</CardTitle>
@@ -231,7 +246,10 @@ Use `size="sm"` for smaller padding.
 #### With form
 </Prose>
 
-<ComponentPreview code={`<Card class="w-[380px]">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Card class="w-[380px]">
   <CardHeader>
     <CardTitle>Create project</CardTitle>
     <CardDescription>Deploy your new project in one-click.</CardDescription>
@@ -252,7 +270,9 @@ Use `size="sm"` for smaller padding.
     <Button variant="outline">Cancel</Button>
     <Button>Create</Button>
   </CardFooter>
-</Card>`}>
+</Card>
+```
+  </Fragment>
   <Card class="w-[380px]">
     <CardHeader>
       <CardTitle>Create project</CardTitle>

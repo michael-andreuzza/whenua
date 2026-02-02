@@ -19,7 +19,10 @@ import AlignLeft from "@lucide/astro/icons/align-start-horizontal";
 import AlignCenter from "@lucide/astro/icons/align-center-horizontal";
 import AlignRight from "@lucide/astro/icons/align-end-horizontal";
 
-<ComponentPreview code={`<ToggleGroup type="single" defaultValue="center">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<ToggleGroup type="single" defaultValue="center">
   <ToggleGroupItem value="left" aria-label="Align left">
     <AlignLeft class="size-4" />
   </ToggleGroupItem>
@@ -29,7 +32,9 @@ import AlignRight from "@lucide/astro/icons/align-end-horizontal";
   <ToggleGroupItem value="right" aria-label="Align right">
     <AlignRight class="size-4" />
   </ToggleGroupItem>
-</ToggleGroup>`}>
+</ToggleGroup>
+```
+  </Fragment>
   <ToggleGroup type="single" defaultValue="center">
     <ToggleGroupItem value="left" aria-label="Align left">
       <AlignLeft class="size-4" />
@@ -79,7 +84,10 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/bearnie/toggle"
 #### Outline
 </Prose>
 
-<ComponentPreview code={`<ToggleGroup type="single" variant="outline">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<ToggleGroup type="single" variant="outline">
   <ToggleGroupItem value="left" aria-label="Align left">
     <AlignLeft class="size-4" />
   </ToggleGroupItem>
@@ -89,7 +97,9 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/bearnie/toggle"
   <ToggleGroupItem value="right" aria-label="Align right">
     <AlignRight class="size-4" />
   </ToggleGroupItem>
-</ToggleGroup>`}>
+</ToggleGroup>
+```
+  </Fragment>
   <ToggleGroup type="single" variant="outline">
     <ToggleGroupItem value="left" aria-label="Align left">
       <AlignLeft class="size-4" />
@@ -109,7 +119,10 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/bearnie/toggle"
 #### Multiple
 </Prose>
 
-<ComponentPreview code={`<ToggleGroup type="multiple" defaultValue="bold,italic">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<ToggleGroup type="multiple" defaultValue="bold,italic">
   <ToggleGroupItem value="bold" aria-label="Toggle bold">
     <Bold class="size-4" />
   </ToggleGroupItem>
@@ -119,7 +132,9 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/bearnie/toggle"
   <ToggleGroupItem value="underline" aria-label="Toggle underline">
     <Underline class="size-4" />
   </ToggleGroupItem>
-</ToggleGroup>`}>
+</ToggleGroup>
+```
+  </Fragment>
   <ToggleGroup type="multiple" defaultValue="bold,italic">
     <ToggleGroupItem value="bold" aria-label="Toggle bold">
       <Bold class="size-4" />
@@ -139,7 +154,10 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/bearnie/toggle"
 #### Sizes
 </Prose>
 
-<ComponentPreview code={`<div class="flex flex-col items-start gap-4">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex flex-col items-start gap-4">
   <ToggleGroup type="single" size="sm">
     <ToggleGroupItem value="left" aria-label="Align left">
       <AlignLeft class="size-4" />
@@ -173,7 +191,9 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/bearnie/toggle"
       <AlignRight class="size-4" />
     </ToggleGroupItem>
   </ToggleGroup>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex flex-col items-start gap-4">
     <ToggleGroup type="single" size="sm">
       <ToggleGroupItem value="left" aria-label="Align left">
@@ -217,7 +237,10 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/bearnie/toggle"
 #### Vertical
 </Prose>
 
-<ComponentPreview code={`<ToggleGroup type="single" orientation="vertical" defaultValue="center">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<ToggleGroup type="single" orientation="vertical" defaultValue="center">
   <ToggleGroupItem value="left" aria-label="Align left">
     <AlignLeft class="size-4" />
   </ToggleGroupItem>
@@ -227,7 +250,9 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/bearnie/toggle"
   <ToggleGroupItem value="right" aria-label="Align right">
     <AlignRight class="size-4" />
   </ToggleGroupItem>
-</ToggleGroup>`}>
+</ToggleGroup>
+```
+  </Fragment>
   <ToggleGroup type="single" orientation="vertical" defaultValue="center">
     <ToggleGroupItem value="left" aria-label="Align left">
       <AlignLeft class="size-4" />
@@ -247,7 +272,10 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/bearnie/toggle"
 #### Disabled
 </Prose>
 
-<ComponentPreview code={`<ToggleGroup type="single" disabled>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<ToggleGroup type="single" disabled>
   <ToggleGroupItem value="left" aria-label="Align left">
     <AlignLeft class="size-4" />
   </ToggleGroupItem>
@@ -257,7 +285,9 @@ import { ToggleGroup, ToggleGroupItem } from "@/components/bearnie/toggle"
   <ToggleGroupItem value="right" aria-label="Align right">
     <AlignRight class="size-4" />
   </ToggleGroupItem>
-</ToggleGroup>`}>
+</ToggleGroup>
+```
+  </Fragment>
   <ToggleGroup type="single" disabled>
     <ToggleGroupItem value="left" aria-label="Align left">
       <AlignLeft class="size-4" />

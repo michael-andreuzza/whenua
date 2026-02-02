@@ -20,7 +20,10 @@ import TableCell from "@/components/ui/table/TableCell.astro";
 import TableCaption from "@/components/ui/table/TableCaption.astro";
 import Badge from "@/components/ui/badge/Badge.astro";
 
-<ComponentPreview code={`<Table>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Table>
   <TableHeader>
     <TableRow>
       <TableHead>Name</TableHead>
@@ -40,7 +43,9 @@ import Badge from "@/components/ui/badge/Badge.astro";
       <TableCell>User</TableCell>
     </TableRow>
   </TableBody>
-</Table>`}>
+</Table>
+```
+  </Fragment>
   <Table>
     <TableHeader>
       <TableRow>
@@ -114,7 +119,10 @@ import {
 #### With caption
 </Prose>
 
-<ComponentPreview code={`<Table>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Table>
   <TableCaption>A list of recent invoices.</TableCaption>
   <TableHeader>
     <TableRow>
@@ -135,7 +143,9 @@ import {
       <TableCell class="text-right">$150.00</TableCell>
     </TableRow>
   </TableBody>
-</Table>`}>
+</Table>
+```
+  </Fragment>
   <Table>
     <TableCaption>A list of recent invoices.</TableCaption>
     <TableHeader>
@@ -166,7 +176,10 @@ import {
 #### With footer
 </Prose>
 
-<ComponentPreview code={`<Table>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Table>
   <TableHeader>
     <TableRow>
       <TableHead>Item</TableHead>
@@ -189,7 +202,9 @@ import {
       <TableCell class="text-right">$150.00</TableCell>
     </TableRow>
   </TableFooter>
-</Table>`}>
+</Table>
+```
+  </Fragment>
   <Table>
     <TableHeader>
       <TableRow>
@@ -222,7 +237,10 @@ import {
 #### With badges
 </Prose>
 
-<ComponentPreview code={`<Table>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Table>
   <TableHeader>
     <TableRow>
       <TableHead>Name</TableHead>
@@ -242,7 +260,9 @@ import {
       <TableCell>User</TableCell>
     </TableRow>
   </TableBody>
-</Table>`}>
+</Table>
+```
+  </Fragment>
   <Table>
     <TableHeader>
       <TableRow>

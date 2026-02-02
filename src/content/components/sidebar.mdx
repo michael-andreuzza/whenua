@@ -26,56 +26,10 @@ import SidebarSeparator from "@/components/ui/sidebar/SidebarSeparator.astro";
 **Note:** The sidebar is hidden by default on mobile. View these examples on desktop or use the SidebarTrigger to toggle visibility.
 </Prose>
 
-<ComponentPreview fullWidth code={`<div class="flex h-[400px] w-full border rounded-lg overflow-hidden">
-  <Sidebar class="w-64 shrink-0">
-    <SidebarHeader>
-      <div class="flex items-center gap-2 px-2">
-        <div class="size-6 rounded-md bg-primary"></div>
-        <span class="font-semibold">Acme Inc</span>
-      </div>
-    </SidebarHeader>
-    <SidebarContent>
-      <SidebarGroup>
-        <SidebarGroupLabel>Application</SidebarGroupLabel>
-        <SidebarMenu>
-          <SidebarMenuItem>
-            <SidebarMenuButton href="#" isActive>
-              <span>Home</span>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-          <SidebarMenuItem>
-            <SidebarMenuButton href="#">
-              <span>Inbox</span>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-          <SidebarMenuItem>
-            <SidebarMenuButton href="#">
-              <span>Calendar</span>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-          <SidebarMenuItem>
-            <SidebarMenuButton href="#">
-              <span>Search</span>
-            </SidebarMenuButton>
-          </SidebarMenuItem>
-        </SidebarMenu>
-      </SidebarGroup>
-    </SidebarContent>
-    <SidebarFooter>
-      <SidebarMenu>
-        <SidebarMenuItem>
-          <SidebarMenuButton href="#">
-            <span>Settings</span>
-          </SidebarMenuButton>
-        </SidebarMenuItem>
-      </SidebarMenu>
-    </SidebarFooter>
-  </Sidebar>
-  <main class="flex-1 p-6 bg-muted/30">
-    <p class="text-sm text-muted-foreground">Main content area</p>
-  </main>
-</div>`}
-displayCode={`<Sidebar>
+<ComponentPreview fullWidth>
+  <Fragment slot="code">
+```html
+<Sidebar>
   <SidebarHeader>
     <div class="flex items-center gap-2 px-2">
       <div class="size-6 rounded-md bg-primary"></div>
@@ -108,7 +62,9 @@ displayCode={`<Sidebar>
       </SidebarMenuItem>
     </SidebarMenu>
   </SidebarFooter>
-</Sidebar>`}>
+</Sidebar>
+```
+  </Fragment>
   <div class="flex h-[400px] w-full border rounded-lg overflow-hidden">
     <Sidebar class="w-64 shrink-0">
       <SidebarHeader>

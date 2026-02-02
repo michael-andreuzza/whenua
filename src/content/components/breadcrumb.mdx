@@ -19,7 +19,10 @@ import BreadcrumbSeparator from "@/components/ui/breadcrumb/BreadcrumbSeparator.
 import BreadcrumbEllipsis from "@/components/ui/breadcrumb/BreadcrumbEllipsis.astro";
 import House from "@lucide/astro/icons/house";
 
-<ComponentPreview code={`<Breadcrumb>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Breadcrumb>
   <BreadcrumbList>
     <BreadcrumbItem>
       <BreadcrumbLink href="/">Home</BreadcrumbLink>
@@ -33,7 +36,9 @@ import House from "@lucide/astro/icons/house";
       <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
     </BreadcrumbItem>
   </BreadcrumbList>
-</Breadcrumb>`}>
+</Breadcrumb>
+```
+  </Fragment>
   <Breadcrumb>
     <BreadcrumbList>
       <BreadcrumbItem>
@@ -100,7 +105,10 @@ import {
 #### With icon
 </Prose>
 
-<ComponentPreview code={`<Breadcrumb>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Breadcrumb>
   <BreadcrumbList>
     <BreadcrumbItem>
       <BreadcrumbLink href="/">
@@ -116,7 +124,9 @@ import {
       <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
     </BreadcrumbItem>
   </BreadcrumbList>
-</Breadcrumb>`}>
+</Breadcrumb>
+```
+  </Fragment>
   <Breadcrumb>
     <BreadcrumbList>
       <BreadcrumbItem>
@@ -142,7 +152,10 @@ import {
 #### Collapsed
 </Prose>
 
-<ComponentPreview code={`<Breadcrumb>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Breadcrumb>
   <BreadcrumbList>
     <BreadcrumbItem>
       <BreadcrumbLink href="/">Home</BreadcrumbLink>
@@ -163,7 +176,9 @@ import {
       <BreadcrumbPage>Breadcrumb</BreadcrumbPage>
     </BreadcrumbItem>
   </BreadcrumbList>
-</Breadcrumb>`}>
+</Breadcrumb>
+```
+  </Fragment>
   <Breadcrumb>
     <BreadcrumbList>
       <BreadcrumbItem>

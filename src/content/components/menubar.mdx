@@ -26,7 +26,10 @@ import MenubarSub from "@/components/ui/menubar/MenubarSub.astro";
 import MenubarSubTrigger from "@/components/ui/menubar/MenubarSubTrigger.astro";
 import MenubarSubContent from "@/components/ui/menubar/MenubarSubContent.astro";
 
-<ComponentPreview code={`<Menubar>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Menubar>
   <MenubarMenu>
     <MenubarTrigger>File</MenubarTrigger>
     <MenubarContent>
@@ -74,7 +77,9 @@ import MenubarSubContent from "@/components/ui/menubar/MenubarSubContent.astro";
       <MenubarItem>Full Screen</MenubarItem>
     </MenubarContent>
   </MenubarMenu>
-</Menubar>`}>
+</Menubar>
+```
+  </Fragment>
   <Menubar>
     <MenubarMenu>
       <MenubarTrigger>File</MenubarTrigger>
@@ -180,7 +185,10 @@ import {
 Use `MenubarCheckboxItem` for toggleable options.
 </Prose>
 
-<ComponentPreview code={`<Menubar>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Menubar>
   <MenubarMenu>
     <MenubarTrigger>View</MenubarTrigger>
     <MenubarContent>
@@ -189,7 +197,9 @@ Use `MenubarCheckboxItem` for toggleable options.
       <MenubarCheckboxItem checked>Show Status Bar</MenubarCheckboxItem>
     </MenubarContent>
   </MenubarMenu>
-</Menubar>`}>
+</Menubar>
+```
+  </Fragment>
   <Menubar>
     <MenubarMenu>
       <MenubarTrigger>View</MenubarTrigger>
@@ -210,7 +220,10 @@ Use `MenubarCheckboxItem` for toggleable options.
 Use `MenubarRadioGroup` and `MenubarRadioItem` for single-select options.
 </Prose>
 
-<ComponentPreview code={`<Menubar>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Menubar>
   <MenubarMenu>
     <MenubarTrigger>Profiles</MenubarTrigger>
     <MenubarContent>
@@ -221,7 +234,9 @@ Use `MenubarRadioGroup` and `MenubarRadioItem` for single-select options.
       </MenubarRadioGroup>
     </MenubarContent>
   </MenubarMenu>
-</Menubar>`}>
+</Menubar>
+```
+  </Fragment>
   <Menubar>
     <MenubarMenu>
       <MenubarTrigger>Profiles</MenubarTrigger>
@@ -244,7 +259,10 @@ Use `MenubarRadioGroup` and `MenubarRadioItem` for single-select options.
 Use `MenubarSub`, `MenubarSubTrigger`, and `MenubarSubContent` for nested menus.
 </Prose>
 
-<ComponentPreview code={`<Menubar>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Menubar>
   <MenubarMenu>
     <MenubarTrigger>File</MenubarTrigger>
     <MenubarContent>
@@ -261,7 +279,9 @@ Use `MenubarSub`, `MenubarSubTrigger`, and `MenubarSubContent` for nested menus.
       <MenubarItem>Export</MenubarItem>
     </MenubarContent>
   </MenubarMenu>
-</Menubar>`}>
+</Menubar>
+```
+  </Fragment>
   <Menubar>
     <MenubarMenu>
       <MenubarTrigger>File</MenubarTrigger>

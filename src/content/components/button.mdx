@@ -15,7 +15,12 @@ import Mail from "@lucide/astro/icons/mail";
 import LoaderCircle from "@lucide/astro/icons/loader-circle";
 import ChevronRight from "@lucide/astro/icons/chevron-right";
 
-<ComponentPreview code={`<Button>Button</Button>`}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Button>Button</Button>
+```
+  </Fragment>
   <Button>Button</Button>
 </ComponentPreview>
 
@@ -51,7 +56,12 @@ import { Button } from "@/components/bearnie/button"
 #### Secondary
 </Prose>
 
-<ComponentPreview code={`<Button variant="secondary">Secondary</Button>`}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Button variant="secondary">Secondary</Button>
+```
+  </Fragment>
   <Button variant="secondary">Secondary</Button>
 </ComponentPreview>
 </div>
@@ -61,7 +71,12 @@ import { Button } from "@/components/bearnie/button"
 #### Outline
 </Prose>
 
-<ComponentPreview code={`<Button variant="outline">Outline</Button>`}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Button variant="outline">Outline</Button>
+```
+  </Fragment>
   <Button variant="outline">Outline</Button>
 </ComponentPreview>
 </div>
@@ -71,7 +86,12 @@ import { Button } from "@/components/bearnie/button"
 #### Ghost
 </Prose>
 
-<ComponentPreview code={`<Button variant="ghost">Ghost</Button>`}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Button variant="ghost">Ghost</Button>
+```
+  </Fragment>
   <Button variant="ghost">Ghost</Button>
 </ComponentPreview>
 </div>
@@ -81,7 +101,12 @@ import { Button } from "@/components/bearnie/button"
 #### Link
 </Prose>
 
-<ComponentPreview code={`<Button variant="link">Link</Button>`}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Button variant="link">Link</Button>
+```
+  </Fragment>
   <Button variant="link">Link</Button>
 </ComponentPreview>
 </div>
@@ -91,7 +116,12 @@ import { Button } from "@/components/bearnie/button"
 #### Destructive
 </Prose>
 
-<ComponentPreview code={`<Button variant="destructive">Destructive</Button>`}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Button variant="destructive">Destructive</Button>
+```
+  </Fragment>
   <Button variant="destructive">Destructive</Button>
 </ComponentPreview>
 </div>
@@ -101,7 +131,12 @@ import { Button } from "@/components/bearnie/button"
 #### Success
 </Prose>
 
-<ComponentPreview code={`<Button variant="success">Success</Button>`}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Button variant="success">Success</Button>
+```
+  </Fragment>
   <Button variant="success">Success</Button>
 </ComponentPreview>
 </div>
@@ -111,7 +146,12 @@ import { Button } from "@/components/bearnie/button"
 #### Warning
 </Prose>
 
-<ComponentPreview code={`<Button variant="warning">Warning</Button>`}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Button variant="warning">Warning</Button>
+```
+  </Fragment>
   <Button variant="warning">Warning</Button>
 </ComponentPreview>
 </div>
@@ -121,7 +161,12 @@ import { Button } from "@/components/bearnie/button"
 #### Info
 </Prose>
 
-<ComponentPreview code={`<Button variant="info">Info</Button>`}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Button variant="info">Info</Button>
+```
+  </Fragment>
   <Button variant="info">Info</Button>
 </ComponentPreview>
 </div>
@@ -131,10 +176,15 @@ import { Button } from "@/components/bearnie/button"
 #### With left icon
 </Prose>
 
-<ComponentPreview code={`<Button>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Button>
   <Mail slot="left-icon" />
   Login with Email
-</Button>`}>
+</Button>
+```
+  </Fragment>
   <Button>
     <Mail slot="left-icon" />
     Login with Email
@@ -147,10 +197,15 @@ import { Button } from "@/components/bearnie/button"
 #### With right icon
 </Prose>
 
-<ComponentPreview code={`<Button>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Button>
   Continue
   <ChevronRight slot="right-icon" />
-</Button>`}>
+</Button>
+```
+  </Fragment>
   <Button>
     Continue
     <ChevronRight slot="right-icon" />
@@ -163,9 +218,14 @@ import { Button } from "@/components/bearnie/button"
 #### Icon only
 </Prose>
 
-<ComponentPreview code={`<Button iconOnly variant="outline">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Button iconOnly variant="outline">
   <ChevronRight />
-</Button>`}>
+</Button>
+```
+  </Fragment>
   <Button iconOnly variant="outline">
     <ChevronRight />
   </Button>
@@ -177,10 +237,15 @@ import { Button } from "@/components/bearnie/button"
 #### Loading
 </Prose>
 
-<ComponentPreview code={`<Button disabled>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Button disabled>
   <LoaderCircle slot="left-icon" class="animate-spin" />
   Please wait
-</Button>`}>
+</Button>
+```
+  </Fragment>
   <Button disabled>
     <LoaderCircle slot="left-icon" class="animate-spin" />
     Please wait
@@ -193,13 +258,18 @@ import { Button } from "@/components/bearnie/button"
 #### Sizes
 </Prose>
 
-<ComponentPreview code={`<div class="flex items-center gap-2">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex items-center gap-2">
   <Button size="xs">Extra Small</Button>
   <Button size="sm">Small</Button>
   <Button size="default">Default</Button>
   <Button size="lg">Large</Button>
   <Button size="xl">Extra Large</Button>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex flex-wrap items-center gap-2">
     <Button size="xs">Extra Small</Button>
     <Button size="sm">Small</Button>
@@ -215,7 +285,12 @@ import { Button } from "@/components/bearnie/button"
 #### As link
 </Prose>
 
-<ComponentPreview code={`<Button href="/docs">Documentation</Button>`}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Button href="/docs">Documentation</Button>
+```
+  </Fragment>
   <Button href="/docs">Documentation</Button>
 </ComponentPreview>
 </div>

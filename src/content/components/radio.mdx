@@ -15,7 +15,10 @@ import RadioGroup from "@/components/ui/radio/RadioGroup.astro";
 import RadioGroupItem from "@/components/ui/radio/RadioGroupItem.astro";
 import Label from "@/components/ui/label/Label.astro";
 
-<ComponentPreview code={`<RadioGroup name="options" defaultValue="comfortable">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<RadioGroup name="options" defaultValue="comfortable">
   <div class="flex items-center gap-3">
     <RadioGroupItem value="default" id="r1" />
     <Label for="r1">Default</Label>
@@ -28,7 +31,9 @@ import Label from "@/components/ui/label/Label.astro";
     <RadioGroupItem value="compact" id="r3" />
     <Label for="r3">Compact</Label>
   </div>
-</RadioGroup>`}>
+</RadioGroup>
+```
+  </Fragment>
   <RadioGroup name="options" defaultValue="comfortable">
     <div class="flex items-center gap-3">
       <RadioGroupItem value="default" id="r1" />
@@ -86,7 +91,10 @@ import { RadioGroup, RadioGroupItem } from "@/components/bearnie/radio"
 #### Horizontal
 </Prose>
 
-<ComponentPreview code={`<RadioGroup name="size" defaultValue="md" orientation="horizontal">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<RadioGroup name="size" defaultValue="md" orientation="horizontal">
   <div class="flex items-center gap-2">
     <RadioGroupItem value="sm" id="sm" />
     <Label for="sm">Small</Label>
@@ -99,7 +107,9 @@ import { RadioGroup, RadioGroupItem } from "@/components/bearnie/radio"
     <RadioGroupItem value="lg" id="lg" />
     <Label for="lg">Large</Label>
   </div>
-</RadioGroup>`}>
+</RadioGroup>
+```
+  </Fragment>
   <RadioGroup name="size" defaultValue="md" orientation="horizontal">
     <div class="flex items-center gap-2">
       <RadioGroupItem value="sm" id="sm" />
@@ -122,7 +132,10 @@ import { RadioGroup, RadioGroupItem } from "@/components/bearnie/radio"
 #### With description
 </Prose>
 
-<ComponentPreview code={`<RadioGroup name="plan" defaultValue="comfortable" class="gap-4">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<RadioGroup name="plan" defaultValue="comfortable" class="gap-4">
   <div class="flex items-start gap-3">
     <RadioGroupItem value="comfortable" id="comfortable" class="mt-1" />
     <div class="grid gap-1">
@@ -137,7 +150,9 @@ import { RadioGroup, RadioGroupItem } from "@/components/bearnie/radio"
       <p class="text-sm text-muted-foreground">Reduced spacing for power users.</p>
     </div>
   </div>
-</RadioGroup>`}>
+</RadioGroup>
+```
+  </Fragment>
   <RadioGroup name="plan" defaultValue="comfortable" class="gap-4">
     <div class="flex items-start gap-3">
       <RadioGroupItem value="comfortable" id="comfortable" class="mt-1" />
@@ -162,7 +177,10 @@ import { RadioGroup, RadioGroupItem } from "@/components/bearnie/radio"
 #### Disabled
 </Prose>
 
-<ComponentPreview code={`<RadioGroup name="disabled-group" disabled>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<RadioGroup name="disabled-group" disabled>
   <div class="flex items-center gap-3">
     <RadioGroupItem value="one" id="d1" />
     <Label for="d1">Option One</Label>
@@ -171,7 +189,9 @@ import { RadioGroup, RadioGroupItem } from "@/components/bearnie/radio"
     <RadioGroupItem value="two" id="d2" />
     <Label for="d2">Option Two</Label>
   </div>
-</RadioGroup>`}>
+</RadioGroup>
+```
+  </Fragment>
   <RadioGroup name="disabled-group" disabled>
     <div class="flex items-center gap-3">
       <RadioGroupItem value="one" id="d1" />
@@ -190,7 +210,10 @@ import { RadioGroup, RadioGroupItem } from "@/components/bearnie/radio"
 #### Card style
 </Prose>
 
-<ComponentPreview code={`<RadioGroup name="card-plan" defaultValue="team" class="grid gap-4 md:grid-cols-2">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<RadioGroup name="card-plan" defaultValue="team" class="grid gap-4 md:grid-cols-2">
   <label
     for="personal"
     class="flex cursor-pointer items-start gap-3 rounded-lg border p-4 has-[:checked]:border-primary has-[:checked]:bg-primary/5"
@@ -211,7 +234,9 @@ import { RadioGroup, RadioGroupItem } from "@/components/bearnie/radio"
       <span class="text-sm text-muted-foreground">For small teams</span>
     </div>
   </label>
-</RadioGroup>`}>
+</RadioGroup>
+```
+  </Fragment>
   <RadioGroup name="card-plan" defaultValue="team" class="grid gap-4 md:grid-cols-2">
     <label
       for="personal"
@@ -242,7 +267,10 @@ import { RadioGroup, RadioGroupItem } from "@/components/bearnie/radio"
 #### Standalone Radio
 </Prose>
 
-<ComponentPreview code={`<div class="flex flex-col gap-2">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex flex-col gap-2">
   <div class="flex items-center gap-2">
     <Radio id="option-one" name="standalone" value="one" />
     <Label for="option-one">Option One</Label>
@@ -251,7 +279,9 @@ import { RadioGroup, RadioGroupItem } from "@/components/bearnie/radio"
     <Radio id="option-two" name="standalone" value="two" />
     <Label for="option-two">Option Two</Label>
   </div>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex flex-col gap-2">
     <div class="flex items-center gap-2">
       <Radio id="option-one" name="standalone" value="one" />

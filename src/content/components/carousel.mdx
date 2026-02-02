@@ -19,7 +19,10 @@ import CarouselDots from "@/components/ui/carousel/CarouselDots.astro";
 import Card from "@/components/ui/card/Card.astro";
 import CardContent from "@/components/ui/card/CardContent.astro";
 
-<ComponentPreview code={`<Carousel class="w-full max-w-md">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Carousel class="w-full max-w-md">
   <CarouselContent>
     <CarouselItem>
       <Card>
@@ -45,7 +48,9 @@ import CardContent from "@/components/ui/card/CardContent.astro";
   </CarouselContent>
   <CarouselPrevious />
   <CarouselNext />
-</Carousel>`}>
+</Carousel>
+```
+  </Fragment>
   <Carousel class="w-full max-w-md mx-auto">
     <CarouselContent>
       <CarouselItem>
@@ -126,7 +131,10 @@ import {
 #### With dots
 </Prose>
 
-<ComponentPreview code={`<Carousel class="w-full max-w-md">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Carousel class="w-full max-w-md">
   <CarouselContent>
     <CarouselItem>
       <div class="flex aspect-video items-center justify-center rounded-lg bg-muted">
@@ -147,7 +155,9 @@ import {
   <CarouselPrevious />
   <CarouselNext />
   <CarouselDots count={3} />
-</Carousel>`}>
+</Carousel>
+```
+  </Fragment>
   <Carousel class="w-full max-w-md mx-auto">
     <CarouselContent>
       <CarouselItem>
@@ -178,7 +188,10 @@ import {
 #### Loop
 </Prose>
 
-<ComponentPreview code={`<Carousel loop class="w-full max-w-md">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Carousel loop class="w-full max-w-md">
   <CarouselContent>
     <CarouselItem>
       <div class="flex aspect-video items-center justify-center rounded-lg bg-primary text-primary-foreground">
@@ -198,7 +211,9 @@ import {
   </CarouselContent>
   <CarouselPrevious />
   <CarouselNext />
-</Carousel>`}>
+</Carousel>
+```
+  </Fragment>
   <Carousel loop class="w-full max-w-md mx-auto">
     <CarouselContent>
       <CarouselItem>
@@ -228,7 +243,10 @@ import {
 #### Autoplay
 </Prose>
 
-<ComponentPreview code={`<Carousel autoplay autoplayDelay={3000} loop class="w-full max-w-md">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Carousel autoplay autoplayDelay={3000} loop class="w-full max-w-md">
   <CarouselContent>
     <CarouselItem>
       <div class="flex aspect-video items-center justify-center rounded-lg bg-rose-200 text-rose-900">
@@ -247,7 +265,9 @@ import {
     </CarouselItem>
   </CarouselContent>
   <CarouselDots count={3} />
-</Carousel>`}>
+</Carousel>
+```
+  </Fragment>
   <Carousel autoplay autoplayDelay={3000} loop class="w-full max-w-md mx-auto">
     <CarouselContent>
       <CarouselItem>
@@ -276,7 +296,10 @@ import {
 #### Multiple slides per view
 </Prose>
 
-<ComponentPreview code={`<Carousel slidesPerView={3} spacing={16} class="w-full max-w-2xl">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Carousel slidesPerView={3} spacing={16} class="w-full max-w-2xl">
   <CarouselContent>
     <CarouselItem>
       <Card>
@@ -316,7 +339,9 @@ import {
   </CarouselContent>
   <CarouselPrevious />
   <CarouselNext />
-</Carousel>`}>
+</Carousel>
+```
+  </Fragment>
   <Carousel slidesPerView={3} spacing={16} class="w-full max-w-2xl mx-auto">
     <CarouselContent>
       <CarouselItem>

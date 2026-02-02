@@ -22,7 +22,10 @@ import DialogTitle from "@/components/ui/dialog/DialogTitle.astro";
 import DialogDescription from "@/components/ui/dialog/DialogDescription.astro";
 import DialogFooter from "@/components/ui/dialog/DialogFooter.astro";
 
-<ComponentPreview code={`<Dialog>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Dialog>
   <DialogTrigger>
     <Button>Open Dialog</Button>
   </DialogTrigger>
@@ -37,7 +40,9 @@ import DialogFooter from "@/components/ui/dialog/DialogFooter.astro";
       <Button>Continue</Button>
     </DialogFooter>
   </DialogContent>
-</Dialog>`}>
+</Dialog>
+```
+  </Fragment>
   <Dialog>
     <DialogTrigger>
       <Button>Open Dialog</Button>
@@ -108,7 +113,10 @@ import {
 #### With form
 </Prose>
 
-<ComponentPreview code={`<Dialog>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Dialog>
   <DialogTrigger>
     <Button variant="outline">Edit Profile</Button>
   </DialogTrigger>
@@ -132,7 +140,9 @@ import {
       <Button>Save changes</Button>
     </DialogFooter>
   </DialogContent>
-</Dialog>`}>
+</Dialog>
+```
+  </Fragment>
   <Dialog>
     <DialogTrigger>
       <Button variant="outline">Edit Profile</Button>

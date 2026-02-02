@@ -18,10 +18,15 @@ import CircleCheck from "@lucide/astro/icons/circle-check";
 import TriangleAlert from "@lucide/astro/icons/triangle-alert";
 import CircleX from "@lucide/astro/icons/circle-x";
 
-<ComponentPreview code={`<Alert>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Alert>
   <AlertTitle>Heads up!</AlertTitle>
   <AlertDescription>You can add components to your app using the CLI.</AlertDescription>
-</Alert>`}>
+</Alert>
+```
+  </Fragment>
   <Alert>
     <AlertTitle>Heads up!</AlertTitle>
     <AlertDescription>You can add components to your app using the CLI.</AlertDescription>
@@ -69,11 +74,16 @@ import {
 #### Destructive
 </Prose>
 
-<ComponentPreview code={`<Alert variant="destructive">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Alert variant="destructive">
   <CircleX class="size-4" />
   <AlertTitle>Error</AlertTitle>
   <AlertDescription>Your session has expired. Please log in again.</AlertDescription>
-</Alert>`}>
+</Alert>
+```
+  </Fragment>
   <Alert variant="destructive">
     <CircleX class="size-4" />
     <AlertTitle>Error</AlertTitle>
@@ -87,11 +97,16 @@ import {
 #### Success
 </Prose>
 
-<ComponentPreview code={`<Alert variant="success">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Alert variant="success">
   <CircleCheck class="size-4" />
   <AlertTitle>Success</AlertTitle>
   <AlertDescription>Your changes have been saved successfully.</AlertDescription>
-</Alert>`}>
+</Alert>
+```
+  </Fragment>
   <Alert variant="success">
     <CircleCheck class="size-4" />
     <AlertTitle>Success</AlertTitle>
@@ -105,11 +120,16 @@ import {
 #### Warning
 </Prose>
 
-<ComponentPreview code={`<Alert variant="warning">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Alert variant="warning">
   <TriangleAlert class="size-4" />
   <AlertTitle>Warning</AlertTitle>
   <AlertDescription>Your account is about to expire.</AlertDescription>
-</Alert>`}>
+</Alert>
+```
+  </Fragment>
   <Alert variant="warning">
     <TriangleAlert class="size-4" />
     <AlertTitle>Warning</AlertTitle>
@@ -123,11 +143,16 @@ import {
 #### Info
 </Prose>
 
-<ComponentPreview code={`<Alert variant="info">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Alert variant="info">
   <Info class="size-4" />
   <AlertTitle>Info</AlertTitle>
   <AlertDescription>A new version is available for download.</AlertDescription>
-</Alert>`}>
+</Alert>
+```
+  </Fragment>
   <Alert variant="info">
     <Info class="size-4" />
     <AlertTitle>Info</AlertTitle>

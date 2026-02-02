@@ -24,7 +24,10 @@ import Package from "@lucide/astro/icons/package";
 import Settings from "@lucide/astro/icons/settings";
 import Shield from "@lucide/astro/icons/shield";
 
-<ComponentPreview code={`<Stepper activeStep={1}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Stepper activeStep={1}>
   <StepperItem step={0}>
     <StepperTrigger>
       <Check class="size-4" />
@@ -50,7 +53,9 @@ import Shield from "@lucide/astro/icons/shield";
       <StepperDescription>Review and finish</StepperDescription>
     </div>
   </StepperItem>
-</Stepper>`}>
+</Stepper>
+```
+  </Fragment>
   <Stepper activeStep={1}>
     <StepperItem step={0}>
       <StepperTrigger>
@@ -129,7 +134,10 @@ import {
 #### Simple stepper
 </Prose>
 
-<ComponentPreview code={`<Stepper activeStep={0}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Stepper activeStep={0}>
   <StepperItem step={0}>
     <StepperTrigger>1</StepperTrigger>
     <StepperTitle>Details</StepperTitle>
@@ -144,7 +152,9 @@ import {
     <StepperTrigger>3</StepperTrigger>
     <StepperTitle>Confirm</StepperTitle>
   </StepperItem>
-</Stepper>`}>
+</Stepper>
+```
+  </Fragment>
   <Stepper activeStep={0}>
     <StepperItem step={0}>
       <StepperTrigger>1</StepperTrigger>
@@ -169,7 +179,10 @@ import {
 #### Vertical orientation
 </Prose>
 
-<ComponentPreview code={`<Stepper orientation="vertical" activeStep={1}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Stepper orientation="vertical" activeStep={1}>
   <StepperItem step={0}>
     <StepperTrigger>
       <Check class="size-4" />
@@ -195,7 +208,9 @@ import {
       <StepperDescription>Add your profile</StepperDescription>
     </div>
   </StepperItem>
-</Stepper>`}>
+</Stepper>
+```
+  </Fragment>
   <Stepper orientation="vertical" activeStep={1}>
     <StepperItem step={0}>
       <StepperTrigger>
@@ -233,7 +248,10 @@ import {
 Use icons instead of numbers for a more visual representation.
 </Prose>
 
-<ComponentPreview code={`<Stepper activeStep={1}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Stepper activeStep={1}>
   <StepperItem step={0}>
     <StepperTrigger>
       <User class="size-4" />
@@ -254,7 +272,9 @@ Use icons instead of numbers for a more visual representation.
     </StepperTrigger>
     <StepperTitle>Setup</StepperTitle>
   </StepperItem>
-</Stepper>`}>
+</Stepper>
+```
+  </Fragment>
   <Stepper activeStep={1}>
     <StepperItem step={0}>
       <StepperTrigger>
@@ -287,7 +307,10 @@ Use icons instead of numbers for a more visual representation.
 Use custom classes to create larger, more prominent titles.
 </Prose>
 
-<ComponentPreview code={`<Stepper activeStep={0}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Stepper activeStep={0}>
   <StepperItem step={0}>
     <StepperTrigger>1</StepperTrigger>
     <div>
@@ -311,7 +334,9 @@ Use custom classes to create larger, more prominent titles.
       <StepperDescription>Go live with your project</StepperDescription>
     </div>
   </StepperItem>
-</Stepper>`}>
+</Stepper>
+```
+  </Fragment>
   <Stepper activeStep={0}>
     <StepperItem step={0}>
       <StepperTrigger>1</StepperTrigger>
@@ -347,7 +372,10 @@ Use custom classes to create larger, more prominent titles.
 Use the `href` prop to create steps that link to page sections. A link icon appears on hover.
 </Prose>
 
-<ComponentPreview code={`<Stepper activeStep={0}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Stepper activeStep={0}>
   <StepperItem step={0}>
     <StepperTrigger href="#introduction">1</StepperTrigger>
     <StepperTitle>Introduction</StepperTitle>
@@ -362,7 +390,9 @@ Use the `href` prop to create steps that link to page sections. A link icon appe
     <StepperTrigger href="#usage">3</StepperTrigger>
     <StepperTitle>Usage</StepperTitle>
   </StepperItem>
-</Stepper>`}>
+</Stepper>
+```
+  </Fragment>
   <Stepper activeStep={0}>
     <StepperItem step={0}>
       <StepperTrigger href="#introduction">1</StepperTrigger>
@@ -389,7 +419,10 @@ Use the `href` prop to create steps that link to page sections. A link icon appe
 Use letters or custom text instead of numbers.
 </Prose>
 
-<ComponentPreview code={`<Stepper activeStep={1}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Stepper activeStep={1}>
   <StepperItem step={0}>
     <StepperTrigger>A</StepperTrigger>
     <StepperTitle>Alpha</StepperTitle>
@@ -404,7 +437,9 @@ Use letters or custom text instead of numbers.
     <StepperTrigger>C</StepperTrigger>
     <StepperTitle>Release</StepperTitle>
   </StepperItem>
-</Stepper>`}>
+</Stepper>
+```
+  </Fragment>
   <Stepper activeStep={1}>
     <StepperItem step={0}>
       <StepperTrigger>A</StepperTrigger>
@@ -431,7 +466,10 @@ Use letters or custom text instead of numbers.
 Show a checkmark icon for completed steps.
 </Prose>
 
-<ComponentPreview code={`<Stepper activeStep={2}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Stepper activeStep={2}>
   <StepperItem step={0}>
     <StepperTrigger>
       <Check class="size-4" />
@@ -457,7 +495,9 @@ Show a checkmark icon for completed steps.
     <StepperTrigger>4</StepperTrigger>
     <StepperTitle>Confirm</StepperTitle>
   </StepperItem>
-</Stepper>`}>
+</Stepper>
+```
+  </Fragment>
   <Stepper activeStep={2}>
     <StepperItem step={0}>
       <StepperTrigger>
@@ -495,7 +535,10 @@ Show a checkmark icon for completed steps.
 A complete vertical stepper with icons and detailed descriptions.
 </Prose>
 
-<ComponentPreview code={`<Stepper orientation="vertical" activeStep={1}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Stepper orientation="vertical" activeStep={1}>
   <StepperItem step={0}>
     <StepperTrigger>
       <Check class="size-4" />
@@ -525,7 +568,9 @@ A complete vertical stepper with icons and detailed descriptions.
       <StepperDescription>Select a subscription that fits your needs.</StepperDescription>
     </div>
   </StepperItem>
-</Stepper>`}>
+</Stepper>
+```
+  </Fragment>
   <Stepper orientation="vertical" activeStep={1}>
     <StepperItem step={0}>
       <StepperTrigger>

@@ -12,13 +12,17 @@ import CodeBlock from "@/components/docs/CodeBlock.astro";
 import Prose from "@/components/docs/Prose.astro";
 import AspectRatio from "@/components/ui/aspect-ratio/AspectRatio.astro";
 
-<ComponentPreview code={`<AspectRatio ratio={16 / 9} class="bg-muted">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<AspectRatio ratio={16 / 9} class="bg-muted">
   <img src="/images/readme/bearnie.png" alt="Landscape" class="rounded-md object-cover size-full" />
-</AspectRatio>`}>
-
-    <AspectRatio ratio={16 / 9} class="bg-muted mx-auto">
-      <img src="/images/readme/bearnie.png" alt="Landscape" class="rounded-md object-cover size-full mx-auto" />
-    </AspectRatio>
+</AspectRatio>
+```
+  </Fragment>
+  <AspectRatio ratio={16 / 9} class="bg-muted mx-auto">
+    <img src="/images/readme/bearnie.png" alt="Landscape" class="rounded-md object-cover size-full mx-auto" />
+  </AspectRatio>
 </ComponentPreview>
 
 <div class="space-y-4">
@@ -55,17 +59,21 @@ import { AspectRatio } from "@/components/bearnie/aspect-ratio"
 #### 16:9 (Video)
 </Prose>
 
-<ComponentPreview code={`<AspectRatio ratio={16 / 9} class="bg-muted rounded-md">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<AspectRatio ratio={16 / 9} class="bg-muted rounded-md">
   <div class="flex items-center justify-center h-full text-muted-foreground">
     16:9 Video
   </div>
-</AspectRatio>`}>
-
-    <AspectRatio ratio={16 / 9} class="bg-muted rounded-md">
-      <div class="flex items-center justify-center h-full text-muted-foreground">
-        16:9 Video
-      </div>
-    </AspectRatio>
+</AspectRatio>
+```
+  </Fragment>
+  <AspectRatio ratio={16 / 9} class="bg-muted rounded-md">
+    <div class="flex items-center justify-center h-full text-muted-foreground">
+      16:9 Video
+    </div>
+  </AspectRatio>
 </ComponentPreview>
 </div>
 
@@ -74,17 +82,21 @@ import { AspectRatio } from "@/components/bearnie/aspect-ratio"
 #### 4:3 (Standard)
 </Prose>
 
-<ComponentPreview code={`<AspectRatio ratio={4 / 3} class="bg-muted rounded-md">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<AspectRatio ratio={4 / 3} class="bg-muted rounded-md">
   <div class="flex items-center justify-center h-full text-muted-foreground">
     4:3 Standard
   </div>
-</AspectRatio>`}>
- 
-    <AspectRatio ratio={4 / 3} class="bg-muted rounded-md">
-      <div class="flex items-center justify-center h-full text-muted-foreground">
-        4:3 Standard
-      </div>
-    </AspectRatio>
+</AspectRatio>
+```
+  </Fragment>
+  <AspectRatio ratio={4 / 3} class="bg-muted rounded-md">
+    <div class="flex items-center justify-center h-full text-muted-foreground">
+      4:3 Standard
+    </div>
+  </AspectRatio>
 </ComponentPreview>
 </div>
 
@@ -93,17 +105,21 @@ import { AspectRatio } from "@/components/bearnie/aspect-ratio"
 #### 1:1 (Square)
 </Prose>
 
-<ComponentPreview code={`<AspectRatio ratio={1} class="bg-muted rounded-md">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<AspectRatio ratio={1} class="bg-muted rounded-md">
   <div class="flex items-center justify-center h-full text-muted-foreground">
     1:1 Square
   </div>
-</AspectRatio>`}>
- 
-    <AspectRatio ratio={1} class="bg-muted rounded-md">
-      <div class="flex items-center justify-center h-full text-muted-foreground">
-        1:1 Square
-      </div>
-    </AspectRatio>
+</AspectRatio>
+```
+  </Fragment>
+  <AspectRatio ratio={1} class="bg-muted rounded-md">
+    <div class="flex items-center justify-center h-full text-muted-foreground">
+      1:1 Square
+    </div>
+  </AspectRatio>
 </ComponentPreview>
 </div>
 
@@ -112,17 +128,21 @@ import { AspectRatio } from "@/components/bearnie/aspect-ratio"
 #### 21:9 (Ultrawide)
 </Prose>
 
-<ComponentPreview code={`<AspectRatio ratio={21 / 9} class="bg-muted rounded-md">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<AspectRatio ratio={21 / 9} class="bg-muted rounded-md">
   <div class="flex items-center justify-center h-full text-muted-foreground">
     21:9 Ultrawide
   </div>
-</AspectRatio>`}>
-  
-    <AspectRatio ratio={21 / 9} class="bg-muted rounded-md">
-      <div class="flex items-center justify-center h-full text-muted-foreground">
-        21:9 Ultrawide
-      </div>
-    </AspectRatio>
+</AspectRatio>
+```
+  </Fragment>
+  <AspectRatio ratio={21 / 9} class="bg-muted rounded-md">
+    <div class="flex items-center justify-center h-full text-muted-foreground">
+      21:9 Ultrawide
+    </div>
+  </AspectRatio>
 </ComponentPreview>
 </div>
 
@@ -131,17 +151,21 @@ import { AspectRatio } from "@/components/bearnie/aspect-ratio"
 #### Portrait (2:3)
 </Prose>
 
-<ComponentPreview code={`<AspectRatio ratio={2 / 3} class="bg-muted rounded-md">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<AspectRatio ratio={2 / 3} class="bg-muted rounded-md">
   <div class="flex items-center justify-center h-full text-muted-foreground">
     2:3 Portrait
   </div>
-</AspectRatio>`}>
-
-    <AspectRatio ratio={2 / 3} class="bg-muted rounded-md">
-      <div class="flex items-center justify-center h-full text-muted-foreground">
-        2:3 Portrait
-      </div>
-    </AspectRatio>
+</AspectRatio>
+```
+  </Fragment>
+  <AspectRatio ratio={2 / 3} class="bg-muted rounded-md">
+    <div class="flex items-center justify-center h-full text-muted-foreground">
+      2:3 Portrait
+    </div>
+  </AspectRatio>
 </ComponentPreview>
 </div>
 </div>

@@ -12,7 +12,12 @@ import CodeBlock from "@/components/docs/CodeBlock.astro";
 import Prose from "@/components/docs/Prose.astro";
 import Progress from "@/components/ui/progress/Progress.astro";
 
-<ComponentPreview code={`<Progress value={60} />`}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Progress value={60} />
+```
+  </Fragment>
   <Progress value={60} class="w-full max-w-md" />
 </ComponentPreview>
 
@@ -48,12 +53,17 @@ import { Progress } from "@/components/bearnie/progress"
 #### Different values
 </Prose>
 
-<ComponentPreview code={`<div class="grid gap-4 w-full max-w-md">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="grid gap-4 w-full max-w-md">
   <Progress value={25} />
   <Progress value={50} />
   <Progress value={75} />
   <Progress value={100} />
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="grid gap-4 w-full max-w-md">
     <Progress value={25} />
     <Progress value={50} />
@@ -68,7 +78,12 @@ import { Progress } from "@/components/bearnie/progress"
 #### Custom max
 </Prose>
 
-<ComponentPreview code={`<Progress value={3} max={10} />`}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Progress value={3} max={10} />
+```
+  </Fragment>
   <Progress value={3} max={10} class="w-full max-w-md" />
 </ComponentPreview>
 </div>

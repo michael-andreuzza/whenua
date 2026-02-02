@@ -18,7 +18,10 @@ import TreeItemChildren from "@/components/ui/tree/TreeItemChildren.astro";
 import File from "@lucide/astro/icons/file";
 import FileText from "@lucide/astro/icons/file-text";
 
-<ComponentPreview code={`<Tree>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Tree>
   <TreeItem defaultOpen>
     <TreeItemContent>
       <TreeItemTrigger />
@@ -53,7 +56,9 @@ import FileText from "@lucide/astro/icons/file-text";
       </TreeItem>
     </TreeItemChildren>
   </TreeItem>
-</Tree>`}>
+</Tree>
+```
+  </Fragment>
   <Tree>
     <TreeItem defaultOpen>
       <TreeItemContent>
@@ -142,7 +147,10 @@ import {
 #### Simple list
 </Prose>
 
-<ComponentPreview code={`<Tree>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Tree>
   <TreeItem>
     <TreeItemContent>
       <TreeItemTrigger />
@@ -177,7 +185,9 @@ import {
       </TreeItem>
     </TreeItemChildren>
   </TreeItem>
-</Tree>`}>
+</Tree>
+```
+  </Fragment>
   <Tree>
     <TreeItem>
       <TreeItemContent>
@@ -222,7 +232,10 @@ import {
 #### Default expanded
 </Prose>
 
-<ComponentPreview code={`<Tree>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Tree>
   <TreeItem defaultOpen>
     <TreeItemContent>
       <TreeItemTrigger />
@@ -237,7 +250,9 @@ import {
       </TreeItem>
     </TreeItemChildren>
   </TreeItem>
-</Tree>`}>
+</Tree>
+```
+  </Fragment>
   <Tree>
     <TreeItem defaultOpen>
       <TreeItemContent>

@@ -12,10 +12,15 @@ import CodeBlock from "@/components/docs/CodeBlock.astro";
 import Prose from "@/components/docs/Prose.astro";
 import Skeleton from "@/components/ui/skeleton/Skeleton.astro";
 
-<ComponentPreview code={`<div class="space-y-2">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="space-y-2">
   <Skeleton class="h-4 w-[250px]" />
   <Skeleton class="h-4 w-[200px]" />
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="space-y-2">
     <Skeleton class="h-4 w-[250px]" />
     <Skeleton class="h-4 w-[200px]" />
@@ -54,13 +59,18 @@ import { Skeleton } from "@/components/bearnie/skeleton"
 #### Card
 </Prose>
 
-<ComponentPreview code={`<div class="flex flex-col space-y-3">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex flex-col space-y-3">
   <Skeleton class="h-[125px] w-[250px] rounded-xl" />
   <div class="space-y-2">
     <Skeleton class="h-4 w-[250px]" />
     <Skeleton class="h-4 w-[200px]" />
   </div>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex flex-col space-y-3">
     <Skeleton class="h-[125px] w-[250px] rounded-xl" />
     <div class="space-y-2">
@@ -76,13 +86,18 @@ import { Skeleton } from "@/components/bearnie/skeleton"
 #### With avatar
 </Prose>
 
-<ComponentPreview code={`<div class="flex items-center space-x-4">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex items-center space-x-4">
   <Skeleton class="size-12 rounded-full" />
   <div class="space-y-2">
     <Skeleton class="h-4 w-[200px]" />
     <Skeleton class="h-4 w-[150px]" />
   </div>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex items-center space-x-4">
     <Skeleton class="size-12 rounded-full" />
     <div class="space-y-2">

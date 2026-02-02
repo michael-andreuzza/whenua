@@ -12,7 +12,12 @@ import CodeBlock from "@/components/docs/CodeBlock.astro";
 import Prose from "@/components/docs/Prose.astro";
 import Separator from "@/components/ui/separator/Separator.astro";
 
-<ComponentPreview code={`<Separator />`}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Separator />
+```
+  </Fragment>
   <div class="w-full max-w-md">
     <Separator />
   </div>
@@ -50,11 +55,16 @@ import { Separator } from "@/components/bearnie/separator"
 #### Horizontal
 </Prose>
 
-<ComponentPreview code={`<div class="w-full max-w-md">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="w-full max-w-md">
   <p class="text-sm">Above separator</p>
   <Separator class="my-4" />
   <p class="text-sm">Below separator</p>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="w-full max-w-md">
     <p class="text-sm">Above separator</p>
     <Separator class="my-4" />
@@ -68,13 +78,18 @@ import { Separator } from "@/components/bearnie/separator"
 #### Vertical
 </Prose>
 
-<ComponentPreview code={`<div class="flex h-5 items-center gap-4 text-sm">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex h-5 items-center gap-4 text-sm">
   <span>Blog</span>
   <Separator orientation="vertical" />
   <span>Docs</span>
   <Separator orientation="vertical" />
   <span>Source</span>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex h-5 items-center gap-4 text-sm">
     <span>Blog</span>
     <Separator orientation="vertical" />

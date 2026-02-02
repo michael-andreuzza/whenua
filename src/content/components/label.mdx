@@ -14,7 +14,12 @@ import Label from "@/components/ui/label/Label.astro";
 import Input from "@/components/ui/input/Input.astro";
 import Checkbox from "@/components/ui/checkbox/Checkbox.astro";
 
-<ComponentPreview code={`<Label for="email">Your email address</Label>`}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Label for="email">Your email address</Label>
+```
+  </Fragment>
   <Label for="email">Your email address</Label>
 </ComponentPreview>
 
@@ -50,10 +55,15 @@ import { Label } from "@/components/bearnie/label"
 #### With input
 </Prose>
 
-<ComponentPreview code={`<div class="grid gap-2 w-full max-w-sm">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="grid gap-2 w-full max-w-sm">
   <Label for="email">Email</Label>
   <Input type="email" id="email" placeholder="m@example.com" />
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="grid gap-2 w-full max-w-sm">
     <Label for="email">Email</Label>
     <Input type="email" id="email" placeholder="m@example.com" />
@@ -66,10 +76,15 @@ import { Label } from "@/components/bearnie/label"
 #### With checkbox
 </Prose>
 
-<ComponentPreview code={`<div class="flex items-center gap-2">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex items-center gap-2">
   <Checkbox id="terms" />
   <Label for="terms">Accept terms and conditions</Label>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex items-center gap-2">
     <Checkbox id="terms" />
     <Label for="terms">Accept terms and conditions</Label>
@@ -82,10 +97,15 @@ import { Label } from "@/components/bearnie/label"
 #### Required
 </Prose>
 
-<ComponentPreview code={`<div class="grid gap-2 w-full max-w-sm">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="grid gap-2 w-full max-w-sm">
   <Label for="name" required>Name</Label>
   <Input id="name" placeholder="Enter your name" required />
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="grid gap-2 w-full max-w-sm">
     <Label for="name" required>Name</Label>
     <Input id="name" placeholder="Enter your name" required />

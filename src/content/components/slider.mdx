@@ -12,7 +12,12 @@ import CodeBlock from "@/components/docs/CodeBlock.astro";
 import Prose from "@/components/docs/Prose.astro";
 import Slider from "@/components/ui/slider/Slider.astro";
 
-<ComponentPreview code={`<Slider defaultValue={[33]} max={100} step={1} />`}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Slider defaultValue={[33]} max={100} step={1} />
+```
+  </Fragment>
   <div class="w-full max-w-sm">
     <Slider defaultValue={[33]} max={100} step={1} />
   </div>
@@ -50,7 +55,12 @@ import { Slider } from "@/components/bearnie/slider"
 #### Range
 </Prose>
 
-<ComponentPreview code={`<Slider defaultValue={[25, 75]} max={100} step={1} />`}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Slider defaultValue={[25, 75]} max={100} step={1} />
+```
+  </Fragment>
   <div class="w-full max-w-sm">
     <Slider defaultValue={[25, 75]} max={100} step={1} />
   </div>
@@ -62,7 +72,12 @@ import { Slider } from "@/components/bearnie/slider"
 #### Multiple thumbs
 </Prose>
 
-<ComponentPreview code={`<Slider defaultValue={[10, 50, 90]} max={100} step={1} />`}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Slider defaultValue={[10, 50, 90]} max={100} step={1} />
+```
+  </Fragment>
   <div class="w-full max-w-sm">
     <Slider defaultValue={[10, 50, 90]} max={100} step={1} />
   </div>
@@ -74,7 +89,12 @@ import { Slider } from "@/components/bearnie/slider"
 #### Step values
 </Prose>
 
-<ComponentPreview code={`<Slider defaultValue={[50]} max={100} step={10} />`}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Slider defaultValue={[50]} max={100} step={10} />
+```
+  </Fragment>
   <div class="w-full max-w-sm">
     <Slider defaultValue={[50]} max={100} step={10} />
   </div>
@@ -86,7 +106,12 @@ import { Slider } from "@/components/bearnie/slider"
 #### Vertical
 </Prose>
 
-<ComponentPreview code={`<Slider defaultValue={[50]} orientation="vertical" />`}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Slider defaultValue={[50]} orientation="vertical" />
+```
+  </Fragment>
   <div class="h-48">
     <Slider defaultValue={[50]} orientation="vertical" />
   </div>
@@ -98,7 +123,12 @@ import { Slider } from "@/components/bearnie/slider"
 #### Disabled
 </Prose>
 
-<ComponentPreview code={`<Slider defaultValue={[50]} disabled />`}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Slider defaultValue={[50]} disabled />
+```
+  </Fragment>
   <div class="w-full max-w-sm">
     <Slider defaultValue={[50]} disabled />
   </div>
@@ -110,13 +140,18 @@ import { Slider } from "@/components/bearnie/slider"
 #### With label
 </Prose>
 
-<ComponentPreview code={`<div class="space-y-2">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="space-y-2">
   <div class="flex justify-between">
     <label class="text-sm font-medium">Volume</label>
     <span class="text-sm text-muted-foreground">50%</span>
   </div>
   <Slider defaultValue={[50]} />
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="w-full max-w-sm space-y-2">
     <div class="flex justify-between">
       <label class="text-sm font-medium">Volume</label>

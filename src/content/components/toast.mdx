@@ -15,9 +15,14 @@ import Toaster from "@/components/ui/toast/Toaster.astro";
 
 <Toaster />
 
-<ComponentPreview code={`<Button onclick="toast('Event has been created.')">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Button onclick="toast('Event has been created.')">
   Show Toast
-</Button>`}>
+</Button>
+```
+  </Fragment>
   <Button onclick="toast('Event has been created.')">Show Toast</Button>
 </ComponentPreview>
 
@@ -53,9 +58,14 @@ toast("Event has been created.")
 #### With title and description
 </Prose>
 
-<ComponentPreview code={`<Button onclick="toast({ title: 'Scheduled', description: 'Friday, February 10, 2023 at 5:57 PM' })">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Button onclick="toast({ title: 'Scheduled', description: 'Friday, February 10, 2023 at 5:57 PM' })">
   Show Toast
-</Button>`}>
+</Button>
+```
+  </Fragment>
   <Button onclick="toast({ title: 'Scheduled', description: 'Friday, February 10, 2023 at 5:57 PM' })">
     Show Toast with details
   </Button>
@@ -67,9 +77,14 @@ toast("Event has been created.")
 #### Success
 </Prose>
 
-<ComponentPreview code={`<Button onclick="toast.success('Changes saved successfully!')">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Button onclick="toast.success('Changes saved successfully!')">
   Show Success Toast
-</Button>`}>
+</Button>
+```
+  </Fragment>
   <Button variant="success" onclick="toast.success('Changes saved successfully!')">
     Show Success Toast
   </Button>
@@ -81,9 +96,14 @@ toast("Event has been created.")
 #### Error
 </Prose>
 
-<ComponentPreview code={`<Button onclick="toast.error('Something went wrong.')">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Button onclick="toast.error('Something went wrong.')">
   Show Error Toast
-</Button>`}>
+</Button>
+```
+  </Fragment>
   <Button variant="destructive" onclick="toast.error('Something went wrong.')">
     Show Error Toast
   </Button>
@@ -95,9 +115,14 @@ toast("Event has been created.")
 #### Warning
 </Prose>
 
-<ComponentPreview code={`<Button onclick="toast.warning('Your session is about to expire.')">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Button onclick="toast.warning('Your session is about to expire.')">
   Show Warning Toast
-</Button>`}>
+</Button>
+```
+  </Fragment>
   <Button variant="warning" onclick="toast.warning('Your session is about to expire.')">
     Show Warning Toast
   </Button>
@@ -109,9 +134,14 @@ toast("Event has been created.")
 #### Info
 </Prose>
 
-<ComponentPreview code={`<Button onclick="toast.info('A new update is available.')">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Button onclick="toast.info('A new update is available.')">
   Show Info Toast
-</Button>`}>
+</Button>
+```
+  </Fragment>
   <Button variant="info" onclick="toast.info('A new update is available.')">
     Show Info Toast
   </Button>
@@ -123,9 +153,14 @@ toast("Event has been created.")
 #### With action
 </Prose>
 
-<ComponentPreview code={`<Button onclick="toast({ title: 'Undo action', description: 'Message deleted.', action: { label: 'Undo', onClick: () => console.log('Undone!') } })">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Button onclick="toast({ title: 'Undo action', description: 'Message deleted.', action: { label: 'Undo', onClick: () => console.log('Undone!') } })">
   Show Toast with Action
-</Button>`}>
+</Button>
+```
+  </Fragment>
   <Button variant="outline" onclick="toast({ title: 'Undo action', description: 'Message deleted.', action: { label: 'Undo', onClick: () => console.log('Undone!') } })">
     Show Toast with Action
   </Button>

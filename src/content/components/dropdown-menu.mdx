@@ -23,7 +23,10 @@ import LogOut from "@lucide/astro/icons/log-out";
 import CreditCard from "@lucide/astro/icons/credit-card";
 import Ellipsis from "@lucide/astro/icons/ellipsis";
 
-<ComponentPreview code={`<DropdownMenu>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<DropdownMenu>
   <DropdownMenuTrigger>
     <Button variant="outline">Open Menu</Button>
   </DropdownMenuTrigger>
@@ -34,7 +37,9 @@ import Ellipsis from "@lucide/astro/icons/ellipsis";
     <DropdownMenuItem>Settings</DropdownMenuItem>
     <DropdownMenuItem>Logout</DropdownMenuItem>
   </DropdownMenuContent>
-</DropdownMenu>`}>
+</DropdownMenu>
+```
+  </Fragment>
   <DropdownMenu>
     <DropdownMenuTrigger>
       <Button variant="outline">Open Menu</Button>
@@ -96,7 +101,10 @@ import {
 #### Align start
 </Prose>
 
-<ComponentPreview code={`<DropdownMenu>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<DropdownMenu>
   <DropdownMenuTrigger>
     <Button variant="outline">Align Start</Button>
   </DropdownMenuTrigger>
@@ -105,7 +113,9 @@ import {
     <DropdownMenuItem>Settings</DropdownMenuItem>
     <DropdownMenuItem>Logout</DropdownMenuItem>
   </DropdownMenuContent>
-</DropdownMenu>`}>
+</DropdownMenu>
+```
+  </Fragment>
   <DropdownMenu>
     <DropdownMenuTrigger>
       <Button variant="outline">Align Start</Button>
@@ -124,7 +134,10 @@ import {
 #### Align center
 </Prose>
 
-<ComponentPreview code={`<DropdownMenu>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<DropdownMenu>
   <DropdownMenuTrigger>
     <Button variant="outline">Align Center</Button>
   </DropdownMenuTrigger>
@@ -133,7 +146,9 @@ import {
     <DropdownMenuItem>Settings</DropdownMenuItem>
     <DropdownMenuItem>Logout</DropdownMenuItem>
   </DropdownMenuContent>
-</DropdownMenu>`}>
+</DropdownMenu>
+```
+  </Fragment>
   <DropdownMenu>
     <DropdownMenuTrigger>
       <Button variant="outline">Align Center</Button>
@@ -152,7 +167,10 @@ import {
 #### Align end
 </Prose>
 
-<ComponentPreview code={`<DropdownMenu>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<DropdownMenu>
   <DropdownMenuTrigger>
     <Button variant="outline">Align End</Button>
   </DropdownMenuTrigger>
@@ -161,7 +179,9 @@ import {
     <DropdownMenuItem>Settings</DropdownMenuItem>
     <DropdownMenuItem>Logout</DropdownMenuItem>
   </DropdownMenuContent>
-</DropdownMenu>`}>
+</DropdownMenu>
+```
+  </Fragment>
   <DropdownMenu>
     <DropdownMenuTrigger>
       <Button variant="outline">Align End</Button>
@@ -180,7 +200,10 @@ import {
 #### With icons
 </Prose>
 
-<ComponentPreview code={`<DropdownMenu>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<DropdownMenu>
   <DropdownMenuTrigger>
     <Button variant="outline">My Account</Button>
   </DropdownMenuTrigger>
@@ -205,7 +228,9 @@ import {
       Logout
     </DropdownMenuItem>
   </DropdownMenuContent>
-</DropdownMenu>`}>
+</DropdownMenu>
+```
+  </Fragment>
   <DropdownMenu>
     <DropdownMenuTrigger>
       <Button variant="outline">My Account</Button>
@@ -240,7 +265,10 @@ import {
 #### Icon button trigger
 </Prose>
 
-<ComponentPreview code={`<DropdownMenu>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<DropdownMenu>
   <DropdownMenuTrigger>
     <Button variant="ghost" iconOnly>
       <Ellipsis />
@@ -252,7 +280,9 @@ import {
     <DropdownMenuSeparator />
     <DropdownMenuItem>Delete</DropdownMenuItem>
   </DropdownMenuContent>
-</DropdownMenu>`}>
+</DropdownMenu>
+```
+  </Fragment>
   <DropdownMenu>
     <DropdownMenuTrigger>
       <Button variant="ghost" iconOnly>

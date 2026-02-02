@@ -19,14 +19,19 @@ import Bold from "@lucide/astro/icons/bold";
 import Italic from "@lucide/astro/icons/italic";
 import Underline from "@lucide/astro/icons/underline";
 
-<ComponentPreview code={`<Tooltip>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Tooltip>
   <TooltipTrigger>
     <Button variant="outline">Hover me</Button>
   </TooltipTrigger>
   <TooltipContent>
     <p>This is a tooltip</p>
   </TooltipContent>
-</Tooltip>`}>
+</Tooltip>
+```
+  </Fragment>
   <Tooltip>
     <TooltipTrigger>
       <Button variant="outline">Hover me</Button>
@@ -80,14 +85,19 @@ import {
 #### Side top
 </Prose>
 
-<ComponentPreview code={`<Tooltip>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Tooltip>
   <TooltipTrigger>
     <Button variant="outline">Top</Button>
   </TooltipTrigger>
   <TooltipContent side="top">
     <p>Tooltip on top</p>
   </TooltipContent>
-</Tooltip>`}>
+</Tooltip>
+```
+  </Fragment>
   <Tooltip>
     <TooltipTrigger>
       <Button variant="outline">Top</Button>
@@ -104,14 +114,19 @@ import {
 #### Side bottom
 </Prose>
 
-<ComponentPreview code={`<Tooltip>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Tooltip>
   <TooltipTrigger>
     <Button variant="outline">Bottom</Button>
   </TooltipTrigger>
   <TooltipContent side="bottom">
     <p>Tooltip on bottom</p>
   </TooltipContent>
-</Tooltip>`}>
+</Tooltip>
+```
+  </Fragment>
   <Tooltip>
     <TooltipTrigger>
       <Button variant="outline">Bottom</Button>
@@ -128,14 +143,19 @@ import {
 #### Side left
 </Prose>
 
-<ComponentPreview code={`<Tooltip>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Tooltip>
   <TooltipTrigger>
     <Button variant="outline">Left</Button>
   </TooltipTrigger>
   <TooltipContent side="left">
     <p>Tooltip on left</p>
   </TooltipContent>
-</Tooltip>`}>
+</Tooltip>
+```
+  </Fragment>
   <Tooltip>
     <TooltipTrigger>
       <Button variant="outline">Left</Button>
@@ -152,14 +172,19 @@ import {
 #### Side right
 </Prose>
 
-<ComponentPreview code={`<Tooltip>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Tooltip>
   <TooltipTrigger>
     <Button variant="outline">Right</Button>
   </TooltipTrigger>
   <TooltipContent side="right">
     <p>Tooltip on right</p>
   </TooltipContent>
-</Tooltip>`}>
+</Tooltip>
+```
+  </Fragment>
   <Tooltip>
     <TooltipTrigger>
       <Button variant="outline">Right</Button>
@@ -176,7 +201,10 @@ import {
 #### With icon button
 </Prose>
 
-<ComponentPreview code={`<Tooltip>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Tooltip>
   <TooltipTrigger>
     <Button iconOnly variant="outline">
       <Plus />
@@ -185,7 +213,9 @@ import {
   <TooltipContent>
     <p>Add to library</p>
   </TooltipContent>
-</Tooltip>`}>
+</Tooltip>
+```
+  </Fragment>
   <Tooltip>
     <TooltipTrigger>
       <Button iconOnly variant="outline">
@@ -204,7 +234,10 @@ import {
 #### Toolbar
 </Prose>
 
-<ComponentPreview code={`<div class="flex gap-1">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex gap-1">
   <Tooltip>
     <TooltipTrigger>
       <Button iconOnly variant="ghost" size="sm">
@@ -235,7 +268,9 @@ import {
       <p>Underline</p>
     </TooltipContent>
   </Tooltip>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex gap-1">
     <Tooltip>
       <TooltipTrigger>

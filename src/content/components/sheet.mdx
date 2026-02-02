@@ -23,7 +23,10 @@ import Button from "@/components/ui/button/Button.astro";
 import Input from "@/components/ui/input/Input.astro";
 import Label from "@/components/ui/label/Label.astro";
 
-<ComponentPreview code={`<Sheet>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Sheet>
   <SheetTrigger>
     <Button variant="outline">Open Sheet</Button>
   </SheetTrigger>
@@ -51,7 +54,9 @@ import Label from "@/components/ui/label/Label.astro";
       </SheetClose>
     </SheetFooter>
   </SheetContent>
-</Sheet>`}>
+</Sheet>
+```
+  </Fragment>
   <Sheet>
     <SheetTrigger>
       <Button variant="outline">Open Sheet</Button>
@@ -134,7 +139,10 @@ import {
 #### Side positions
 </Prose>
 
-<ComponentPreview code={`<div class="flex flex-wrap gap-2">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex flex-wrap gap-2">
   <Sheet>
     <SheetTrigger><Button variant="outline">Top</Button></SheetTrigger>
     <SheetOverlay />
@@ -175,7 +183,9 @@ import {
       </SheetHeader>
     </SheetContent>
   </Sheet>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex flex-wrap gap-2">
     <Sheet>
       <SheetTrigger><Button variant="outline">Top</Button></SheetTrigger>
@@ -226,7 +236,10 @@ import {
 #### Without close button
 </Prose>
 
-<ComponentPreview code={`<Sheet>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Sheet>
   <SheetTrigger>
     <Button variant="outline">Open Sheet</Button>
   </SheetTrigger>
@@ -239,7 +252,9 @@ import {
       </SheetDescription>
     </SheetHeader>
   </SheetContent>
-</Sheet>`}>
+</Sheet>
+```
+  </Fragment>
   <Sheet>
     <SheetTrigger>
       <Button variant="outline">Open Sheet</Button>
@@ -262,7 +277,10 @@ import {
 #### Navigation menu
 </Prose>
 
-<ComponentPreview code={`<Sheet>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Sheet>
   <SheetTrigger>
     <Button variant="outline">Menu</Button>
   </SheetTrigger>
@@ -278,7 +296,9 @@ import {
       <a href="#" class="block px-3 py-2 rounded-md hover:bg-muted">Contact</a>
     </nav>
   </SheetContent>
-</Sheet>`}>
+</Sheet>
+```
+  </Fragment>
   <Sheet>
     <SheetTrigger>
       <Button variant="outline">Menu</Button>

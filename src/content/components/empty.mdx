@@ -26,7 +26,10 @@ import Users from "@lucide/astro/icons/users";
 import Plus from "@lucide/astro/icons/plus";
 import Upload from "@lucide/astro/icons/upload";
 
-<ComponentPreview code={`<Empty>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Empty>
   <EmptyHeader>
     <EmptyMedia variant="icon">
       <Inbox />
@@ -39,7 +42,9 @@ import Upload from "@lucide/astro/icons/upload";
   <EmptyContent>
     <Button size="sm">Compose message</Button>
   </EmptyContent>
-</Empty>`}>
+</Empty>
+```
+  </Fragment>
   <Empty>
     <EmptyHeader>
       <EmptyMedia variant="icon">
@@ -106,7 +111,10 @@ import {
 #### With icon
 </Prose>
 
-<ComponentPreview code={`<Empty>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Empty>
   <EmptyHeader>
     <EmptyMedia variant="icon">
       <FolderOpen />
@@ -122,7 +130,9 @@ import {
       New project
     </Button>
   </EmptyContent>
-</Empty>`}>
+</Empty>
+```
+  </Fragment>
   <Empty>
     <EmptyHeader>
       <EmptyMedia variant="icon">
@@ -148,7 +158,10 @@ import {
 #### With avatar
 </Prose>
 
-<ComponentPreview code={`<Empty>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Empty>
   <EmptyHeader>
     <EmptyMedia>
       <Avatar class="size-12">
@@ -164,7 +177,9 @@ import {
   <EmptyContent>
     <Button size="sm">Send message</Button>
   </EmptyContent>
-</Empty>`}>
+</Empty>
+```
+  </Fragment>
   <Empty>
     <EmptyHeader>
       <EmptyMedia>
@@ -190,7 +205,10 @@ import {
 #### Multiple actions
 </Prose>
 
-<ComponentPreview code={`<Empty>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Empty>
   <EmptyHeader>
     <EmptyMedia variant="icon">
       <Upload />
@@ -204,7 +222,9 @@ import {
     <Button size="sm">Upload</Button>
     <Button size="sm" variant="outline">Import</Button>
   </EmptyContent>
-</Empty>`}>
+</Empty>
+```
+  </Fragment>
   <Empty>
     <EmptyHeader>
       <EmptyMedia variant="icon">
@@ -228,7 +248,10 @@ import {
 #### Minimal
 </Prose>
 
-<ComponentPreview code={`<Empty>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Empty>
   <EmptyHeader>
     <EmptyMedia variant="icon">
       <Users />
@@ -238,7 +261,9 @@ import {
       Invite your team to collaborate.
     </EmptyDescription>
   </EmptyHeader>
-</Empty>`}>
+</Empty>
+```
+  </Fragment>
   <Empty>
     <EmptyHeader>
       <EmptyMedia variant="icon">

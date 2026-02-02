@@ -15,15 +15,19 @@ import AvatarImage from "@/components/ui/avatar/AvatarImage.astro";
 import AvatarFallback from "@/components/ui/avatar/AvatarFallback.astro";
 import AvatarGroup from "@/components/ui/avatar/AvatarGroup.astro";
 
-<ComponentPreview code={`<Avatar>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Avatar>
   <AvatarImage src="/images/avatars/mike.png" alt="User" />
   <AvatarFallback>MA</AvatarFallback>
-</Avatar>`}>
-
-    <Avatar>
-      <AvatarImage src="/images/avatars/mike.png" alt="User" />
-      <AvatarFallback>MA</AvatarFallback>
-    </Avatar>
+</Avatar>
+```
+  </Fragment>
+  <Avatar>
+    <AvatarImage src="/images/avatars/mike.png" alt="User" />
+    <AvatarFallback>MA</AvatarFallback>
+  </Avatar>
 </ComponentPreview>
 
 <div class="space-y-4">
@@ -65,7 +69,10 @@ import {
 #### Sizes
 </Prose>
 
-<ComponentPreview code={`<div class="flex items-center gap-4">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex items-center gap-4">
   <Avatar size="sm">
     <AvatarFallback>SM</AvatarFallback>
   </Avatar>
@@ -75,7 +82,9 @@ import {
   <Avatar size="lg">
     <AvatarFallback>LG</AvatarFallback>
   </Avatar>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex items-center gap-4">
     <Avatar size="sm">
       <AvatarFallback>SM</AvatarFallback>
@@ -95,14 +104,19 @@ import {
 #### With fallback
 </Prose>
 
-<ComponentPreview code={`<Avatar>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Avatar>
   <AvatarImage src="/broken-image.png" alt="User" />
   <AvatarFallback>JD</AvatarFallback>
-</Avatar>`}>
-    <Avatar>
-      <AvatarImage src="/broken-image.png" alt="User" />
-      <AvatarFallback>JD</AvatarFallback>
-    </Avatar>
+</Avatar>
+```
+  </Fragment>
+  <Avatar>
+    <AvatarImage src="/broken-image.png" alt="User" />
+    <AvatarFallback>JD</AvatarFallback>
+  </Avatar>
 </ComponentPreview>
 </div>
 
@@ -111,7 +125,10 @@ import {
 #### Avatar group
 </Prose>
 
-<ComponentPreview code={`<AvatarGroup>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<AvatarGroup>
   <Avatar class="border-2 border-background">
     <AvatarImage src="/images/avatars/mike.png" alt="Mike" />
     <AvatarFallback>MA</AvatarFallback>
@@ -125,7 +142,9 @@ import {
   <Avatar class="border-2 border-background">
     <AvatarFallback>CD</AvatarFallback>
   </Avatar>
-</AvatarGroup>`}>
+</AvatarGroup>
+```
+  </Fragment>
   <AvatarGroup>
     <Avatar class="border-2 border-background">
       <AvatarImage src="/images/avatars/mike.png" alt="Mike" />
@@ -149,7 +168,10 @@ import {
 #### Avatar group with max
 </Prose>
 
-<ComponentPreview code={`<AvatarGroup max={3}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<AvatarGroup max={3}>
   <Avatar class="border-2 border-background">
     <AvatarImage src="/images/avatars/mike.png" alt="Mike" />
     <AvatarFallback>MA</AvatarFallback>
@@ -166,7 +188,9 @@ import {
   <Avatar class="border-2 border-background">
     <AvatarFallback>EF</AvatarFallback>
   </Avatar>
-</AvatarGroup>`}>
+</AvatarGroup>
+```
+  </Fragment>
   <AvatarGroup max={3}>
     <Avatar class="border-2 border-background">
       <AvatarImage src="/images/avatars/mike.png" alt="Mike" />

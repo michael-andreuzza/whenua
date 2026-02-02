@@ -15,9 +15,14 @@ import Bold from "@lucide/astro/icons/bold";
 import Italic from "@lucide/astro/icons/italic";
 import Underline from "@lucide/astro/icons/underline";
 
-<ComponentPreview code={`<Toggle aria-label="Toggle bold">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Toggle aria-label="Toggle bold">
   <Bold class="size-4" />
-</Toggle>`}>
+</Toggle>
+```
+  </Fragment>
   <Toggle aria-label="Toggle bold">
     <Bold class="size-4" />
   </Toggle>
@@ -55,14 +60,19 @@ import { Toggle } from "@/components/bearnie/toggle"
 #### Outline
 </Prose>
 
-<ComponentPreview code={`<div class="flex items-center gap-2">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex items-center gap-2">
   <Toggle variant="outline" aria-label="Toggle italic">
     <Italic class="size-4" />
   </Toggle>
   <Toggle variant="outline" aria-label="Toggle bold">
     <Bold class="size-4" />
   </Toggle>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex items-center gap-2">
     <Toggle variant="outline" aria-label="Toggle italic">
       <Italic class="size-4" />
@@ -79,10 +89,15 @@ import { Toggle } from "@/components/bearnie/toggle"
 #### With text
 </Prose>
 
-<ComponentPreview code={`<Toggle aria-label="Toggle italic">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Toggle aria-label="Toggle italic">
   <Italic class="size-4" />
   <span>Italic</span>
-</Toggle>`}>
+</Toggle>
+```
+  </Fragment>
   <Toggle aria-label="Toggle italic">
     <Italic class="size-4" />
     <span>Italic</span>
@@ -95,7 +110,10 @@ import { Toggle } from "@/components/bearnie/toggle"
 #### Sizes
 </Prose>
 
-<ComponentPreview code={`<div class="flex items-center gap-2">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex items-center gap-2">
   <Toggle size="sm" aria-label="Toggle bold">
     <Bold class="size-4" />
   </Toggle>
@@ -105,7 +123,9 @@ import { Toggle } from "@/components/bearnie/toggle"
   <Toggle size="lg" aria-label="Toggle bold">
     <Bold class="size-4" />
   </Toggle>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex items-center gap-2">
     <Toggle size="sm" aria-label="Toggle bold">
       <Bold class="size-4" />
@@ -125,9 +145,14 @@ import { Toggle } from "@/components/bearnie/toggle"
 #### Pressed
 </Prose>
 
-<ComponentPreview code={`<Toggle pressed aria-label="Toggle underline">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Toggle pressed aria-label="Toggle underline">
   <Underline class="size-4" />
-</Toggle>`}>
+</Toggle>
+```
+  </Fragment>
   <Toggle pressed aria-label="Toggle underline">
     <Underline class="size-4" />
   </Toggle>
@@ -139,14 +164,19 @@ import { Toggle } from "@/components/bearnie/toggle"
 #### Disabled
 </Prose>
 
-<ComponentPreview code={`<div class="flex items-center gap-2">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex items-center gap-2">
   <Toggle disabled aria-label="Toggle bold">
     <Bold class="size-4" />
   </Toggle>
   <Toggle disabled pressed aria-label="Toggle italic">
     <Italic class="size-4" />
   </Toggle>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex items-center gap-2">
     <Toggle disabled aria-label="Toggle bold">
       <Bold class="size-4" />

@@ -13,7 +13,12 @@ import Prose from "@/components/docs/Prose.astro";
 import Spinner from "@/components/ui/spinner/Spinner.astro";
 import Button from "@/components/ui/button/Button.astro";
 
-<ComponentPreview code={`<Spinner />`}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Spinner />
+```
+  </Fragment>
   <Spinner />
 </ComponentPreview>
 
@@ -49,11 +54,16 @@ import { Spinner } from "@/components/bearnie/spinner"
 #### Sizes
 </Prose>
 
-<ComponentPreview code={`<div class="flex items-center gap-4">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex items-center gap-4">
   <Spinner size="sm" />
   <Spinner size="default" />
   <Spinner size="lg" />
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex items-center gap-4">
     <Spinner size="sm" />
     <Spinner size="default" />
@@ -67,10 +77,15 @@ import { Spinner } from "@/components/bearnie/spinner"
 #### In button
 </Prose>
 
-<ComponentPreview code={`<Button disabled>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Button disabled>
   <Spinner size="sm" class="mr-2" />
   Loading...
-</Button>`}>
+</Button>
+```
+  </Fragment>
   <Button disabled>
     <Spinner size="sm" class="mr-2" />
     Loading...

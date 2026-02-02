@@ -22,7 +22,10 @@ import AlertDialogAction from "@/components/ui/alert-dialog/AlertDialogAction.as
 import AlertDialogCancel from "@/components/ui/alert-dialog/AlertDialogCancel.astro";
 import Button from "@/components/ui/button/Button.astro";
 
-<ComponentPreview code={`<AlertDialog>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<AlertDialog>
   <AlertDialogTrigger>
     <Button variant="outline">Delete Account</Button>
   </AlertDialogTrigger>
@@ -39,7 +42,9 @@ import Button from "@/components/ui/button/Button.astro";
       <AlertDialogAction>Continue</AlertDialogAction>
     </AlertDialogFooter>
   </AlertDialogContent>
-</AlertDialog>`}>
+</AlertDialog>
+```
+  </Fragment>
   <AlertDialog>
     <AlertDialogTrigger>
       <Button variant="outline">Delete Account</Button>
@@ -120,7 +125,10 @@ import {
 #### Destructive action
 </Prose>
 
-<ComponentPreview code={`<AlertDialog>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<AlertDialog>
   <AlertDialogTrigger>
     <Button variant="destructive">Delete Project</Button>
   </AlertDialogTrigger>
@@ -139,7 +147,9 @@ import {
       </AlertDialogAction>
     </AlertDialogFooter>
   </AlertDialogContent>
-</AlertDialog>`}>
+</AlertDialog>
+```
+  </Fragment>
   <AlertDialog>
     <AlertDialogTrigger>
       <Button variant="destructive">Delete Project</Button>

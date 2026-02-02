@@ -18,7 +18,10 @@ import AvatarImage from "@/components/ui/avatar/AvatarImage.astro";
 import AvatarFallback from "@/components/ui/avatar/AvatarFallback.astro";
 import CalendarDays from "@lucide/astro/icons/calendar-days";
 
-<ComponentPreview code={`<HoverCard>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<HoverCard>
   <HoverCardTrigger>
     <a href="#" class="text-sm font-medium underline underline-offset-4">@bearnie</a>
   </HoverCardTrigger>
@@ -40,7 +43,9 @@ import CalendarDays from "@lucide/astro/icons/calendar-days";
       </div>
     </div>
   </HoverCardContent>
-</HoverCard>`}>
+</HoverCard>
+```
+  </Fragment>
   <HoverCard>
     <HoverCardTrigger>
       <a href="#" class="text-sm font-medium underline underline-offset-4">@bearnie</a>
@@ -107,14 +112,19 @@ import {
 #### Custom delay
 </Prose>
 
-<ComponentPreview code={`<HoverCard openDelay={0} closeDelay={500}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<HoverCard openDelay={0} closeDelay={500}>
   <HoverCardTrigger>
     <span class="text-sm font-medium underline underline-offset-4 cursor-pointer">Instant open</span>
   </HoverCardTrigger>
   <HoverCardContent>
     <p class="text-sm">Opens instantly, closes after 500ms delay.</p>
   </HoverCardContent>
-</HoverCard>`}>
+</HoverCard>
+```
+  </Fragment>
   <HoverCard openDelay={0} closeDelay={500}>
     <HoverCardTrigger>
       <span class="text-sm font-medium underline underline-offset-4 cursor-pointer">Instant open</span>
@@ -131,7 +141,10 @@ import {
 #### Alignment
 </Prose>
 
-<ComponentPreview code={`<div class="flex gap-8 justify-center">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex gap-8 justify-center">
   <HoverCard>
     <HoverCardTrigger>
       <span class="text-sm underline cursor-pointer">Start</span>
@@ -156,7 +169,9 @@ import {
       <p class="text-sm">Aligned to end</p>
     </HoverCardContent>
   </HoverCard>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex gap-8 justify-center">
     <HoverCard>
       <HoverCardTrigger>

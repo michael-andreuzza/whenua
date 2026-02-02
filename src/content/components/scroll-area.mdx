@@ -13,7 +13,10 @@ import Prose from "@/components/docs/Prose.astro";
 import ScrollArea from "@/components/ui/scroll-area/ScrollArea.astro";
 import Separator from "@/components/ui/separator/Separator.astro";
 
-<ComponentPreview code={`<ScrollArea class="h-72 w-48 rounded-md border">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<ScrollArea class="h-72 w-48 rounded-md border">
   <div class="p-4">
     <h4 class="mb-4 text-sm font-medium">Tags</h4>
     <div class="text-sm">Tag 1</div>
@@ -26,7 +29,9 @@ import Separator from "@/components/ui/separator/Separator.astro";
     <Separator class="my-2" />
     <div class="text-sm">Tag 5</div>
   </div>
-</ScrollArea>`}>
+</ScrollArea>
+```
+  </Fragment>
   <ScrollArea class="h-72 rounded-md border ">
     <div class="p-4">
       <h4 class="mb-4 text-sm font-medium">Tags</h4>
@@ -89,11 +94,16 @@ import { ScrollArea } from "@/components/bearnie/scroll-area"
 #### Vertical
 </Prose>
 
-<ComponentPreview code={`<ScrollArea orientation="vertical" class="h-48  rounded-md border p-4">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<ScrollArea orientation="vertical" class="h-48  rounded-md border p-4">
   <p class="text-sm">
   Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
   </p>
-</ScrollArea>`}>
+</ScrollArea>
+```
+  </Fragment>
   <ScrollArea orientation="vertical" class="h-32  rounded-md border p-4">
     <p class="text-sm">
      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
@@ -107,7 +117,10 @@ import { ScrollArea } from "@/components/bearnie/scroll-area"
 #### Horizontal
 </Prose>
 
-<ComponentPreview code={`<ScrollArea orientation="horizontal" class=" rounded-md border">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<ScrollArea orientation="horizontal" class=" rounded-md border">
   <div class="flex gap-4 p-4">
     <div class="shrink-0 w-32 h-20 rounded bg-muted flex items-center justify-center">Item 1</div>
     <div class="shrink-0 w-32 h-20 rounded bg-muted flex items-center justify-center">Item 2</div>
@@ -115,7 +128,9 @@ import { ScrollArea } from "@/components/bearnie/scroll-area"
     <div class="shrink-0 w-32 h-20 rounded bg-muted flex items-center justify-center">Item 4</div>
     <div class="shrink-0 w-32 h-20 rounded bg-muted flex items-center justify-center">Item 5</div>
   </div>
-</ScrollArea>`}>
+</ScrollArea>
+```
+  </Fragment>
   <ScrollArea orientation="horizontal" class=" rounded-md border">
     <div class="flex gap-4 p-4">
       <div class="shrink-0 w-32 h-20 rounded bg-muted flex items-center justify-center">Item 1</div>
@@ -133,7 +148,10 @@ import { ScrollArea } from "@/components/bearnie/scroll-area"
 #### Both directions
 </Prose>
 
-<ComponentPreview code={`<ScrollArea orientation="both" class="h-48 max-w-1/2 mx-auto  rounded-md border">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<ScrollArea orientation="both" class="h-48 max-w-1/2 mx-auto  rounded-md border">
   <div class=" p-4">
     <p class="text-sm">
       This content is wider and taller than the container, so it can scroll in both directions. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris.
@@ -142,7 +160,9 @@ import { ScrollArea } from "@/components/bearnie/scroll-area"
       Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident.
     </p>
   </div>
-</ScrollArea>`}>
+</ScrollArea>
+```
+  </Fragment>
   <ScrollArea orientation="both" class="h-48 max-w-1/2 mx-auto  rounded-md border">
     <div class=" p-4">
       <p class="text-sm">

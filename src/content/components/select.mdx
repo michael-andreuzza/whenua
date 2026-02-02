@@ -14,11 +14,16 @@ import Select from "@/components/ui/select/Select.astro";
 import SelectOption from "@/components/ui/select/SelectOption.astro";
 import Label from "@/components/ui/label/Label.astro";
 
-<ComponentPreview code={`<Select placeholder="Select a framework">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Select placeholder="Select a framework">
   <option value="astro">Astro</option>
   <option value="next">Next.js</option>
   <option value="remix">Remix</option>
-</Select>`}>
+</Select>
+```
+  </Fragment>
   <Select placeholder="Select a framework" class="w-[200px]">
     <option value="astro">Astro</option>
     <option value="next">Next.js</option>
@@ -61,14 +66,19 @@ import { Select } from "@/components/bearnie/select"
 #### With label
 </Prose>
 
-<ComponentPreview code={`<div class="grid gap-2 w-[200px]">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="grid gap-2 w-[200px]">
   <Label for="framework">Framework</Label>
   <Select id="framework" placeholder="Select a framework">
     <option value="astro">Astro</option>
     <option value="next">Next.js</option>
     <option value="remix">Remix</option>
   </Select>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="grid gap-2 w-[200px]">
     <Label for="framework">Framework</Label>
     <Select id="framework" placeholder="Select a framework">
@@ -85,9 +95,14 @@ import { Select } from "@/components/bearnie/select"
 #### Disabled
 </Prose>
 
-<ComponentPreview code={`<Select disabled placeholder="Disabled">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Select disabled placeholder="Disabled">
   <option value="one">Option One</option>
-</Select>`}>
+</Select>
+```
+  </Fragment>
   <Select disabled placeholder="Disabled" class="w-[200px]">
     <option value="one">Option One</option>
   </Select>

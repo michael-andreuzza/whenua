@@ -96,7 +96,10 @@ import {
 Only one item can be open at a time. Opening a new item automatically closes the previous one.
 </Prose>
 
-<ComponentPreview code={`<Accordion type="single">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Accordion type="single">
   <AccordionItem value="item-1">
     <AccordionTrigger>What is your refund policy?</AccordionTrigger>
     <AccordionContent>We offer a 30-day money-back guarantee on all purchases.</AccordionContent>
@@ -109,7 +112,9 @@ Only one item can be open at a time. Opening a new item automatically closes the
     <AccordionTrigger>Do you offer discounts?</AccordionTrigger>
     <AccordionContent>Yes, we offer seasonal promotions and bulk discounts.</AccordionContent>
   </AccordionItem>
-</Accordion>`}>
+</Accordion>
+```
+  </Fragment>
   <Accordion type="single" class="w-full">
     <AccordionItem value="item-1">
       <AccordionTrigger>What is your refund policy?</AccordionTrigger>
@@ -134,7 +139,10 @@ Only one item can be open at a time. Opening a new item automatically closes the
 Multiple items can be open simultaneously. Useful when users may need to compare content across sections.
 </Prose>
 
-<ComponentPreview code={`<Accordion type="multiple">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Accordion type="multiple">
   <AccordionItem value="item-1">
     <AccordionTrigger>Personal Information</AccordionTrigger>
     <AccordionContent>Name, email, and phone number details.</AccordionContent>
@@ -147,7 +155,9 @@ Multiple items can be open simultaneously. Useful when users may need to compare
     <AccordionTrigger>Payment Method</AccordionTrigger>
     <AccordionContent>Credit card or PayPal account information.</AccordionContent>
   </AccordionItem>
-</Accordion>`}>
+</Accordion>
+```
+  </Fragment>
   <Accordion type="multiple" class="w-full">
     <AccordionItem value="item-1">
       <AccordionTrigger>Personal Information</AccordionTrigger>

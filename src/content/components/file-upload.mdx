@@ -17,7 +17,10 @@ import FileUploadDropzone from "@/components/ui/file-upload/FileUploadDropzone.a
 import FileUploadPreview from "@/components/ui/file-upload/FileUploadPreview.astro";
 import Upload from "@lucide/astro/icons/upload";
 
-<ComponentPreview code={`<FileUpload class="w-full max-w-md space-y-4">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<FileUpload class="w-full max-w-md space-y-4">
   <FileUploadInput name="files" multiple />
   <FileUploadDropzone>
     <Upload class="size-6 text-muted-foreground" />
@@ -27,7 +30,9 @@ import Upload from "@lucide/astro/icons/upload";
     <p class="text-xs text-muted-foreground">PNG, JPG or PDF (max. 10MB)</p>
   </FileUploadDropzone>
   <FileUploadPreview />
-</FileUpload>`}>
+</FileUpload>
+```
+  </Fragment>
   <FileUpload class="w-full max-w-md space-y-4">
     <FileUploadInput name="files" multiple />
     <FileUploadDropzone>
@@ -83,14 +88,19 @@ import {
 #### With button trigger
 </Prose>
 
-<ComponentPreview code={`<FileUpload class="inline-flex flex-col items-start gap-3">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<FileUpload class="inline-flex flex-col items-start gap-3">
   <FileUploadInput name="avatar" accept="image/*" />
   <FileUploadTrigger>
     <Upload class="mr-2 size-4" />
     Upload Avatar
   </FileUploadTrigger>
   <FileUploadPreview class="mt-0" />
-</FileUpload>`}>
+</FileUpload>
+```
+  </Fragment>
   <FileUpload class="inline-flex flex-col items-start gap-3">
     <FileUploadInput name="avatar" accept="image/*" />
     <FileUploadTrigger>
@@ -107,7 +117,10 @@ import {
 #### Single file
 </Prose>
 
-<ComponentPreview code={`<FileUpload class="w-full max-w-md space-y-4">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<FileUpload class="w-full max-w-md space-y-4">
   <FileUploadInput name="document" accept=".pdf,.doc,.docx" />
   <FileUploadDropzone>
     <Upload class="size-5 text-muted-foreground" />
@@ -115,7 +128,9 @@ import {
     <p class="text-xs text-muted-foreground">PDF, DOC, or DOCX</p>
   </FileUploadDropzone>
   <FileUploadPreview />
-</FileUpload>`}>
+</FileUpload>
+```
+  </Fragment>
   <FileUpload class="w-full max-w-md space-y-4">
     <FileUploadInput name="document" accept=".pdf,.doc,.docx" />
     <FileUploadDropzone>
@@ -133,7 +148,10 @@ import {
 #### Multiple files
 </Prose>
 
-<ComponentPreview code={`<FileUpload class="w-full max-w-md space-y-4">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<FileUpload class="w-full max-w-md space-y-4">
   <FileUploadInput name="photos" multiple accept="image/*" />
   <FileUploadDropzone>
     <Upload class="size-5 text-muted-foreground" />
@@ -141,7 +159,9 @@ import {
     <p class="text-xs text-muted-foreground">Select multiple files or drag them here</p>
   </FileUploadDropzone>
   <FileUploadPreview />
-</FileUpload>`}>
+</FileUpload>
+```
+  </Fragment>
   <FileUpload class="w-full max-w-md space-y-4">
     <FileUploadInput name="photos" multiple accept="image/*" />
     <FileUploadDropzone>

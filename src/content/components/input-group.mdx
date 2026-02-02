@@ -29,12 +29,17 @@ import X from "@lucide/astro/icons/x";
 import ChevronDown from "@lucide/astro/icons/chevron-down";
 import DollarSign from "@lucide/astro/icons/dollar-sign";
 
-<ComponentPreview code={`<InputGroup>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<InputGroup>
   <InputGroupInput placeholder="Search..." />
   <InputGroupAddon align="inline-start">
     <Search class="size-4" />
   </InputGroupAddon>
-</InputGroup>`}>
+</InputGroup>
+```
+  </Fragment>
   <InputGroup>
     <InputGroupInput placeholder="Search..." />
     <InputGroupAddon align="inline-start">
@@ -93,12 +98,17 @@ For proper focus management, `InputGroupAddon` should always be placed after `In
 Use `align="inline-start"` to position the addon at the start of the input. This is the default.
 </Prose>
 
-<ComponentPreview code={`<InputGroup>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<InputGroup>
   <InputGroupInput placeholder="Search..." />
   <InputGroupAddon align="inline-start">
     <Search class="size-4" />
   </InputGroupAddon>
-</InputGroup>`}>
+</InputGroup>
+```
+  </Fragment>
   <InputGroup>
     <InputGroupInput placeholder="Search..." />
     <InputGroupAddon align="inline-start">
@@ -115,12 +125,17 @@ Use `align="inline-start"` to position the addon at the start of the input. This
 Use `align="inline-end"` to position the addon at the end of the input.
 </Prose>
 
-<ComponentPreview code={`<InputGroup>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<InputGroup>
   <InputGroupInput type="password" placeholder="Enter password" />
   <InputGroupAddon align="inline-end">
     <Eye class="size-4" />
   </InputGroupAddon>
-</InputGroup>`}>
+</InputGroup>
+```
+  </Fragment>
   <InputGroup>
     <InputGroupInput type="password" placeholder="Enter password" />
     <InputGroupAddon align="inline-end">
@@ -137,12 +152,17 @@ Use `align="inline-end"` to position the addon at the end of the input.
 Use `align="block-start"` to position the addon above the input. Use `layout="block"` on InputGroup for vertical layouts.
 </Prose>
 
-<ComponentPreview code={`<InputGroup layout="block">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<InputGroup layout="block">
   <InputGroupTextarea placeholder="Enter your message..." rows={3} />
   <InputGroupAddon align="block-start" class="text-xs font-medium">
     Message
   </InputGroupAddon>
-</InputGroup>`}>
+</InputGroup>
+```
+  </Fragment>
   <InputGroup layout="block" class="w-full max-w-sm">
     <InputGroupTextarea placeholder="Enter your message..." rows={3} />
     <InputGroupAddon align="block-start" class="text-xs font-medium">
@@ -159,13 +179,18 @@ Use `align="block-start"` to position the addon above the input. Use `layout="bl
 Use `align="block-end"` to position the addon below the input.
 </Prose>
 
-<ComponentPreview code={`<InputGroup layout="block">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<InputGroup layout="block">
   <InputGroupTextarea placeholder="Write a comment..." rows={3} />
   <InputGroupAddon align="block-end" class="justify-between">
     <span class="text-xs">0/280</span>
     <InputGroupButton variant="default" size="sm">Post</InputGroupButton>
   </InputGroupAddon>
-</InputGroup>`}>
+</InputGroup>
+```
+  </Fragment>
   <InputGroup layout="block" class="w-full max-w-sm">
     <InputGroupTextarea placeholder="Write a comment..." rows={3} />
     <InputGroupAddon align="block-end" class="justify-between">
@@ -187,7 +212,10 @@ Use `align="block-end"` to position the addon below the input.
 #### Icon
 </Prose>
 
-<ComponentPreview code={`<div class="flex flex-col gap-4 w-full max-w-sm">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex flex-col gap-4 w-full max-w-sm">
   <InputGroup>
     <InputGroupInput placeholder="Search..." />
     <InputGroupAddon align="inline-start">
@@ -206,7 +234,9 @@ Use `align="block-end"` to position the addon below the input.
       <Lock class="size-4" />
     </InputGroupAddon>
   </InputGroup>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex flex-col gap-4 w-full max-w-sm">
     <InputGroup>
       <InputGroupInput placeholder="Search..." />
@@ -235,7 +265,10 @@ Use `align="block-end"` to position the addon below the input.
 #### Text
 </Prose>
 
-<ComponentPreview code={`<div class="flex flex-col gap-4 w-full max-w-sm">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex flex-col gap-4 w-full max-w-sm">
   <InputGroup>
     <InputGroupInput placeholder="lexingtonthemes.com" />
     <InputGroupAddon align="inline-start">
@@ -248,7 +281,9 @@ Use `align="block-end"` to position the addon below the input.
       <InputGroupText>USD</InputGroupText>
     </InputGroupAddon>
   </InputGroup>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex flex-col gap-4 w-full max-w-sm">
     <InputGroup>
       <InputGroupInput placeholder="lexingtonthemes.com" />
@@ -271,7 +306,10 @@ Use `align="block-end"` to position the addon below the input.
 #### Button
 </Prose>
 
-<ComponentPreview code={`<div class="flex flex-col gap-4 w-full max-w-sm">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex flex-col gap-4 w-full max-w-sm">
   <InputGroup>
     <InputGroupInput placeholder="Enter text to copy..." />
     <InputGroupAddon align="inline-end">
@@ -286,7 +324,9 @@ Use `align="block-end"` to position the addon below the input.
       <InputGroupButton size="xs">Search</InputGroupButton>
     </InputGroupAddon>
   </InputGroup>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex flex-col gap-4 w-full max-w-sm">
     <InputGroup>
       <InputGroupInput placeholder="Enter text to copy..." />
@@ -311,14 +351,19 @@ Use `align="block-end"` to position the addon below the input.
 #### Kbd
 </Prose>
 
-<ComponentPreview code={`<InputGroup>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<InputGroup>
   <InputGroupInput placeholder="Search documentation..." />
   <InputGroupAddon align="inline-end">
     <kbd class="pointer-events-none inline-flex h-5 select-none items-center gap-1 rounded border bg-muted px-1.5 font-mono text-[10px] font-medium text-muted-foreground">
       <span class="text-xs">⌘</span>K
     </kbd>
   </InputGroupAddon>
-</InputGroup>`}>
+</InputGroup>
+```
+  </Fragment>
   <InputGroup class="w-full max-w-sm">
     <InputGroupInput placeholder="Search documentation..." />
     <InputGroupAddon align="inline-end">
@@ -335,7 +380,10 @@ Use `align="block-end"` to position the addon below the input.
 #### Spinner
 </Prose>
 
-<ComponentPreview code={`<div class="flex flex-col gap-4 w-full max-w-sm">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex flex-col gap-4 w-full max-w-sm">
   <InputGroup>
     <InputGroupInput placeholder="Loading..." />
     <InputGroupAddon align="inline-end">
@@ -348,7 +396,9 @@ Use `align="block-end"` to position the addon below the input.
       <Spinner size="sm" />
     </InputGroupAddon>
   </InputGroup>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex flex-col gap-4 w-full max-w-sm">
     <InputGroup>
       <InputGroupInput placeholder="Loading..." />
@@ -371,7 +421,10 @@ Use `align="block-end"` to position the addon below the input.
 #### Multiple addons
 </Prose>
 
-<ComponentPreview code={`<InputGroup>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<InputGroup>
   <InputGroupInput placeholder="0.00" />
   <InputGroupAddon align="inline-start">
     <DollarSign class="size-4" />
@@ -379,7 +432,9 @@ Use `align="block-end"` to position the addon below the input.
   <InputGroupAddon align="inline-end">
     <InputGroupText>USD</InputGroupText>
   </InputGroupAddon>
-</InputGroup>`}>
+</InputGroup>
+```
+  </Fragment>
   <InputGroup class="w-full max-w-sm">
     <InputGroupInput placeholder="0.00" />
     <InputGroupAddon align="inline-start">
@@ -397,14 +452,19 @@ Use `align="block-end"` to position the addon below the input.
 #### Clearable input
 </Prose>
 
-<ComponentPreview code={`<InputGroup>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<InputGroup>
   <InputGroupInput placeholder="Type something..." value="Hello World" />
   <InputGroupAddon align="inline-end">
     <InputGroupButton size="icon-xs" aria-label="Clear">
       <X class="size-3.5" />
     </InputGroupButton>
   </InputGroupAddon>
-</InputGroup>`}>
+</InputGroup>
+```
+  </Fragment>
   <InputGroup class="w-full max-w-sm">
     <InputGroupInput placeholder="Type something..." value="Hello World" />
     <InputGroupAddon align="inline-end">
@@ -421,7 +481,10 @@ Use `align="block-end"` to position the addon below the input.
 #### Textarea with actions
 </Prose>
 
-<ComponentPreview code={`<InputGroup layout="block">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<InputGroup layout="block">
   <InputGroupTextarea placeholder="Write your message..." rows={4} />
   <InputGroupAddon align="block-end" class="justify-end gap-2">
     <InputGroupButton variant="ghost" size="sm">Cancel</InputGroupButton>
@@ -430,7 +493,9 @@ Use `align="block-end"` to position the addon below the input.
       Send
     </InputGroupButton>
   </InputGroupAddon>
-</InputGroup>`}>
+</InputGroup>
+```
+  </Fragment>
   <InputGroup layout="block" class="w-full max-w-md">
     <InputGroupTextarea placeholder="Write your message..." rows={4} />
     <InputGroupAddon align="block-end" class="justify-end gap-2">
@@ -449,7 +514,10 @@ Use `align="block-end"` to position the addon below the input.
 #### Textarea with header and footer
 </Prose>
 
-<ComponentPreview code={`<InputGroup layout="block">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<InputGroup layout="block">
   <InputGroupTextarea placeholder="Write your comment..." rows={3} />
   <InputGroupAddon align="block-start" class="font-medium text-sm">
     Add a comment
@@ -458,7 +526,9 @@ Use `align="block-end"` to position the addon below the input.
     <span class="text-xs">Markdown supported</span>
     <InputGroupButton variant="default" size="sm">Submit</InputGroupButton>
   </InputGroupAddon>
-</InputGroup>`}>
+</InputGroup>
+```
+  </Fragment>
   <InputGroup layout="block" class="w-full max-w-md">
     <InputGroupTextarea placeholder="Write your comment..." rows={3} />
     <InputGroupAddon align="block-start" class="font-medium text-sm">

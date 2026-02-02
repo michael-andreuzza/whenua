@@ -21,11 +21,16 @@ import Bold from "@lucide/astro/icons/bold";
 import Italic from "@lucide/astro/icons/italic";
 import Underline from "@lucide/astro/icons/underline";
 
-<ComponentPreview code={`<ButtonGroup>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<ButtonGroup>
   <Button variant="outline">Left</Button>
   <Button variant="outline">Center</Button>
   <Button variant="outline">Right</Button>
-</ButtonGroup>`}>
+</ButtonGroup>
+```
+  </Fragment>
   <ButtonGroup>
     <Button variant="outline">Left</Button>
     <Button variant="outline">Center</Button>
@@ -69,11 +74,16 @@ import { ButtonGroup, ButtonGroupSeparator, ButtonGroupText } from "@/components
 #### Vertical
 </Prose>
 
-<ComponentPreview code={`<ButtonGroup orientation="vertical">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<ButtonGroup orientation="vertical">
   <Button variant="outline">Top</Button>
   <Button variant="outline">Middle</Button>
   <Button variant="outline">Bottom</Button>
-</ButtonGroup>`}>
+</ButtonGroup>
+```
+  </Fragment>
   <ButtonGroup orientation="vertical">
     <Button variant="outline">Top</Button>
     <Button variant="outline">Middle</Button>
@@ -87,7 +97,10 @@ import { ButtonGroup, ButtonGroupSeparator, ButtonGroupText } from "@/components
 #### Icon buttons
 </Prose>
 
-<ComponentPreview code={`<ButtonGroup>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<ButtonGroup>
   <Button variant="outline" iconOnly>
     <Bold />
   </Button>
@@ -97,7 +110,9 @@ import { ButtonGroup, ButtonGroupSeparator, ButtonGroupText } from "@/components
   <Button variant="outline" iconOnly>
     <Underline />
   </Button>
-</ButtonGroup>`}>
+</ButtonGroup>
+```
+  </Fragment>
   <ButtonGroup>
     <Button variant="outline" iconOnly>
       <Bold />
@@ -117,13 +132,18 @@ import { ButtonGroup, ButtonGroupSeparator, ButtonGroupText } from "@/components
 #### With separator
 </Prose>
 
-<ComponentPreview code={`<ButtonGroup>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<ButtonGroup>
   <Button>Save</Button>
   <ButtonGroupSeparator />
   <Button iconOnly>
     <ChevronDown />
   </Button>
-</ButtonGroup>`}>
+</ButtonGroup>
+```
+  </Fragment>
   <ButtonGroup>
     <Button>Save</Button>
     <ButtonGroupSeparator />
@@ -139,7 +159,10 @@ import { ButtonGroup, ButtonGroupSeparator, ButtonGroupText } from "@/components
 #### Split button
 </Prose>
 
-<ComponentPreview code={`<ButtonGroup>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<ButtonGroup>
   <Button variant="outline">
     <Copy slot="left-icon" />
     Copy
@@ -148,7 +171,9 @@ import { ButtonGroup, ButtonGroupSeparator, ButtonGroupText } from "@/components
   <Button variant="outline" iconOnly>
     <ChevronDown />
   </Button>
-</ButtonGroup>`}>
+</ButtonGroup>
+```
+  </Fragment>
   <ButtonGroup>
     <Button variant="outline">
       <Copy slot="left-icon" />
@@ -167,10 +192,15 @@ import { ButtonGroup, ButtonGroupSeparator, ButtonGroupText } from "@/components
 #### With input
 </Prose>
 
-<ComponentPreview code={`<ButtonGroup>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<ButtonGroup>
   <Input placeholder="Enter URL..." class="rounded-r-none" />
   <Button variant="outline">Go</Button>
-</ButtonGroup>`}>
+</ButtonGroup>
+```
+  </Fragment>
   <ButtonGroup>
     <Input placeholder="Enter URL..." class="rounded-r-none border-r-0" />
     <Button variant="outline">Go</Button>
@@ -183,10 +213,15 @@ import { ButtonGroup, ButtonGroupSeparator, ButtonGroupText } from "@/components
 #### With text
 </Prose>
 
-<ComponentPreview code={`<ButtonGroup>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<ButtonGroup>
   <ButtonGroupText>https://</ButtonGroupText>
   <Input placeholder="lexingtonthemes.com" class="rounded-l-none border-l-0" />
-</ButtonGroup>`}>
+</ButtonGroup>
+```
+  </Fragment>
   <ButtonGroup>
     <ButtonGroupText>https://</ButtonGroupText>
     <Input placeholder="lexingtonthemes.com" class="rounded-l-none border-l-0" />
@@ -199,7 +234,10 @@ import { ButtonGroup, ButtonGroupSeparator, ButtonGroupText } from "@/components
 #### Toolbar
 </Prose>
 
-<ComponentPreview code={`<ButtonGroup>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<ButtonGroup>
   <Button variant="secondary" iconOnly>
     <Bold />
   </Button>
@@ -209,7 +247,9 @@ import { ButtonGroup, ButtonGroupSeparator, ButtonGroupText } from "@/components
   <Button variant="outline" iconOnly>
     <Underline />
   </Button>
-</ButtonGroup>`}>
+</ButtonGroup>
+```
+  </Fragment>
   <ButtonGroup>
     <Button variant="secondary" iconOnly>
       <Bold />
@@ -229,7 +269,10 @@ import { ButtonGroup, ButtonGroupSeparator, ButtonGroupText } from "@/components
 #### Sizes
 </Prose>
 
-<ComponentPreview code={`<div class="flex flex-col gap-4">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex flex-col gap-4">
   <ButtonGroup>
     <Button variant="outline" size="sm">Small</Button>
     <Button variant="outline" size="sm">Group</Button>
@@ -242,7 +285,9 @@ import { ButtonGroup, ButtonGroupSeparator, ButtonGroupText } from "@/components
     <Button variant="outline" size="lg">Large</Button>
     <Button variant="outline" size="lg">Group</Button>
   </ButtonGroup>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex flex-col gap-4">
     <ButtonGroup>
       <Button variant="outline" size="sm">Small</Button>

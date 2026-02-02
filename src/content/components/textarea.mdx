@@ -14,7 +14,12 @@ import Textarea from "@/components/ui/textarea/Textarea.astro";
 import Label from "@/components/ui/label/Label.astro";
 import Button from "@/components/ui/button/Button.astro";
 
-<ComponentPreview code={`<Textarea placeholder="Type your message here." />`}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Textarea placeholder="Type your message here." />
+```
+  </Fragment>
   <Textarea placeholder="Type your message here." class="max-w-sm" />
 </ComponentPreview>
 
@@ -50,10 +55,15 @@ import { Textarea } from "@/components/bearnie/textarea"
 #### With label
 </Prose>
 
-<ComponentPreview code={`<div class="grid gap-2 w-full max-w-sm">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="grid gap-2 w-full max-w-sm">
   <Label for="message">Your message</Label>
   <Textarea id="message" placeholder="Type your message here." />
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="grid gap-2 w-full max-w-sm">
     <Label for="message">Your message</Label>
     <Textarea id="message" placeholder="Type your message here." />
@@ -66,7 +76,12 @@ import { Textarea } from "@/components/bearnie/textarea"
 #### Disabled
 </Prose>
 
-<ComponentPreview code={`<Textarea disabled placeholder="Disabled" />`}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Textarea disabled placeholder="Disabled" />
+```
+  </Fragment>
   <Textarea disabled placeholder="Disabled" class="max-w-sm" />
 </ComponentPreview>
 </div>
@@ -76,10 +91,15 @@ import { Textarea } from "@/components/bearnie/textarea"
 #### With button
 </Prose>
 
-<ComponentPreview code={`<div class="grid gap-2 w-full max-w-sm">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="grid gap-2 w-full max-w-sm">
   <Textarea placeholder="Type your message here." />
   <Button>Send message</Button>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="grid gap-2 w-full max-w-sm">
     <Textarea placeholder="Type your message here." />
     <Button>Send message</Button>

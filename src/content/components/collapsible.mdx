@@ -16,12 +16,17 @@ import CollapsibleContent from "@/components/ui/collapsible/CollapsibleContent.a
 import Button from "@/components/ui/button/Button.astro";
 import ChevronsUpDown from "@lucide/astro/icons/chevrons-up-down";
 
-<ComponentPreview code={`<Collapsible>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Collapsible>
   <CollapsibleTrigger>Toggle content</CollapsibleTrigger>
   <CollapsibleContent>
     <p class="p-4 bg-muted rounded-md mt-2">This content can be collapsed.</p>
   </CollapsibleContent>
-</Collapsible>`}>
+</Collapsible>
+```
+  </Fragment>
   <Collapsible>
     <CollapsibleTrigger>Toggle content</CollapsibleTrigger>
     <CollapsibleContent>
@@ -71,12 +76,17 @@ import {
 #### Default open
 </Prose>
 
-<ComponentPreview code={`<Collapsible defaultOpen>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Collapsible defaultOpen>
   <CollapsibleTrigger>Toggle (starts open)</CollapsibleTrigger>
   <CollapsibleContent>
     <p class="p-4 bg-muted rounded-md mt-2">This content is visible by default.</p>
   </CollapsibleContent>
-</Collapsible>`}>
+</Collapsible>
+```
+  </Fragment>
   <Collapsible defaultOpen>
     <CollapsibleTrigger>Toggle (starts open)</CollapsibleTrigger>
     <CollapsibleContent>
@@ -91,7 +101,10 @@ import {
 #### With button trigger
 </Prose>
 
-<ComponentPreview code={`<Collapsible class="w-[350px] space-y-2">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Collapsible class="w-[350px] space-y-2">
   <div class="flex items-center justify-between">
     <h4 class="text-sm font-semibold">@Mike_Andreuzza starred 3 repositories</h4>
     <CollapsibleTrigger>
@@ -111,7 +124,9 @@ import {
       @stitches/astro
     </div>
   </CollapsibleContent>
-</Collapsible>`}>
+</Collapsible>
+```
+  </Fragment>
   <Collapsible class="w-[350px] space-y-2">
     <div class="flex items-center justify-between">
       <h4 class="text-sm font-semibold">@Mike_Andreuzza starred 3 repositories</h4>

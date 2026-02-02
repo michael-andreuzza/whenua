@@ -13,10 +13,15 @@ import Prose from "@/components/docs/Prose.astro";
 import Switch from "@/components/ui/switch/Switch.astro";
 import Label from "@/components/ui/label/Label.astro";
 
-<ComponentPreview code={`<div class="flex items-center gap-2">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex items-center gap-2">
   <Switch id="airplane-mode" />
   <Label for="airplane-mode">Airplane Mode</Label>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex items-center gap-2">
     <Switch id="airplane-mode" />
     <Label for="airplane-mode">Airplane Mode</Label>
@@ -55,10 +60,15 @@ import { Switch } from "@/components/bearnie/switch"
 #### Checked
 </Prose>
 
-<ComponentPreview code={`<div class="flex items-center gap-2">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex items-center gap-2">
   <Switch id="notifications" checked />
   <Label for="notifications">Enable notifications</Label>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex items-center gap-2">
     <Switch id="notifications" checked />
     <Label for="notifications">Enable notifications</Label>
@@ -71,10 +81,15 @@ import { Switch } from "@/components/bearnie/switch"
 #### Disabled
 </Prose>
 
-<ComponentPreview code={`<div class="flex items-center gap-2">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex items-center gap-2">
   <Switch id="disabled" disabled />
   <Label for="disabled" class="opacity-50">Disabled switch</Label>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex items-center gap-2">
     <Switch id="disabled" disabled />
     <Label for="disabled" class="opacity-50">Disabled switch</Label>
@@ -87,13 +102,18 @@ import { Switch } from "@/components/bearnie/switch"
 #### With description
 </Prose>
 
-<ComponentPreview code={`<div class="flex items-start gap-2">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex items-start gap-2">
   <Switch id="marketing" class="mt-1" />
   <div class="grid gap-1">
     <Label for="marketing">Marketing emails</Label>
     <p class="text-sm text-muted-foreground">Receive emails about new products and updates.</p>
   </div>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex items-start gap-2">
     <Switch id="marketing" class="mt-1" />
     <div class="grid gap-1">

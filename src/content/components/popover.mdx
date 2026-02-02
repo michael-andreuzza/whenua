@@ -17,14 +17,19 @@ import Popover from "@/components/ui/popover/Popover.astro";
 import PopoverTrigger from "@/components/ui/popover/PopoverTrigger.astro";
 import PopoverContent from "@/components/ui/popover/PopoverContent.astro";
 
-<ComponentPreview code={`<Popover>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Popover>
   <PopoverTrigger>
     <Button variant="outline">Open Popover</Button>
   </PopoverTrigger>
   <PopoverContent>
     <p>This is the popover content.</p>
   </PopoverContent>
-</Popover>`}>
+</Popover>
+```
+  </Fragment>
   <Popover>
     <PopoverTrigger>
       <Button variant="outline">Open Popover</Button>
@@ -78,14 +83,19 @@ import {
 #### Side bottom
 </Prose>
 
-<ComponentPreview code={`<Popover>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Popover>
   <PopoverTrigger>
     <Button variant="outline">Bottom</Button>
   </PopoverTrigger>
   <PopoverContent side="bottom">
     <p>Popover opens below the trigger.</p>
   </PopoverContent>
-</Popover>`}>
+</Popover>
+```
+  </Fragment>
   <Popover>
     <PopoverTrigger>
       <Button variant="outline">Bottom</Button>
@@ -102,14 +112,19 @@ import {
 #### Side top
 </Prose>
 
-<ComponentPreview code={`<Popover>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Popover>
   <PopoverTrigger>
     <Button variant="outline">Top</Button>
   </PopoverTrigger>
   <PopoverContent side="top">
     <p>Popover opens above the trigger.</p>
   </PopoverContent>
-</Popover>`}>
+</Popover>
+```
+  </Fragment>
   <Popover>
     <PopoverTrigger>
       <Button variant="outline">Top</Button>
@@ -126,14 +141,19 @@ import {
 #### Side right
 </Prose>
 
-<ComponentPreview code={`<Popover>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Popover>
   <PopoverTrigger>
     <Button variant="outline">Right</Button>
   </PopoverTrigger>
   <PopoverContent side="right">
     <p>Popover opens to the right.</p>
   </PopoverContent>
-</Popover>`}>
+</Popover>
+```
+  </Fragment>
   <Popover>
     <PopoverTrigger>
       <Button variant="outline">Right</Button>
@@ -150,14 +170,19 @@ import {
 #### Side left
 </Prose>
 
-<ComponentPreview code={`<Popover>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Popover>
   <PopoverTrigger>
     <Button variant="outline">Left</Button>
   </PopoverTrigger>
   <PopoverContent side="left">
     <p>Popover opens to the left.</p>
   </PopoverContent>
-</Popover>`}>
+</Popover>
+```
+  </Fragment>
   <Popover>
     <PopoverTrigger>
       <Button variant="outline">Left</Button>
@@ -174,7 +199,10 @@ import {
 #### With form
 </Prose>
 
-<ComponentPreview code={`<Popover>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Popover>
   <PopoverTrigger>
     <Button variant="outline">Open dimensions</Button>
   </PopoverTrigger>
@@ -196,7 +224,9 @@ import {
       </div>
     </div>
   </PopoverContent>
-</Popover>`}>
+</Popover>
+```
+  </Fragment>
   <Popover>
     <PopoverTrigger>
       <Button variant="outline">Open dimensions</Button>

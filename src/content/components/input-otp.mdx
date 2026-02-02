@@ -15,7 +15,10 @@ import InputOTPGroup from "@/components/ui/input-otp/InputOTPGroup.astro";
 import InputOTPSlot from "@/components/ui/input-otp/InputOTPSlot.astro";
 import InputOTPSeparator from "@/components/ui/input-otp/InputOTPSeparator.astro";
 
-<ComponentPreview code={`<InputOTP maxLength={6}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<InputOTP maxLength={6}>
   <InputOTPGroup>
     <InputOTPSlot index={0} />
     <InputOTPSlot index={1} />
@@ -27,7 +30,9 @@ import InputOTPSeparator from "@/components/ui/input-otp/InputOTPSeparator.astro
     <InputOTPSlot index={4} />
     <InputOTPSlot index={5} />
   </InputOTPGroup>
-</InputOTP>`}>
+</InputOTP>
+```
+  </Fragment>
   <InputOTP maxLength={6}>
     <InputOTPGroup>
       <InputOTPSlot index={0} />
@@ -94,7 +99,10 @@ Use the `pattern` prop to define what characters are allowed in the OTP input.
 #### Digits only (default)
 </Prose>
 
-<ComponentPreview code={`<InputOTP maxLength={6} pattern="digits">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<InputOTP maxLength={6} pattern="digits">
   <InputOTPGroup>
     <InputOTPSlot index={0} />
     <InputOTPSlot index={1} />
@@ -103,7 +111,9 @@ Use the `pattern` prop to define what characters are allowed in the OTP input.
     <InputOTPSlot index={4} />
     <InputOTPSlot index={5} />
   </InputOTPGroup>
-</InputOTP>`}>
+</InputOTP>
+```
+  </Fragment>
   <InputOTP maxLength={6} pattern="digits">
     <InputOTPGroup>
       <InputOTPSlot index={0} />
@@ -124,7 +134,10 @@ Use the `pattern` prop to define what characters are allowed in the OTP input.
 Use `pattern="alphanumeric"` to accept both letters and numbers.
 </Prose>
 
-<ComponentPreview code={`<InputOTP maxLength={6} pattern="alphanumeric">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<InputOTP maxLength={6} pattern="alphanumeric">
   <InputOTPGroup>
     <InputOTPSlot index={0} />
     <InputOTPSlot index={1} />
@@ -133,7 +146,9 @@ Use `pattern="alphanumeric"` to accept both letters and numbers.
     <InputOTPSlot index={4} />
     <InputOTPSlot index={5} />
   </InputOTPGroup>
-</InputOTP>`}>
+</InputOTP>
+```
+  </Fragment>
   <InputOTP maxLength={6} pattern="alphanumeric">
     <InputOTPGroup>
       <InputOTPSlot index={0} />
@@ -160,7 +175,10 @@ Use `pattern="alphanumeric"` to accept both letters and numbers.
 Use the `InputOTPSeparator` component to add a separator between input groups.
 </Prose>
 
-<ComponentPreview code={`<InputOTP maxLength={6}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<InputOTP maxLength={6}>
   <InputOTPGroup>
     <InputOTPSlot index={0} />
     <InputOTPSlot index={1} />
@@ -172,7 +190,9 @@ Use the `InputOTPSeparator` component to add a separator between input groups.
     <InputOTPSlot index={4} />
     <InputOTPSlot index={5} />
   </InputOTPGroup>
-</InputOTP>`}>
+</InputOTP>
+```
+  </Fragment>
   <InputOTP maxLength={6}>
     <InputOTPGroup>
       <InputOTPSlot index={0} />
@@ -196,7 +216,10 @@ Use the `InputOTPSeparator` component to add a separator between input groups.
 Use the `disabled` prop to disable the input.
 </Prose>
 
-<ComponentPreview code={`<InputOTP maxLength={6} disabled>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<InputOTP maxLength={6} disabled>
   <InputOTPGroup>
     <InputOTPSlot index={0} />
     <InputOTPSlot index={1} />
@@ -205,7 +228,9 @@ Use the `disabled` prop to disable the input.
     <InputOTPSlot index={4} />
     <InputOTPSlot index={5} />
   </InputOTPGroup>
-</InputOTP>`}>
+</InputOTP>
+```
+  </Fragment>
   <InputOTP maxLength={6} disabled>
     <InputOTPGroup>
       <InputOTPSlot index={0} />
@@ -226,14 +251,19 @@ Use the `disabled` prop to disable the input.
 Use `invalid` on the slots to show an error state.
 </Prose>
 
-<ComponentPreview code={`<InputOTP maxLength={4}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<InputOTP maxLength={4}>
   <InputOTPGroup>
     <InputOTPSlot index={0} invalid />
     <InputOTPSlot index={1} invalid />
     <InputOTPSlot index={2} invalid />
     <InputOTPSlot index={3} invalid />
   </InputOTPGroup>
-</InputOTP>`}>
+</InputOTP>
+```
+  </Fragment>
   <InputOTP maxLength={4}>
     <InputOTPGroup>
       <InputOTPSlot index={0} invalid />
@@ -252,14 +282,19 @@ Use `invalid` on the slots to show an error state.
 A common pattern for PIN codes.
 </Prose>
 
-<ComponentPreview code={`<InputOTP maxLength={4}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<InputOTP maxLength={4}>
   <InputOTPGroup>
     <InputOTPSlot index={0} />
     <InputOTPSlot index={1} />
     <InputOTPSlot index={2} />
     <InputOTPSlot index={3} />
   </InputOTPGroup>
-</InputOTP>`}>
+</InputOTP>
+```
+  </Fragment>
   <InputOTP maxLength={4}>
     <InputOTPGroup>
       <InputOTPSlot index={0} />
@@ -278,7 +313,10 @@ A common pattern for PIN codes.
 You can pass custom content to the separator.
 </Prose>
 
-<ComponentPreview code={`<InputOTP maxLength={6}>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<InputOTP maxLength={6}>
   <InputOTPGroup>
     <InputOTPSlot index={0} />
     <InputOTPSlot index={1} />
@@ -292,7 +330,9 @@ You can pass custom content to the separator.
     <InputOTPSlot index={4} />
     <InputOTPSlot index={5} />
   </InputOTPGroup>
-</InputOTP>`}>
+</InputOTP>
+```
+  </Fragment>
   <InputOTP maxLength={6}>
     <InputOTPGroup>
       <InputOTPSlot index={0} />

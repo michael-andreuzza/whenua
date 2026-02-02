@@ -18,14 +18,18 @@ import Clock from "@lucide/astro/icons/clock";
 import TrendingUp from "@lucide/astro/icons/trending-up";
 import ExternalLink from "@lucide/astro/icons/external-link";
 
-<ComponentPreview code={`<div class="flex flex-wrap gap-2">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex flex-wrap gap-2">
   <Badge>New</Badge>
   <Badge variant="secondary">Popular</Badge>
   <Badge variant="destructive">Sold out</Badge>
   <Badge variant="outline">Draft</Badge>
-</div>`}>
-    <Badge>New</Badge>
-
+</div>
+```
+  </Fragment>
+  <Badge>New</Badge>
 </ComponentPreview>
 
 <div class="space-y-4">
@@ -60,12 +64,17 @@ import { Badge } from "@/components/bearnie/badge"
 #### Variants
 </Prose>
 
-<ComponentPreview code={`<div class="flex flex-wrap gap-2">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex flex-wrap gap-2">
   <Badge>Default</Badge>
   <Badge variant="secondary">Secondary</Badge>
   <Badge variant="destructive">Destructive</Badge>
   <Badge variant="outline">Outline</Badge>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex flex-wrap gap-2">
     <Badge>Default</Badge>
     <Badge variant="secondary">Secondary</Badge>
@@ -80,11 +89,16 @@ import { Badge } from "@/components/bearnie/badge"
 #### Status variants
 </Prose>
 
-<ComponentPreview code={`<div class="flex flex-wrap gap-2">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex flex-wrap gap-2">
   <Badge variant="success">Completed</Badge>
   <Badge variant="warning">Pending</Badge>
   <Badge variant="info">In review</Badge>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex flex-wrap gap-2">
     <Badge variant="success">Completed</Badge>
     <Badge variant="warning">Pending</Badge>
@@ -100,7 +114,10 @@ import { Badge } from "@/components/bearnie/badge"
 Use `data-icon="inline-start"` or `data-icon="inline-end"` to position icons.
 </Prose>
 
-<ComponentPreview code={`<div class="flex flex-wrap gap-2">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex flex-wrap gap-2">
   <Badge variant="warning">
     <Zap data-icon="inline-start" />
     Pro feature
@@ -113,7 +130,9 @@ Use `data-icon="inline-start"` or `data-icon="inline-end"` to position icons.
     <Clock data-icon="inline-start" />
     Coming soon
   </Badge>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex flex-wrap gap-2">
     <Badge variant="warning">
       <Zap data-icon="inline-start" />
@@ -136,7 +155,10 @@ Use `data-icon="inline-start"` or `data-icon="inline-end"` to position icons.
 #### With spinner
 </Prose>
 
-<ComponentPreview code={`<div class="flex flex-wrap gap-2">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<div class="flex flex-wrap gap-2">
   <Badge variant="info">
     <Spinner class="size-3" data-icon="inline-start" />
     Syncing
@@ -145,7 +167,9 @@ Use `data-icon="inline-start"` or `data-icon="inline-end"` to position icons.
     Processing
     <Spinner class="size-3" data-icon="inline-end" />
   </Badge>
-</div>`}>
+</div>
+```
+  </Fragment>
   <div class="flex flex-wrap gap-2">
     <Badge variant="info">
       <Spinner class="size-3" data-icon="inline-start" />
@@ -166,10 +190,15 @@ Use `data-icon="inline-start"` or `data-icon="inline-end"` to position icons.
 Use the `href` prop to render a badge as a link.
 </Prose>
 
-<ComponentPreview code={`<Badge href="/docs" variant="outline">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Badge href="/docs" variant="outline">
   View docs
   <ExternalLink data-icon="inline-end" />
-</Badge>`}>
+</Badge>
+```
+  </Fragment>
   <Badge href="/docs" variant="outline">
     View docs
     <ExternalLink data-icon="inline-end" />

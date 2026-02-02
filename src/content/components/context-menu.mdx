@@ -25,7 +25,10 @@ import FolderPlus from "@lucide/astro/icons/folder-plus";
 import PencilLine from "@lucide/astro/icons/pencil-line";
 import Share from "@lucide/astro/icons/share";
 
-<ComponentPreview code={`<ContextMenu>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<ContextMenu>
   <ContextMenuTrigger>
     <div class="flex h-36 w-full items-center justify-center rounded-md border border-dashed px-4 text-sm text-muted-foreground">
       Right click here
@@ -54,7 +57,9 @@ import Share from "@lucide/astro/icons/share";
       <ContextMenuShortcut>⌫</ContextMenuShortcut>
     </ContextMenuItem>
   </ContextMenuContent>
-</ContextMenu>`}>
+</ContextMenu>
+```
+  </Fragment>
   <ContextMenu>
     <ContextMenuTrigger>
       <div class="flex h-36 w-full items-center justify-center rounded-md border border-dashed px-4 text-sm text-muted-foreground">
@@ -131,7 +136,10 @@ import {
 #### Basic
 </Prose>
 
-<ComponentPreview code={`<ContextMenu>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<ContextMenu>
   <ContextMenuTrigger>
     <div class="flex h-24 w-full items-center justify-center rounded-md border border-dashed px-4 text-sm text-muted-foreground">
       Right click here
@@ -142,7 +150,9 @@ import {
     <ContextMenuItem>Edit</ContextMenuItem>
     <ContextMenuItem>Duplicate</ContextMenuItem>
   </ContextMenuContent>
-</ContextMenu>`}>
+</ContextMenu>
+```
+  </Fragment>
   <ContextMenu>
     <ContextMenuTrigger>
       <div class="flex h-24 w-full items-center justify-center rounded-md border border-dashed px-4 text-sm text-muted-foreground">
@@ -163,7 +173,10 @@ import {
 #### With icons
 </Prose>
 
-<ComponentPreview code={`<ContextMenu>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<ContextMenu>
   <ContextMenuTrigger>
     <div class="flex h-24 w-full items-center justify-center rounded-md border border-dashed px-4 text-sm text-muted-foreground">
       Right click here
@@ -183,7 +196,9 @@ import {
       Share
     </ContextMenuItem>
   </ContextMenuContent>
-</ContextMenu>`}>
+</ContextMenu>
+```
+  </Fragment>
   <ContextMenu>
     <ContextMenuTrigger>
       <div class="flex h-24 w-full items-center justify-center rounded-md border border-dashed px-4 text-sm text-muted-foreground">
@@ -213,7 +228,10 @@ import {
 #### With groups
 </Prose>
 
-<ComponentPreview code={`<ContextMenu>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<ContextMenu>
   <ContextMenuTrigger>
     <div class="flex h-24 w-full items-center justify-center rounded-md border border-dashed px-4 text-sm text-muted-foreground">
       Right click here
@@ -228,7 +246,9 @@ import {
     <ContextMenuItem>Select all</ContextMenuItem>
     <ContextMenuItem>Deselect</ContextMenuItem>
   </ContextMenuContent>
-</ContextMenu>`}>
+</ContextMenu>
+```
+  </Fragment>
   <ContextMenu>
     <ContextMenuTrigger>
       <div class="flex h-24 w-full items-center justify-center rounded-md border border-dashed px-4 text-sm text-muted-foreground">
@@ -253,7 +273,10 @@ import {
 #### Destructive
 </Prose>
 
-<ComponentPreview code={`<ContextMenu>
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<ContextMenu>
   <ContextMenuTrigger>
     <div class="flex h-24 w-full items-center justify-center rounded-md border border-dashed px-4 text-sm text-muted-foreground">
       Right click here
@@ -268,7 +291,9 @@ import {
       Delete permanently
     </ContextMenuItem>
   </ContextMenuContent>
-</ContextMenu>`}>
+</ContextMenu>
+```
+  </Fragment>
   <ContextMenu>
     <ContextMenuTrigger>
       <div class="flex h-24 w-full items-center justify-center rounded-md border border-dashed px-4 text-sm text-muted-foreground">

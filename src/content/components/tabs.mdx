@@ -24,7 +24,10 @@ import Button from "@/components/ui/button/Button.astro";
 import Input from "@/components/ui/input/Input.astro";
 import Label from "@/components/ui/label/Label.astro";
 
-<ComponentPreview code={`<Tabs defaultValue="account">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Tabs defaultValue="account">
   <TabsList>
     <TabsTrigger value="account">Account</TabsTrigger>
     <TabsTrigger value="password">Password</TabsTrigger>
@@ -35,7 +38,9 @@ import Label from "@/components/ui/label/Label.astro";
   <TabsContent value="password">
     <p>Change your password here.</p>
   </TabsContent>
-</Tabs>`}>
+</Tabs>
+```
+  </Fragment>
   <Tabs defaultValue="account" class="w-full max-w-md">
     <TabsList>
       <TabsTrigger value="account">Account</TabsTrigger>
@@ -94,7 +99,10 @@ import {
 #### Default
 </Prose>
 
-<ComponentPreview code={`<Tabs defaultValue="overview">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Tabs defaultValue="overview">
   <TabsList>
     <TabsTrigger value="overview">Overview</TabsTrigger>
     <TabsTrigger value="analytics">Analytics</TabsTrigger>
@@ -103,7 +111,9 @@ import {
   <TabsContent value="overview">Overview content here.</TabsContent>
   <TabsContent value="analytics">Analytics content here.</TabsContent>
   <TabsContent value="reports">Reports content here.</TabsContent>
-</Tabs>`}>
+</Tabs>
+```
+  </Fragment>
   <Tabs defaultValue="overview" class="w-full max-w-md">
     <TabsList>
       <TabsTrigger value="overview">Overview</TabsTrigger>
@@ -122,7 +132,10 @@ import {
 #### Vertical
 </Prose>
 
-<ComponentPreview code={`<Tabs defaultValue="general" orientation="vertical">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Tabs defaultValue="general" orientation="vertical">
   <TabsList>
     <TabsTrigger value="general">General</TabsTrigger>
     <TabsTrigger value="security">Security</TabsTrigger>
@@ -131,7 +144,9 @@ import {
   <TabsContent value="general">General settings and preferences.</TabsContent>
   <TabsContent value="security">Security and privacy options.</TabsContent>
   <TabsContent value="notifications">Notification preferences.</TabsContent>
-</Tabs>`}>
+</Tabs>
+```
+  </Fragment>
   <Tabs defaultValue="general" orientation="vertical" class="w-full max-w-md">
     <TabsList>
       <TabsTrigger value="general">General</TabsTrigger>
@@ -150,7 +165,10 @@ import {
 #### With cards
 </Prose>
 
-<ComponentPreview code={`<Tabs defaultValue="account" class="w-[400px]">
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Tabs defaultValue="account" class="w-[400px]">
   <TabsList class="flex items-center">
     <TabsTrigger value="account">Account</TabsTrigger>
     <TabsTrigger value="password">Password</TabsTrigger>
@@ -197,7 +215,9 @@ import {
       </CardFooter>
     </Card>
   </TabsContent>
-</Tabs>`}>
+</Tabs>
+```
+  </Fragment>
   <Tabs defaultValue="account" class="w-[400px]">
     <TabsList class="grid w-full grid-cols-2">
       <TabsTrigger value="account">Account</TabsTrigger>
