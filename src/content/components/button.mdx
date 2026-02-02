@@ -234,6 +234,21 @@ import { Button } from "@/components/bearnie/button"
 
 <div class="space-y-4">
 <Prose>
+#### Pill
+</Prose>
+
+<ComponentPreview>
+  <Fragment slot="code">
+```html
+<Button pill>Pill Button</Button>
+```
+  </Fragment>
+  <Button pill>Pill Button</Button>
+</ComponentPreview>
+</div>
+
+<div class="space-y-4">
+<Prose>
 #### Loading
 </Prose>
 
@@ -312,6 +327,7 @@ import { Button } from "@/components/bearnie/button"
 | variant | default \| destructive \| outline \| secondary \| ghost \| link \| success \| warning \| info | default | Visual style variant |
 | size | xs \| sm \| default \| lg \| xl | default | Button size |
 | iconOnly | boolean | false | Square button for icon-only use |
+| pill | boolean | false | Renders with fully rounded corners |
 | href | string | - | Renders as anchor link |
 | disabled | boolean | false | Disables the button |
 | class | string | - | Additional CSS classes |

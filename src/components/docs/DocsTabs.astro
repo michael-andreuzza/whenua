@@ -23,65 +23,65 @@ const { tabs, class: className } = Astro.props;
 const id = `docs-tabs-${Math.random().toString(36).substring(2, 9)}`;
 ---
 
-<div
-  class={cn("not-prose w-full", className)}
-  data-docs-tabs={id}
->
+<div class={cn("not-prose w-full", className)} data-docs-tabs={id}>
   <!-- Tab buttons -->
   <div class="flex items-center gap-1 flex-wrap">
-    {tabs.map((tab, index) => (
-      <button
-        type="button"
-        class="px-3 py-1.5 text-sm font-medium text-muted-foreground hover:text-foreground data-[active]:text-foreground data-[active]:bg-muted rounded-md transition-colors"
-        data-docs-tab={tab.id}
-        data-active={index === 0 ? "" : undefined}
-      >
-        {tab.label}
-      </button>
-    ))}
+    {
+      tabs.map((tab, index) => (
+        <button
+          type="button"
+          class="px-3 py-1.5 text-sm font-medium text-muted-foreground hover:text-foreground data-[active]:text-foreground data-[active]:bg-muted rounded-md transition-colors"
+          data-docs-tab={tab.id}
+          data-active={index === 0 ? "" : undefined}
+        >
+          {tab.label}
+        </button>
+      ))
+    }
   </div>
 
   <!-- Tab panels -->
   <div class="mt-2">
-    {tabs.map((tab, index) => (
-      <div
-        class={index === 0 ? "" : "hidden"}
-        data-docs-panel={tab.id}
-      >
-        <div class="border border-border rounded-lg overflow-hidden">
-          <div class="flex items-center justify-between px-4 py-2 border-b border-border bg-background">
-            {tab.description && (
-              <p class="text-sm text-muted-foreground">{tab.description}</p>
-            )}
-            {!tab.description && <span />}
-            <button
-              type="button"
-              class="flex items-center justify-center p-1.5 text-muted-foreground hover:text-foreground rounded-md transition-colors shrink-0"
-              data-copy-button
-              title="Copy code"
-            >
-              <Copy size={14} data-copy-icon />
-              <Check size={14} class="hidden" data-check-icon />
-            </button>
+    {
+      tabs.map((tab, index) => (
+        <div class={index === 0 ? "" : "hidden"} data-docs-panel={tab.id}>
+          <div class="border border-border rounded-lg overflow-hidden">
+            <div class="flex items-center justify-between px-4 py-2 border-b border-border bg-background">
+              {tab.description && (
+                <p class="text-sm text-muted-foreground">{tab.description}</p>
+              )}
+              {!tab.description && <span />}
+              <button
+                type="button"
+                class="flex items-center justify-center p-1.5 text-muted-foreground hover:text-foreground rounded-md transition-colors shrink-0"
+                data-copy-button
+                title="Copy code"
+              >
+                <Copy size={14} data-copy-icon />
+                <Check size={14} class="hidden" data-check-icon />
+              </button>
+            </div>
+            <span class="sr-only" data-code-content>
+              {tab.code}
+            </span>
+            <CodeBlock
+              code={tab.code}
+              lang={tab.lang || "json"}
+              class="rounded-none bg-transparent"
+              showCopy={false}
+            />
           </div>
-          <span class="sr-only" data-code-content>{tab.code}</span>
-          <CodeBlock
-            code={tab.code}
-            lang={tab.lang || "json"}
-            class="!rounded-none !bg-transparent"
-            showCopy={false}
-          />
-        </div>
 
-        {tab.instructions && tab.instructions.length > 0 && (
-          <ul class="text-sm text-muted-foreground mt-4 space-y-1 list-disc list-inside">
-            {tab.instructions.map((instruction) => (
-              <li>{instruction}</li>
-            ))}
-          </ul>
-        )}
-      </div>
-    ))}
+          {tab.instructions && tab.instructions.length > 0 && (
+            <ul class="text-sm text-muted-foreground mt-4 space-y-1 list-disc list-inside">
+              {tab.instructions.map((instruction) => (
+                <li>{instruction}</li>
+              ))}
+            </ul>
+          )}
+        </div>
+      ))
+    }
   </div>
 </div>
 

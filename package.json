@@ -23,9 +23,11 @@
     "@tailwindcss/forms": "^0.5.11",
     "@tailwindcss/typography": "^0.5.19",
     "astro": "^5.16.15",
+    "clsx": "^2.1.1",
     "jszip": "^3.10.1",
     "keen-slider": "^6.8.6",
     "reading-time": "^1.5.0",
+    "tailwind-merge": "^3.4.0",
     "tailwind-scrollbar-hide": "^4.0.0"
   },
   "devDependencies": {

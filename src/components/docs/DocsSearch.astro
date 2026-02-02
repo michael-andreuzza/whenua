@@ -10,7 +10,7 @@ const components = await Promise.all(
     description: component.data.description,
     slug: component.slug,
     type: "component",
-  }))
+  })),
 );
 
 // Get docs pages from collection
@@ -20,7 +20,7 @@ const docs = await Promise.all(
     description: doc.data.description,
     slug: doc.slug === "introduction" ? "" : doc.slug,
     type: "doc",
-  }))
+  })),
 );
 
 const allDocs = [...docs, ...components];
@@ -73,7 +73,7 @@ const allDocs = [...docs, ...components];
       modal.setAttribute("role", "dialog");
       modal.setAttribute("aria-modal", "true");
       modal.innerHTML =
-        '<div class="absolute inset-0 bg-black/50 backdrop-blur-sm" data-search-backdrop></div><div class="relative flex items-start justify-center pt-[20vh] px-4"><div class="w-full max-w-md bg-popover border border-border rounded-xl shadow-xl overflow-hidden"><div class="flex items-center gap-3 px-3 border-b border-border"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground shrink-0"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Search documentation..." class="flex-1 h-12 text-sm bg-transparent border-0 outline-none focus:outline-none focus:ring-0 placeholder:text-muted-foreground text-foreground" style="box-shadow: none !important;" data-search-input /><button type="button" class="text-[10px] text-muted-foreground px-1.5 py-1 rounded border border-border bg-muted hover:bg-muted/80" data-search-close>ESC</button></div><div class="max-h-[50vh] overflow-y-auto" data-search-results><div class="py-12 text-sm text-muted-foreground text-center" data-search-hint>Type to search...</div><div class="py-12 text-sm text-muted-foreground text-center hidden" data-search-empty>No results found</div></div></div></div>';
+        '<div class="absolute inset-0 bg-black/50 backdrop-blur-sm" data-search-backdrop></div><div class="relative flex items-start justify-center pt-[20vh] px-4"><div class="w-full max-w-md bg-popover border border-border rounded-xl shadow-xl overflow-hidden"><div class="flex items-center gap-3 px-3 border-b border-border"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="text-muted-foreground shrink-0"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Search documentation..." class="flex-1 h-12 text-sm bg-transparent border-0 outline-none focus:outline-none focus:ring-0 shadow-none placeholder:text-muted-foreground text-foreground" data-search-input /><button type="button" class="text-[10px] text-muted-foreground px-1.5 py-1 rounded border border-border bg-muted hover:bg-muted/80" data-search-close>ESC</button></div><div class="max-h-[50vh] overflow-y-auto" data-search-results><div class="py-12 text-sm text-muted-foreground text-center" data-search-hint>Type to search...</div><div class="py-12 text-sm text-muted-foreground text-center hidden" data-search-empty>No results found</div></div></div></div>';
       document.body.appendChild(modal);
 
       var backdrop = modal.querySelector("[data-search-backdrop]");

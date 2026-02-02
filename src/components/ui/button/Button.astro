@@ -15,6 +15,7 @@ export interface Props extends HTMLAttributes<"button"> {
     | "info";
   size?: "xs" | "sm" | "default" | "lg" | "xl";
   iconOnly?: boolean;
+  pill?: boolean;
   href?: string;
   disabled?: boolean;
 }
@@ -23,6 +24,7 @@ const {
   variant = "default",
   size = "default",
   iconOnly = false,
+  pill = false,
   href,
   disabled = false,
   class: className,
@@ -49,25 +51,35 @@ const variantStyles = {
 };
 
 const sizeStyles = {
-  xs: "h-7 px-2.5 gap-1.5 rounded-sm text-xs [&_svg]:size-3",
-  sm: "h-8 px-3 gap-1.5 rounded-md text-xs [&_svg]:size-3.5",
-  default: "h-9 px-4 gap-2 rounded-md text-sm [&_svg]:size-4",
-  lg: "h-10 px-6 gap-2.5 rounded-md text-base [&_svg]:size-5",
-  xl: "h-11 px-8 gap-3 rounded-lg text-lg [&_svg]:size-5",
+  xs: "h-7 px-2.5 gap-1.5 text-xs [&_svg]:size-3",
+  sm: "h-8 px-3 gap-1.5 text-xs [&_svg]:size-3.5",
+  default: "h-9 px-4 gap-2 text-sm [&_svg]:size-4",
+  lg: "h-10 px-6 gap-2.5 text-base [&_svg]:size-5",
+  xl: "h-11 px-8 gap-3 text-lg [&_svg]:size-5",
 };
 
 const iconOnlySizeStyles = {
-  xs: "size-7 rounded-sm text-xs [&_svg]:size-3",
-  sm: "size-8 rounded-md text-xs [&_svg]:size-3.5",
-  default: "size-9 rounded-md text-sm [&_svg]:size-4",
-  lg: "size-10 rounded-md text-base [&_svg]:size-5",
-  xl: "size-11 rounded-lg text-lg [&_svg]:size-5",
+  xs: "size-7 text-xs [&_svg]:size-3",
+  sm: "size-8 text-xs [&_svg]:size-3.5",
+  default: "size-9 text-sm [&_svg]:size-4",
+  lg: "size-10 text-base [&_svg]:size-5",
+  xl: "size-11 text-lg [&_svg]:size-5",
 };
+
+const radiusStyles = {
+  xs: "rounded-sm",
+  sm: "rounded-md",
+  default: "rounded-md",
+  lg: "rounded-md",
+  xl: "rounded-lg",
+};
+
 const classes = cn(
   baseStyles,
   variantStyles[variant],
   iconOnly ? iconOnlySizeStyles[size] : sizeStyles[size],
-  className
+  pill ? "rounded-full" : radiusStyles[size],
+  className,
 );
 ---
 

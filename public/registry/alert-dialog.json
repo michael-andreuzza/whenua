@@ -16,37 +16,37 @@
     {
       "name": "AlertDialogAction.astro",
       "path": "alert-dialog/AlertDialogAction.astro",
-      "content": "---\nimport { cn } from '@/utils/cn';\nimport type { HTMLAttributes } from 'astro/types';\n\nexport interface Props extends HTMLAttributes<'button'> {}\n\nconst { class: className, ...props } = Astro.props;\n\nconst classes = cn(\n  'inline-flex h-10 items-center justify-center rounded-md bg-primary px-4 py-2 text-sm font-medium text-primary-foreground ring-offset-background transition-colors',\n  'hover:bg-primary/90',\n  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',\n  'disabled:pointer-events-none disabled:opacity-50',\n  className\n);\n---\n\n<button\n  type=\"button\"\n  class={classes}\n  data-alert-dialog-action\n  {...props}\n>\n  <slot />\n</button>\n"
+      "content": "---\nimport Button from '@/components/ui/button/Button.astro';\nimport type { HTMLAttributes } from 'astro/types';\n\nexport interface Props extends HTMLAttributes<'button'> {\n  variant?: 'default' | 'destructive';\n}\n\nconst { variant = 'default', class: className, ...props } = Astro.props;\n---\n\n<Button\n  variant={variant}\n  size=\"sm\"\n  class={className}\n  data-alert-dialog-action\n  {...props}\n>\n  <slot />\n</Button>\n"
     },
     {
       "name": "AlertDialogCancel.astro",
       "path": "alert-dialog/AlertDialogCancel.astro",
-      "content": "---\nimport { cn } from '@/utils/cn';\nimport type { HTMLAttributes } from 'astro/types';\n\nexport interface Props extends HTMLAttributes<'button'> {}\n\nconst { class: className, ...props } = Astro.props;\n\nconst classes = cn(\n  'inline-flex h-10 items-center justify-center rounded-md border border-input bg-background px-4 py-2 text-sm font-medium ring-offset-background transition-colors',\n  'hover:bg-accent hover:text-accent-foreground',\n  'focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2',\n  'disabled:pointer-events-none disabled:opacity-50',\n  className\n);\n---\n\n<button\n  type=\"button\"\n  class={classes}\n  data-alert-dialog-cancel\n  {...props}\n>\n  <slot />\n</button>\n"
+      "content": "---\nimport Button from '@/components/ui/button/Button.astro';\nimport type { HTMLAttributes } from 'astro/types';\n\nexport interface Props extends HTMLAttributes<'button'> {}\n\nconst { class: className, ...props } = Astro.props;\n---\n\n<Button\n  variant=\"outline\"\n  size=\"sm\"\n  class={className}\n  data-alert-dialog-cancel\n  {...props}\n>\n  <slot />\n</Button>\n"
     },
     {
       "name": "AlertDialogContent.astro",
       "path": "alert-dialog/AlertDialogContent.astro",
-      "content": "---\nimport { cn } from '@/utils/cn';\nimport type { HTMLAttributes } from 'astro/types';\n\nexport interface Props extends HTMLAttributes<'div'> {}\n\nconst { class: className, ...props } = Astro.props;\n\nconst classes = cn(\n  'fixed left-1/2 top-1/2 z-50 grid w-full max-w-lg -translate-x-1/2 -translate-y-1/2 gap-4 border bg-background p-6 shadow-lg sm:rounded-lg',\n  className\n);\n---\n\n<div\n  class={classes}\n  data-alert-dialog-content\n  role=\"alertdialog\"\n  aria-modal=\"true\"\n  hidden\n  {...props}\n>\n  <slot />\n</div>\n"
+      "content": "---\nimport { cn } from '@/utils/cn';\nimport type { HTMLAttributes } from 'astro/types';\n\nexport interface Props extends HTMLAttributes<'div'> {}\n\nconst { class: className, ...props } = Astro.props;\n\nconst classes = cn(\n  'fixed left-1/2 top-1/2 z-50 grid w-full max-w-sm -translate-x-1/2 -translate-y-1/2 border bg-background shadow-lg sm:rounded-lg',\n  className\n);\n---\n\n<div\n  class={classes}\n  data-alert-dialog-content\n  role=\"alertdialog\"\n  aria-modal=\"true\"\n  hidden\n  {...props}\n>\n  <slot />\n</div>\n"
     },
     {
       "name": "AlertDialogDescription.astro",
       "path": "alert-dialog/AlertDialogDescription.astro",
-      "content": "---\nimport { cn } from '@/utils/cn';\nimport type { HTMLAttributes } from 'astro/types';\n\nexport interface Props extends HTMLAttributes<'p'> {\n  id?: string;\n}\n\nconst { class: className, id, ...props } = Astro.props;\n\nconst classes = cn(\n  'text-sm text-muted-foreground',\n  className\n);\n---\n\n<p class={classes} data-alert-dialog-description id={id} {...props}>\n  <slot />\n</p>\n"
+      "content": "---\nimport { cn } from '@/utils/cn';\nimport type { HTMLAttributes } from 'astro/types';\n\nexport interface Props extends HTMLAttributes<'div'> {\n  id?: string;\n}\n\nconst { class: className, id, ...props } = Astro.props;\n\nconst classes = cn(\n  'text-sm text-muted-foreground',\n  className\n);\n---\n\n<div class={classes} data-alert-dialog-description id={id} {...props}>\n  <slot />\n</div>\n"
     },
     {
       "name": "AlertDialogFooter.astro",
       "path": "alert-dialog/AlertDialogFooter.astro",
-      "content": "---\nimport { cn } from '@/utils/cn';\nimport type { HTMLAttributes } from 'astro/types';\n\nexport interface Props extends HTMLAttributes<'div'> {}\n\nconst { class: className, ...props } = Astro.props;\n\nconst classes = cn(\n  'flex flex-col-reverse gap-2 sm:flex-row sm:justify-end',\n  className\n);\n---\n\n<div class={classes} {...props}>\n  <slot />\n</div>\n"
+      "content": "---\nimport { cn } from '@/utils/cn';\nimport type { HTMLAttributes } from 'astro/types';\n\nexport interface Props extends HTMLAttributes<'div'> {}\n\nconst { class: className, ...props } = Astro.props;\n\nconst classes = cn(\n  'flex flex-col-reverse gap-2 sm:flex-row sm:justify-end border-t px-6 py-4',\n  className\n);\n---\n\n<div class={classes} {...props}>\n  <slot />\n</div>\n"
     },
     {
       "name": "AlertDialogHeader.astro",
       "path": "alert-dialog/AlertDialogHeader.astro",
-      "content": "---\nimport { cn } from '@/utils/cn';\nimport type { HTMLAttributes } from 'astro/types';\n\nexport interface Props extends HTMLAttributes<'div'> {}\n\nconst { class: className, ...props } = Astro.props;\n\nconst classes = cn(\n  'flex flex-col gap-2 text-center sm:text-left',\n  className\n);\n---\n\n<div class={classes} {...props}>\n  <slot />\n</div>\n"
+      "content": "---\nimport { cn } from '@/utils/cn';\nimport type { HTMLAttributes } from 'astro/types';\n\nexport interface Props extends HTMLAttributes<'div'> {}\n\nconst { class: className, ...props } = Astro.props;\n\nconst classes = cn(\n  'flex flex-col gap-2 text-center sm:text-left p-6 pb-4',\n  className\n);\n---\n\n<div class={classes} {...props}>\n  <slot />\n</div>\n"
     },
     {
       "name": "AlertDialogOverlay.astro",
       "path": "alert-dialog/AlertDialogOverlay.astro",
-      "content": "---\nimport { cn } from '@/utils/cn';\nimport type { HTMLAttributes } from 'astro/types';\n\nexport interface Props extends HTMLAttributes<'div'> {}\n\nconst { class: className, ...props } = Astro.props;\n\nconst classes = cn(\n  'fixed inset-0 z-50 bg-black/80',\n  className\n);\n---\n\n<div\n  class={classes}\n  data-alert-dialog-overlay\n  hidden\n  {...props}\n/>\n"
+      "content": "---\nimport { cn } from '@/utils/cn';\nimport type { HTMLAttributes } from 'astro/types';\n\nexport interface Props extends HTMLAttributes<'div'> {}\n\nconst { class: className, ...props } = Astro.props;\n\nconst classes = cn(\n  'fixed inset-0 z-50 bg-black/20 dark:bg-black/80 backdrop-blur-sm',\n  className\n);\n---\n\n<div\n  class={classes}\n  data-alert-dialog-overlay\n  hidden\n  {...props}\n/>\n"
     },
     {
       "name": "AlertDialogTitle.astro",
