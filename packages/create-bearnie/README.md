@@ -12,6 +12,26 @@ npx create-bearnie
 npm create bearnie my-app
 ```
 
+## Options
+
+### `--full`
+
+Include all components from the start:
+
+```bash
+npx create-bearnie my-app --full
+```
+
+This fetches all components from the registry and installs them in your project.
+
+### `--theme`
+
+Apply a custom theme from the [theme builder](https://bearnie.dev/create-bearnie-theme):
+
+```bash
+npx create-bearnie my-app --theme="https://bearnie.dev/create-bearnie-theme#..."
+```
+
 ## What's included
 
 - Astro 5 with TypeScript
@@ -20,13 +40,23 @@ npm create bearnie my-app
 - Simple landing page to get started
 - Ready for components via `npx bearnie add`
 
+With `--full` flag:
+- All Bearnie UI components
+- Utility functions (`cn`, `focus-trap`)
+- Additional dependencies (`clsx`, `tailwind-merge`)
+
 ## After creating your project
 
 ```bash
 cd my-app
 npm install
-npx bearnie add button card dialog
 npm run dev
+```
+
+Without `--full`, add components as needed:
+
+```bash
+npx bearnie add button card dialog
 ```
 
 ## Learn more
