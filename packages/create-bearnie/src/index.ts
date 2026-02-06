@@ -31,7 +31,15 @@ interface ThemeConfig {
 function parseThemeArg(): string | null {
   const themeArg = process.argv.find((arg) => arg.startsWith("--theme="));
   if (!themeArg) return null;
-  return themeArg.split("=")[1];
+  // Use indexOf + slice instead of split to preserve = chars in base64 padding
+  const equalIndex = themeArg.indexOf("=");
+  let value = themeArg.slice(equalIndex + 1);
+  // Remove surrounding quotes if present (some shells may pass them through)
+  if ((value.startsWith('"') && value.endsWith('"')) || 
+      (value.startsWith("'") && value.endsWith("'"))) {
+    value = value.slice(1, -1);
+  }
+  return value;
 }
 
 // Parse --full flag

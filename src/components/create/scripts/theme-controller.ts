@@ -215,12 +215,56 @@ function updateUrl() {
   history.replaceState(null, '', newUrl);
 }
 
+// Color name to hue mapping (extracted from OKLCH values in primary-colors.ts)
+const colorToHue: Record<string, number> = {
+  neutral: 0,
+  red: 27.325,
+  orange: 41.116,
+  amber: 70.08,
+  yellow: 86.047,
+  lime: 130.85,
+  green: 163.225,
+  emerald: 163.225,
+  teal: 182.503,
+  cyan: 199.769,
+  sky: 222.492,
+  blue: 262.881,
+  indigo: 276.966,
+  violet: 293.009,
+  purple: 302.321,
+  fuchsia: 322.896,
+  pink: 354.308,
+  rose: 16.439,
+};
+
+// Base color to neutral hue mapping (extracted from OKLCH values in base-colors.ts)
+const baseColorToHue: Record<string, number> = {
+  neutral: 0,
+  slate: 264.695,
+  gray: 261.692,
+  zinc: 285.823,
+  stone: 49.25,
+};
+
+// Generate base64-encoded theme config for CLI
+function generateThemeHash(): string {
+  const themeConfig = {
+    primaryHue: colorToHue[state.primaryColor] ?? 0,
+    destructiveHue: 27.325,   // Always red
+    successHue: 163.225,      // Always emerald/green
+    warningHue: 70.08,        // Always amber
+    infoHue: 262.881,         // Always blue
+    neutralHue: baseColorToHue[state.baseColor] ?? 0,
+    radius: parseFloat(state.radius) * 16, // Convert rem to px (CLI expects px)
+    font: state.font as 'inter' | 'geist',
+  };
+  
+  return btoa(JSON.stringify(themeConfig));
+}
+
 function updateCliCommands() {
-  const params = stateToParams();
-  const queryString = params.toString();
-  const themeUrl = queryString 
-    ? `${window.location.origin}/create-bearnie-theme?${queryString}`
-    : `${window.location.origin}/create-bearnie-theme`;
+  const themeHash = generateThemeHash();
+  const themeUrl = `${window.location.origin}/create-bearnie-theme#${themeHash}`;
   
   const pmCommands: Record<string, string> = {
     npx: `npx create-bearnie my-app --theme="${themeUrl}"`,
